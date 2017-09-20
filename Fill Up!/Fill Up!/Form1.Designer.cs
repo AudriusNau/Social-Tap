@@ -1,6 +1,6 @@
 ﻿namespace Fill_Up_
 {
-    partial class pradinisLangas
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pradinisLangas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pavadinimas = new System.Windows.Forms.Label();
             this.ivertintiBokala = new System.Windows.Forms.Button();
             this.bokalas = new System.Windows.Forms.PictureBox();
@@ -112,7 +112,7 @@
             this.artimiausiBarai.UseVisualStyleBackColor = false;
             this.artimiausiBarai.Click += new System.EventHandler(this.artimiausiBarai_Click);
             // 
-            // pradinisLangas
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,9 +125,9 @@
             this.Controls.Add(this.ivertintiBokala);
             this.Controls.Add(this.pavadinimas);
             this.Controls.Add(this.bokalas);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "pradinisLangas";
+            this.Name = "Form1";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bokalas)).EndInit();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class pradinisLangas : Form
+    public partial class Form1 : Form
     {
-        public pradinisLangas()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -24,9 +24,21 @@ namespace Fill_Up_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-        }
+            this.Hide();
 
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm is Form2)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+     
         private void button2_Click(object sender, EventArgs e)
         {
 
