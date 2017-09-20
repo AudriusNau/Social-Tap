@@ -2,7 +2,7 @@
 
 public class BeerBar
 {
-	public BeetBar()
+	public BeerBar()
 	{
 	}
 }
