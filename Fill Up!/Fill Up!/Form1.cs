@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form1 : Form
+    public partial class pradinisLangas : Form
     {
-        public Form1()
+        public pradinisLangas()
         {
             InitializeComponent();
         }
@@ -28,6 +28,16 @@ namespace Fill_Up_
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void megstamiausiBarai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void artimiausiBarai_Click(object sender, EventArgs e)
         {
 
         }
