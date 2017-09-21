@@ -30,5 +30,10 @@ namespace Fill_Up_
                 }
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

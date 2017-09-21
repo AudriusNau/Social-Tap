@@ -60,7 +60,7 @@
             this.ivertintiBokala.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ivertintiBokala.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ivertintiBokala.Location = new System.Drawing.Point(185, 203);
-            this.ivertintiBokala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ivertintiBokala.Margin = new System.Windows.Forms.Padding(4);
             this.ivertintiBokala.Name = "ivertintiBokala";
             this.ivertintiBokala.Size = new System.Drawing.Size(276, 69);
             this.ivertintiBokala.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.bokalas.BackColor = System.Drawing.Color.Transparent;
             this.bokalas.Image = ((System.Drawing.Image)(resources.GetObject("bokalas.Image")));
             this.bokalas.Location = new System.Drawing.Point(403, 30);
-            this.bokalas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bokalas.Margin = new System.Windows.Forms.Padding(4);
             this.bokalas.Name = "bokalas";
             this.bokalas.Size = new System.Drawing.Size(169, 108);
             this.bokalas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,7 +88,7 @@
             this.megstamiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.megstamiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.megstamiausiBarai.Location = new System.Drawing.Point(119, 326);
-            this.megstamiausiBarai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.megstamiausiBarai.Margin = new System.Windows.Forms.Padding(4);
             this.megstamiausiBarai.Name = "megstamiausiBarai";
             this.megstamiausiBarai.Size = new System.Drawing.Size(416, 69);
             this.megstamiausiBarai.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.artimiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.artimiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.artimiausiBarai.Location = new System.Drawing.Point(185, 439);
-            this.artimiausiBarai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.artimiausiBarai.Margin = new System.Windows.Forms.Padding(4);
             this.artimiausiBarai.Name = "artimiausiBarai";
             this.artimiausiBarai.Size = new System.Drawing.Size(276, 69);
             this.artimiausiBarai.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.pavadinimas);
             this.Controls.Add(this.bokalas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form1_Load);
