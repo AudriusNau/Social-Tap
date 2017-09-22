@@ -29,100 +29,108 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Pavadinimas = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pavadinimas = new System.Windows.Forms.Label();
+            this.ivertintiBokala = new System.Windows.Forms.Button();
+            this.bokalas = new System.Windows.Forms.PictureBox();
+            this.megstamiausiBarai = new System.Windows.Forms.Button();
+            this.artimiausiBarai = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.bokalas)).BeginInit();
             this.SuspendLayout();
             // 
-            // Pavadinimas
+            // pavadinimas
             // 
-            this.Pavadinimas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Pavadinimas.AutoSize = true;
-            this.Pavadinimas.BackColor = System.Drawing.Color.Transparent;
-            this.Pavadinimas.Font = new System.Drawing.Font("Snap ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pavadinimas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Pavadinimas.Location = new System.Drawing.Point(156, 43);
-            this.Pavadinimas.Name = "Pavadinimas";
-            this.Pavadinimas.Size = new System.Drawing.Size(178, 45);
-            this.Pavadinimas.TabIndex = 0;
-            this.Pavadinimas.Text = "Fill Up!";
-            this.Pavadinimas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pavadinimas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pavadinimas.AutoSize = true;
+            this.pavadinimas.BackColor = System.Drawing.Color.Transparent;
+            this.pavadinimas.Font = new System.Drawing.Font("Snap ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pavadinimas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pavadinimas.Location = new System.Drawing.Point(208, 53);
+            this.pavadinimas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pavadinimas.Name = "pavadinimas";
+            this.pavadinimas.Size = new System.Drawing.Size(222, 57);
+            this.pavadinimas.TabIndex = 0;
+            this.pavadinimas.Text = "Fill Up!";
+            this.pavadinimas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // ivertintiBokala
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(139, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 56);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Įvertinti bokalą";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ivertintiBokala.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ivertintiBokala.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ivertintiBokala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ivertintiBokala.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ivertintiBokala.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ivertintiBokala.Location = new System.Drawing.Point(185, 203);
+            this.ivertintiBokala.Margin = new System.Windows.Forms.Padding(4);
+            this.ivertintiBokala.Name = "ivertintiBokala";
+            this.ivertintiBokala.Size = new System.Drawing.Size(276, 69);
+            this.ivertintiBokala.TabIndex = 1;
+            this.ivertintiBokala.Text = "Įvertinti bokalą\r\n";
+            this.ivertintiBokala.UseVisualStyleBackColor = false;
+            this.ivertintiBokala.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // bokalas
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(302, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 88);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.bokalas.BackColor = System.Drawing.Color.Transparent;
+            this.bokalas.Image = ((System.Drawing.Image)(resources.GetObject("bokalas.Image")));
+            this.bokalas.Location = new System.Drawing.Point(403, 30);
+            this.bokalas.Margin = new System.Windows.Forms.Padding(4);
+            this.bokalas.Name = "bokalas";
+            this.bokalas.Size = new System.Drawing.Size(169, 108);
+            this.bokalas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bokalas.TabIndex = 3;
+            this.bokalas.TabStop = false;
             // 
-            // button2
+            // megstamiausiBarai
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(89, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(312, 56);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Mano mėgstamiausi barai";
-            this.button2.UseVisualStyleBackColor = false;
+            this.megstamiausiBarai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.megstamiausiBarai.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.megstamiausiBarai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.megstamiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.megstamiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.megstamiausiBarai.Location = new System.Drawing.Point(119, 326);
+            this.megstamiausiBarai.Margin = new System.Windows.Forms.Padding(4);
+            this.megstamiausiBarai.Name = "megstamiausiBarai";
+            this.megstamiausiBarai.Size = new System.Drawing.Size(416, 69);
+            this.megstamiausiBarai.TabIndex = 4;
+            this.megstamiausiBarai.Text = "Mano mėgstamiausi barai";
+            this.megstamiausiBarai.UseVisualStyleBackColor = false;
+            this.megstamiausiBarai.Click += new System.EventHandler(this.megstamiausiBarai_Click);
             // 
-            // button3
+            // artimiausiBarai
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button3.Location = new System.Drawing.Point(139, 357);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 56);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Artimiausi barai";
-            this.button3.UseVisualStyleBackColor = false;
+            this.artimiausiBarai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.artimiausiBarai.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.artimiausiBarai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.artimiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.artimiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.artimiausiBarai.Location = new System.Drawing.Point(185, 439);
+            this.artimiausiBarai.Margin = new System.Windows.Forms.Padding(4);
+            this.artimiausiBarai.Name = "artimiausiBarai";
+            this.artimiausiBarai.Size = new System.Drawing.Size(276, 69);
+            this.artimiausiBarai.TabIndex = 5;
+            this.artimiausiBarai.Text = "Artimiausi barai";
+            this.artimiausiBarai.UseVisualStyleBackColor = false;
+            this.artimiausiBarai.Click += new System.EventHandler(this.artimiausiBarai_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(501, 534);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Pavadinimas);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(668, 657);
+            this.Controls.Add(this.artimiausiBarai);
+            this.Controls.Add(this.megstamiausiBarai);
+            this.Controls.Add(this.ivertintiBokala);
+            this.Controls.Add(this.pavadinimas);
+            this.Controls.Add(this.bokalas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bokalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,11 +138,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Pavadinimas;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label pavadinimas;
+        private System.Windows.Forms.Button ivertintiBokala;
+        private System.Windows.Forms.PictureBox bokalas;
+        private System.Windows.Forms.Button megstamiausiBarai;
+        private System.Windows.Forms.Button artimiausiBarai;
     }
 }
 

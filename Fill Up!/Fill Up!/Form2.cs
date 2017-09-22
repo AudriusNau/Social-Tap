@@ -10,46 +10,28 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void atgal_Click(object sender, EventArgs e)
         {
             this.Hide();
 
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Form2)
+                if (frm is Form1)
                 {
                     frm.Show();
                     return;
                 }
             }
-
-            Form2 f2 = new Form2();
-            f2.Show();
-        }
-     
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
 
-        private void megstamiausiBarai_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void artimiausiBarai_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
