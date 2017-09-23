@@ -35,5 +35,10 @@ namespace Fill_Up_
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
