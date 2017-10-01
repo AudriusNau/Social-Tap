@@ -33,53 +33,32 @@ namespace Fill_Up_
             }
         }
 
-        private void textBarName_TextChanged(object sender, EventArgs e)  //baro pavadinimas
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e) { }
- 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) //0,3
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e) //0,4
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) //0,5
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e) //1
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e) //kiek truksta mm
-        {
-
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e) //eurai
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e) //issaugoti
         {
             Bar bar = new Bar();
+            GlassOfBeer glass = new GlassOfBeer();
+
             bar.Name = textBarName.Text;
-            //bar.Rating = domainUpDownRating.
-        }
+            bar.Rating = int.Parse(domainUpDownRating.Text);
+            glass.LackOfBeer = (int)numericUpDown1.Value;
+            glass.Price = (double)numericUpDown2.Value;
 
-        private void domainUpDownRating_SelectedItemChanged(object sender, EventArgs e)
-        {
-
+            if (radioButton1.Checked == true)
+            {
+                glass.OrderedQuantity = 0.3;
+            }
+            else if (radioButton2.Checked == true)
+            {
+                glass.OrderedQuantity = 0.4;
+            }
+            else if (radioButton3.Checked == true)
+            {
+                glass.OrderedQuantity = 0.5;
+            }
+            else
+            {
+                glass.OrderedQuantity = 1;
+            }
         }
     }
 }
