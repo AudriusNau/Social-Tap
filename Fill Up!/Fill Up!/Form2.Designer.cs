@@ -224,10 +224,10 @@ namespace Fill_Up_
             65536});
             this.numericUpDown2.Location = new System.Drawing.Point(175, 291);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            1,
+            10,
             0,
             0,
-            65536 });
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(70, 24);
             this.numericUpDown2.TabIndex = 18;
@@ -297,7 +297,6 @@ namespace Fill_Up_
             this.domainUpDownRating.TabIndex = 28;
             this.domainUpDownRating.Text = "0";
             this.domainUpDownRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //this.domainUpDownRating.SelectedItemChanged += new System.EventHandler(this.domainUpDownRating_SelectedItemChanged);
             // 
             // Form2
             // 
@@ -362,7 +361,7 @@ namespace Fill_Up_
             this.domainUpDownRating.Items.Add("5");
 
             this.domainUpDownRating.Text = "0";
-            this.radioButton1.Checked = true;
+            radioButton1.Checked = true;
 
         }
     }
