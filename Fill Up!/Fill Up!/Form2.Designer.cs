@@ -1,4 +1,6 @@
-﻿namespace Fill_Up_
+﻿using System;
+
+namespace Fill_Up_
 {
     partial class Form2
     {
@@ -213,7 +215,13 @@
             // numericUpDown2
             // 
             this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.numericUpDown2.DecimalPlaces = 1;
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.numericUpDown2.Location = new System.Drawing.Point(175, 291);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             20,
@@ -282,12 +290,14 @@
             // 
             this.domainUpDownRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.domainUpDownRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.domainUpDownRating.InterceptArrowKeys = false;
             this.domainUpDownRating.Location = new System.Drawing.Point(255, 363);
             this.domainUpDownRating.Name = "domainUpDownRating";
             this.domainUpDownRating.Size = new System.Drawing.Size(59, 24);
             this.domainUpDownRating.TabIndex = 28;
             this.domainUpDownRating.Text = "0";
             this.domainUpDownRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.domainUpDownRating.SelectedItemChanged += new System.EventHandler(this.domainUpDownRating_SelectedItemChanged);
             // 
             // Form2
             // 
@@ -342,5 +352,16 @@
         private System.Windows.Forms.TextBox textBarName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DomainUpDown domainUpDownRating;
+
+        public void Form2_Load()
+        {
+            this.domainUpDownRating.Items.Add("1");
+            this.domainUpDownRating.Items.Add("2");
+            this.domainUpDownRating.Items.Add("3");
+            this.domainUpDownRating.Items.Add("4");
+            this.domainUpDownRating.Items.Add("5");
+
+            this.domainUpDownRating.Text = "0";
+        }
     }
 }
