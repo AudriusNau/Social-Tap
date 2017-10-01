@@ -16,18 +16,7 @@ namespace Fill_Up_
         public Form2()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            DomainUpDown.DomainUpDownItemCollection items = this.domainUpDownRating.Items;
-            items.Add("1");
-            items.Add("2");
-            items.Add("3");
-            items.Add("4");
-            items.Add("4");
-
-            this.domainUpDownRating.Text = "0";
+            Form2_Load();
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -85,6 +74,12 @@ namespace Fill_Up_
         {
             Bar bar = new Bar();
             bar.Name = textBarName.Text;
+            //bar.Rating = domainUpDownRating.
+        }
+
+        private void domainUpDownRating_SelectedItemChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
