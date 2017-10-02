@@ -10,25 +10,16 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void atgal_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            this.Hide();
 
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Form1)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,7 +27,7 @@ namespace Fill_Up_
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
