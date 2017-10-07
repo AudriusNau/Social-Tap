@@ -12,9 +12,9 @@ namespace Fill_Up_.Fill_Up_
     {
         public static void ReadingFile()
         {
-            XmlTextReader reader = new XmlTextReader(@"C:\Users\audri\source\repos\Social-Tap\Fill Up!\Fill Up!\Fill_Up_\Data.xml");
+            XmlTextReader reader = new XmlTextReader(@"Data.xml");
             using (System.IO.StreamWriter writer = 
-                new System.IO.StreamWriter(@"C:\Users\audri\source\repos\Social-Tap\Fill Up!\Fill Up!\Fill_Up_\Rez.txt", false))
+                new System.IO.StreamWriter(@"Rez.txt", false))
 
                 while (reader.Read())
                 {
