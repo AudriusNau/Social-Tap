@@ -118,13 +118,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Fill_Up_\Data.xml" />
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
     <None Include="Resources\Favorites-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Fill_Up_\Data.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
