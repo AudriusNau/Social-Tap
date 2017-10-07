@@ -48,6 +48,7 @@ namespace Fill_Up_
             this.textBarName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.domainUpDownRating = new System.Windows.Forms.DomainUpDown();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -295,7 +296,7 @@ namespace Fill_Up_
             this.domainUpDownRating.Name = "domainUpDownRating";
             this.domainUpDownRating.Size = new System.Drawing.Size(59, 24);
             this.domainUpDownRating.TabIndex = 28;
-            this.domainUpDownRating.Text = "0";
+            this.domainUpDownRating.Text = "5";
             this.domainUpDownRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form2
@@ -304,6 +305,7 @@ namespace Fill_Up_
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(501, 534);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.domainUpDownRating);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBarName);
@@ -354,15 +356,14 @@ namespace Fill_Up_
 
         public void Form2_Load()
         {
-            this.domainUpDownRating.Items.Add("1");
-            this.domainUpDownRating.Items.Add("2");
-            this.domainUpDownRating.Items.Add("3");
+            this.domainUpDownRating.Text = "5";
             this.domainUpDownRating.Items.Add("4");
-            this.domainUpDownRating.Items.Add("5");
-
-            this.domainUpDownRating.Text = "0";
+            this.domainUpDownRating.Items.Add("3");
+            this.domainUpDownRating.Items.Add("2");
+            this.domainUpDownRating.Items.Add("1");
             radioButton1.Checked = true;
-
         }
+
+        private System.Windows.Forms.Button button2;
     }
 }

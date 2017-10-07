@@ -1,29 +1,17 @@
 ﻿namespace Fill_Up_
 {
-    internal class GlassOfBeer
+    public struct GlassOfBeer
     {
 
-        private double orderedQuantity;
-        private int lackOfBeer;
-        private double price;
+        public double orderedQuantity; 
+        public int lackOfBeer;
+        public decimal price;
 
-        public double OrderedQuantity
+        public GlassOfBeer(double orderedQuantity, int lackOfBeer, decimal price)
         {
-            get { return orderedQuantity; }
-            set { orderedQuantity = value; }
+            this.orderedQuantity = orderedQuantity;
+            this.lackOfBeer = lackOfBeer;
+            this.price = price;
         }
-
-        public int LackOfBeer
-        {
-            get { return lackOfBeer; }
-            set { lackOfBeer = value; }
-        }
-
-        public double Price
-        {
-            get { return price; }
-            set { price = value; }
-        }
-
     }
 }
