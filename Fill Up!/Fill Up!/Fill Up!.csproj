@@ -141,7 +141,6 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1680175 %282%291.jpg" />
-    <Content Include="Fill_Up_\Data.xml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
