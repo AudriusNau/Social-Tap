@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Fill_Up_\AllBars.cs" />
     <Compile Include="Fill_Up_\Bar.cs" />
+    <Compile Include="Fill_Up_\ReadFile.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +130,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Fill_Up_\Data.xml" />
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
     <None Include="Resources\Favorites-icon.png" />
