@@ -94,7 +94,6 @@
             this.megstamiausiBarai.TabIndex = 4;
             this.megstamiausiBarai.Text = "Mano mėgstamiausi barai";
             this.megstamiausiBarai.UseVisualStyleBackColor = false;
-            this.megstamiausiBarai.Click += new System.EventHandler(this.megstamiausiBarai_Click);
             // 
             // artimiausiBarai
             // 
@@ -110,7 +109,6 @@
             this.artimiausiBarai.TabIndex = 5;
             this.artimiausiBarai.Text = "Artimiausi barai";
             this.artimiausiBarai.UseVisualStyleBackColor = false;
-            this.artimiausiBarai.Click += new System.EventHandler(this.artimiausiBarai_Click);
             // 
             // Form1
             // 
@@ -128,8 +126,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Home";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Home";           
             ((System.ComponentModel.ISupportInitialize)(this.bokalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

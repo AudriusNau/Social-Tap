@@ -1,20 +1,23 @@
 ﻿namespace Fill_Up_
 {
-    internal class Bar
+    public class Bar
     {
-        private string name;
-        private int rating;
+        public string Name { get; set; }
+        public int Rating { get; set; }
+        public GlassOfBeer Glass { get; set; }
 
-        public string Name
+        public Bar()
         {
-            get { return name; }
-            set { name = value; }
+            Name = null;
+            Rating = 0;
+            Glass = new GlassOfBeer();
         }
 
-        public int Rating
+        public Bar(string name, int rating, GlassOfBeer glass)
         {
-            get { return rating; }
-            set { rating = value; }
+            Name = name;
+            Rating = rating;
+            Glass = glass;
         }
     }
 }

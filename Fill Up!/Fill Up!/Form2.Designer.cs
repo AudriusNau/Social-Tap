@@ -78,7 +78,6 @@ namespace Fill_Up_
             this.label1.Size = new System.Drawing.Size(268, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Užsakyto alaus kiekis:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -120,7 +119,6 @@ namespace Fill_Up_
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "0,3l";
             this.radioButton1.UseVisualStyleBackColor = false;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -136,7 +134,6 @@ namespace Fill_Up_
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "0,4l";
             this.radioButton2.UseVisualStyleBackColor = false;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -152,7 +149,6 @@ namespace Fill_Up_
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "0,5l";
             this.radioButton3.UseVisualStyleBackColor = false;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -168,7 +164,6 @@ namespace Fill_Up_
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "1l";
             this.radioButton4.UseVisualStyleBackColor = false;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // label4
             // 
@@ -210,7 +205,6 @@ namespace Fill_Up_
             this.numericUpDown1.Size = new System.Drawing.Size(70, 24);
             this.numericUpDown1.TabIndex = 17;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -224,7 +218,7 @@ namespace Fill_Up_
             65536});
             this.numericUpDown2.Location = new System.Drawing.Point(175, 291);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            20,
+            10,
             0,
             0,
             0});
@@ -232,7 +226,6 @@ namespace Fill_Up_
             this.numericUpDown2.Size = new System.Drawing.Size(70, 24);
             this.numericUpDown2.TabIndex = 18;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // button1
             // 
@@ -271,7 +264,6 @@ namespace Fill_Up_
             this.textBarName.Size = new System.Drawing.Size(178, 29);
             this.textBarName.TabIndex = 24;
             this.textBarName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBarName.TextChanged += new System.EventHandler(this.textBarName_TextChanged);
             // 
             // label7
             // 
@@ -295,9 +287,8 @@ namespace Fill_Up_
             this.domainUpDownRating.Name = "domainUpDownRating";
             this.domainUpDownRating.Size = new System.Drawing.Size(59, 24);
             this.domainUpDownRating.TabIndex = 28;
-            this.domainUpDownRating.Text = "0";
+            this.domainUpDownRating.Text = "5";
             this.domainUpDownRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.domainUpDownRating.SelectedItemChanged += new System.EventHandler(this.domainUpDownRating_SelectedItemChanged);
             // 
             // Form2
             // 
@@ -355,13 +346,12 @@ namespace Fill_Up_
 
         public void Form2_Load()
         {
-            this.domainUpDownRating.Items.Add("1");
-            this.domainUpDownRating.Items.Add("2");
-            this.domainUpDownRating.Items.Add("3");
+            this.domainUpDownRating.Text = "5";
             this.domainUpDownRating.Items.Add("4");
-            this.domainUpDownRating.Items.Add("5");
-
-            this.domainUpDownRating.Text = "0";
+            this.domainUpDownRating.Items.Add("3");
+            this.domainUpDownRating.Items.Add("2");
+            this.domainUpDownRating.Items.Add("1");
+            radioButton1.Checked = true;
         }
     }
 }
