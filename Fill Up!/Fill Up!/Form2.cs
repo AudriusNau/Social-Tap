@@ -50,7 +50,7 @@ namespace Fill_Up_
                 glass.orderedQuantity = 1;
 
             Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
-            x.AddNewBar(bar);
+            allBars.AddNewBar(bar);
 
             List<Bar> hehe = allBars.GetBarList();
             MessageBox.Show(hehe.Count.ToString());
