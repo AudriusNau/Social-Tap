@@ -32,6 +32,11 @@ namespace Fill_Up_
         
         private void artimiausiBarai_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void artimiausiBarai_Click_1(object sender, EventArgs e)
+        {
             this.Hide();
 
             foreach (Form frm in Application.OpenForms)
