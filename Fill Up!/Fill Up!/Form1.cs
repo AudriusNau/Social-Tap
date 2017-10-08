@@ -51,7 +51,19 @@ namespace Fill_Up_
 
         private void artimiausiBarai_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm is Zemelapis)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+
+            Zemelapis zemelapis = new Zemelapis();
+            zemelapis.Show();
         }
     }
 }
