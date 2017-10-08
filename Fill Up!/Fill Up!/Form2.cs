@@ -6,8 +6,10 @@ namespace Fill_Up_
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        AllBars allBars;
+        public Form2(AllBars a)
         {
+            allBars = a;
             InitializeComponent();
             Form2_Load();
         }
@@ -27,7 +29,6 @@ namespace Fill_Up_
 
         private void button1_Click(object sender, EventArgs e) //issaugoti
         {
-            AllBars allBars = new AllBars();
             GlassOfBeer glass = new GlassOfBeer();
 
             glass.lackOfBeer = (int)numericUpDown1.Value;
@@ -49,13 +50,13 @@ namespace Fill_Up_
                 glass.orderedQuantity = 1;
 
             Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
-            allBars.AddNewBar(bar);
+            x.AddNewBar(bar);
 
             List<Bar> hehe = allBars.GetBarList();
             MessageBox.Show(hehe.Count.ToString());
 
             this.Hide();
-            Form3 frm3 = new Form3(bar);
+            Form3 frm3 = new Form3(allBars, bar);
             frm3.Show();
         }
     }

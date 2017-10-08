@@ -12,8 +12,11 @@ namespace Fill_Up_
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        AllBars allBars;
+
+        public Form1(AllBars a)
         {
+            allBars = a;
             InitializeComponent();
         }
 
@@ -30,7 +33,7 @@ namespace Fill_Up_
                 }
             }
 
-            Form2 f2 = new Form2();
+            Form2 f2 = new Form2(allBars);
             f2.Show();
         }
      

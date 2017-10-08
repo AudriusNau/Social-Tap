@@ -5,17 +5,15 @@ namespace Fill_Up_
 {
     public partial class Form3 : Form
     {
-        public Form3(Bar bar)
+        AllBars allBars;
+        public Form3(AllBars a, Bar bar)
         {
-            AllBars allBars = new AllBars();
+            allBars = a;
             InitializeComponent();
             ChangeLabels(bar);
 
             Bar betterBar = allBars.FindBetterBar(bar);
             Bar cheaperBar = allBars.FindCheaperBar(bar);
-
-            //  ****** list'as tuscias, todel betterBar ir cheaperBar tuscios reiksmes
-            //palyginima padarysiu AllBars klaseje, kai suprasiu kame problema su listu
 
             if(betterBar != cheaperBar)
             {

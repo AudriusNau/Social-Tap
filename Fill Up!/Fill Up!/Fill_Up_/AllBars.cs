@@ -4,7 +4,12 @@ namespace Fill_Up_
 {
     public class AllBars
     {
-        private List <Bar> barList = new List<Bar>();
+        private List<Bar> barList;
+
+        public AllBars()
+        {
+            this.barList = new List<Bar>();
+        }
 
         public void AddNewBar(Bar bar)
         {
