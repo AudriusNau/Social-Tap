@@ -1,25 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fill_Up_
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        AllBars allBars;
+
+        public Form1(AllBars a)
         {
+            allBars = a;
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,20 +26,10 @@ namespace Fill_Up_
                 }
             }
 
-            Form2 f2 = new Form2();
+            Form2 f2 = new Form2(allBars);
             f2.Show();
         }
-     
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void megstamiausiBarai_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void artimiausiBarai_Click(object sender, EventArgs e)
         {
             this.Hide();

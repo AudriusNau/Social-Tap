@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Fill_Up_;
 using System.Windows.Forms;
 
 namespace Fill_Up_
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        AllBars allBars;
+        public Form2(AllBars a)
         {
+            allBars = a;
             InitializeComponent();
             Form2_Load();
         }
@@ -22,7 +17,6 @@ namespace Fill_Up_
         private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             foreach (Form frm in Application.OpenForms)
             {
                 if (frm is Form1)
@@ -33,53 +27,37 @@ namespace Fill_Up_
             }
         }
 
-        private void textBarName_TextChanged(object sender, EventArgs e)  //baro pavadinimas
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e) { }
- 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) //0,3
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e) //0,4
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) //0,5
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e) //1
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e) //kiek truksta mm
-        {
-
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e) //eurai
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e) //issaugoti
         {
-            Bar bar = new Bar();
-            bar.Name = textBarName.Text;
-            //bar.Rating = domainUpDownRating.
-        }
+            GlassOfBeer glass = new GlassOfBeer();
 
-        private void domainUpDownRating_SelectedItemChanged(object sender, EventArgs e)
-        {
+            glass.lackOfBeer = (int)numericUpDown1.Value;
+            glass.price = numericUpDown2.Value;
 
+            if (radioButton1.Checked == true)
+            {
+                glass.orderedQuantity = 0.3;
+            }
+            else if (radioButton2.Checked == true)
+            {
+                glass.orderedQuantity = 0.4;
+            }
+            else if (radioButton3.Checked == true)
+            {
+                glass.orderedQuantity = 0.5;
+            }
+            else
+                glass.orderedQuantity = 1;
+
+            Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
+            allBars.AddNewBar(bar);
+
+            List<Bar> hehe = allBars.GetBarList();
+            MessageBox.Show(hehe.Count.ToString());
+
+            this.Hide();
+            Form3 frm3 = new Form3(allBars, bar);
+            frm3.Show();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
