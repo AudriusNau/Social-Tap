@@ -59,5 +59,10 @@ namespace Fill_Up_
             Form3 frm3 = new Form3(allBars, bar);
             frm3.Show();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
