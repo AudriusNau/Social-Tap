@@ -129,7 +129,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bokalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

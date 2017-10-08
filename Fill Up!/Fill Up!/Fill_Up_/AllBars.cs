@@ -4,21 +4,40 @@ namespace Fill_Up_
 {
     public class AllBars
     {
-        private List <Bar> barList;
+        private List <Bar> barList = new List<Bar>();
 
-        public AllBars()
+        public void AddNewBar(Bar bar)
         {
-            barList = new List<Bar>();
+            this.barList.Add(bar);
         }
 
-        public void addNewBar(Bar bar)
+        public List <Bar> GetBarList()
         {
-            barList.Add(bar);
-        }
-
-        public List <Bar> getBarList()
-        {
-		    return this.barList;
+		    return barList;
 	    }
+
+        public Bar FindBetterBar(Bar bar)
+        {
+            Bar betterBar = bar;
+
+            foreach (Bar iterator in barList)
+            {
+                if (iterator.Glass.lackOfBeer < betterBar.Glass.lackOfBeer)
+                    betterBar.Equals(iterator); 
+            }
+            return betterBar;
+        }
+
+        public Bar FindCheaperBar(Bar bar)
+        {
+            Bar cheaperBar = bar;
+
+            foreach (Bar iterator in barList)
+            {
+                if (iterator.Glass.price < cheaperBar.Glass.price)
+                    cheaperBar.Equals(iterator);
+            }
+            return cheaperBar;
+        }
     }
 }

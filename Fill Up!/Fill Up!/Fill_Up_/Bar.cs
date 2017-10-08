@@ -6,6 +6,13 @@
         public int Rating { get; set; }
         public GlassOfBeer Glass { get; set; }
 
+        public Bar()
+        {
+            Name = null;
+            Rating = 0;
+            Glass = new GlassOfBeer();
+        }
+
         public Bar(string name, int rating, GlassOfBeer glass)
         {
             Name = name;
