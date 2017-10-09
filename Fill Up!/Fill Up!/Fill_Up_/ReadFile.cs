@@ -33,9 +33,6 @@ namespace Fill_Up_.Fill_Up_
                             break;
                     }
                 }
-            
-
-
         }
     }
 }

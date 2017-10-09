@@ -44,10 +44,9 @@
             this.pavadinimas.BackColor = System.Drawing.Color.Transparent;
             this.pavadinimas.Font = new System.Drawing.Font("Snap ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pavadinimas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pavadinimas.Location = new System.Drawing.Point(208, 53);
-            this.pavadinimas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pavadinimas.Location = new System.Drawing.Point(156, 43);
             this.pavadinimas.Name = "pavadinimas";
-            this.pavadinimas.Size = new System.Drawing.Size(222, 57);
+            this.pavadinimas.Size = new System.Drawing.Size(178, 45);
             this.pavadinimas.TabIndex = 0;
             this.pavadinimas.Text = "Fill Up!";
             this.pavadinimas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,10 +58,9 @@
             this.ivertintiBokala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ivertintiBokala.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ivertintiBokala.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ivertintiBokala.Location = new System.Drawing.Point(185, 203);
-            this.ivertintiBokala.Margin = new System.Windows.Forms.Padding(4);
+            this.ivertintiBokala.Location = new System.Drawing.Point(139, 165);
             this.ivertintiBokala.Name = "ivertintiBokala";
-            this.ivertintiBokala.Size = new System.Drawing.Size(276, 69);
+            this.ivertintiBokala.Size = new System.Drawing.Size(207, 56);
             this.ivertintiBokala.TabIndex = 1;
             this.ivertintiBokala.Text = "Įvertinti bokalą\r\n";
             this.ivertintiBokala.UseVisualStyleBackColor = false;
@@ -72,10 +70,9 @@
             // 
             this.bokalas.BackColor = System.Drawing.Color.Transparent;
             this.bokalas.Image = ((System.Drawing.Image)(resources.GetObject("bokalas.Image")));
-            this.bokalas.Location = new System.Drawing.Point(403, 30);
-            this.bokalas.Margin = new System.Windows.Forms.Padding(4);
+            this.bokalas.Location = new System.Drawing.Point(302, 24);
             this.bokalas.Name = "bokalas";
-            this.bokalas.Size = new System.Drawing.Size(169, 108);
+            this.bokalas.Size = new System.Drawing.Size(127, 88);
             this.bokalas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bokalas.TabIndex = 3;
             this.bokalas.TabStop = false;
@@ -87,10 +84,9 @@
             this.megstamiausiBarai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.megstamiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.megstamiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.megstamiausiBarai.Location = new System.Drawing.Point(119, 326);
-            this.megstamiausiBarai.Margin = new System.Windows.Forms.Padding(4);
+            this.megstamiausiBarai.Location = new System.Drawing.Point(89, 265);
             this.megstamiausiBarai.Name = "megstamiausiBarai";
-            this.megstamiausiBarai.Size = new System.Drawing.Size(416, 69);
+            this.megstamiausiBarai.Size = new System.Drawing.Size(312, 56);
             this.megstamiausiBarai.TabIndex = 4;
             this.megstamiausiBarai.Text = "Mano mėgstamiausi barai";
             this.megstamiausiBarai.UseVisualStyleBackColor = false;
@@ -102,10 +98,9 @@
             this.artimiausiBarai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.artimiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.artimiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.artimiausiBarai.Location = new System.Drawing.Point(185, 439);
-            this.artimiausiBarai.Margin = new System.Windows.Forms.Padding(4);
+            this.artimiausiBarai.Location = new System.Drawing.Point(139, 357);
             this.artimiausiBarai.Name = "artimiausiBarai";
-            this.artimiausiBarai.Size = new System.Drawing.Size(276, 69);
+            this.artimiausiBarai.Size = new System.Drawing.Size(207, 56);
             this.artimiausiBarai.TabIndex = 5;
             this.artimiausiBarai.Text = "Artimiausi barai";
             this.artimiausiBarai.UseVisualStyleBackColor = false;
@@ -113,19 +108,18 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(668, 657);
+            this.ClientSize = new System.Drawing.Size(501, 534);
             this.Controls.Add(this.artimiausiBarai);
             this.Controls.Add(this.megstamiausiBarai);
             this.Controls.Add(this.ivertintiBokala);
             this.Controls.Add(this.pavadinimas);
             this.Controls.Add(this.bokalas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.bokalas)).EndInit();
