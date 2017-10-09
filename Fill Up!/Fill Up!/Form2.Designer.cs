@@ -346,7 +346,8 @@ namespace Fill_Up_
 
         public void Form2_Load()
         {
-            this.domainUpDownRating.Text = "5";
+            this.domainUpDownRating.Text = "";
+            this.domainUpDownRating.Items.Add("5");
             this.domainUpDownRating.Items.Add("4");
             this.domainUpDownRating.Items.Add("3");
             this.domainUpDownRating.Items.Add("2");
