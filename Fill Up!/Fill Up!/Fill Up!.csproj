@@ -156,7 +156,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1680175 %282%291.jpg" />
   </ItemGroup>
@@ -166,6 +165,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1680175 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
