@@ -41,14 +41,14 @@ namespace Fill_Up_
 
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Zemelapis)
+                if (frm is Map)
                 {
                     frm.Show();
                     return;
                 }
             }
 
-            Zemelapis zemelapis = new Zemelapis();
+            Map zemelapis = new Map();
             zemelapis.Show();
         }
     }
