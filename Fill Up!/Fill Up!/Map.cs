@@ -12,46 +12,21 @@ namespace Fill_Up_
 {
     public partial class Map : Form
     {
-        public Map()
+        AllBars allBars;
+        public Map(AllBars a)
         {
             InitializeComponent();
-        }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void textBoxBaras_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string street = textBoxStreet.Text;
-            string city = textBoxCity.Text;
-            string bar = textBoxBar.Text;
+            string bar = "snekutis"; //pakeisti i rekomenduojama bara
 
             try
             {
                 StringBuilder queryadress = new StringBuilder();
-                queryadress.Append("http://maps.google.com/maps?q=");
-
-                if (street != string.Empty)
-                {
-                    queryadress.Append(street + "," + "+");
-                }
-
-                if (city != string.Empty)
-                {
-                    queryadress.Append(city + "," + "+");
-                }
+                queryadress.Append("https://www.google.lt/maps/search/");
 
                 if (bar != string.Empty)
                 {
-                    queryadress.Append(bar + "," + "+");
+                    queryadress.Append(bar);
                 }
 
                 webBrowser1.Navigate(queryadress.ToString());
@@ -61,6 +36,11 @@ namespace Fill_Up_
             {
                 MessageBox.Show(ex.Message.ToString(), "Error");
             }
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            
         }
     }
 }

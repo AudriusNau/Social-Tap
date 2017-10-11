@@ -1,6 +1,6 @@
 ﻿namespace Fill_Up_
 {
-    partial class Map
+    partial class Favorites
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.bar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // webBrowser1
+            // bar
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(668, 657);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.bar.AutoSize = true;
+            this.bar.BackColor = System.Drawing.Color.Transparent;
+            this.bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.bar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bar.Location = new System.Drawing.Point(164, 269);
+            this.bar.Name = "bar";
+            this.bar.Size = new System.Drawing.Size(341, 72);
+            this.bar.TabIndex = 29;
+            this.bar.Text = "Šiuo metu Jūs neturite \r\nmėgstamiausių barų.";
+            this.bar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bar.Click += new System.EventHandler(this.bar_Click);
             // 
-            // Map
+            // Favorites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Fill_Up_.Properties.Resources._1680175__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(668, 657);
-            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.bar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Map";
-            this.Text = "Žemėlapis";
+            this.Name = "Favorites";
+            this.Text = "Mėgstamiausi barai";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label bar;
     }
 }

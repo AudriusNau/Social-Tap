@@ -41,6 +41,7 @@
             this.lackOfBeer = new System.Windows.Forms.Label();
             this.priceOfBeer = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.showMap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -54,6 +55,7 @@
             this.label6.Size = new System.Drawing.Size(181, 24);
             this.label6.TabIndex = 24;
             this.label6.Text = "Baro pavadinimas:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
@@ -125,6 +127,7 @@
             this.barName.Size = new System.Drawing.Size(28, 24);
             this.barName.TabIndex = 32;
             this.barName.Text = "...";
+            this.barName.Click += new System.EventHandler(this.barName_Click);
             // 
             // barRating
             // 
@@ -183,10 +186,24 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(589, 304);
+            this.textBox1.Size = new System.Drawing.Size(589, 264);
             this.textBox1.TabIndex = 37;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // showMap
+            // 
+            this.showMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.showMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.showMap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.showMap.Location = new System.Drawing.Point(188, 571);
+            this.showMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.showMap.Name = "showMap";
+            this.showMap.Size = new System.Drawing.Size(315, 65);
+            this.showMap.TabIndex = 38;
+            this.showMap.Text = "Rodyti žemėlapyje";
+            this.showMap.UseVisualStyleBackColor = false;
+            this.showMap.Click += new System.EventHandler(this.showMap_Click);
             // 
             // Results
             // 
@@ -194,6 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(668, 657);
+            this.Controls.Add(this.showMap);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.priceOfBeer);
             this.Controls.Add(this.lackOfBeer);
@@ -206,6 +224,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Results";
             this.Text = "Rezultatai";
@@ -237,5 +256,6 @@
         private System.Windows.Forms.Label lackOfBeer;
         private System.Windows.Forms.Label priceOfBeer;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button showMap;
     }
 }

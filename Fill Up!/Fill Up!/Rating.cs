@@ -39,15 +39,24 @@ namespace Fill_Up_
             Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);
 
-            List<Bar> hehe = allBars.GetBarList();
+            List<Bar> hehe = allBars.GetBarList();  
             MessageBox.Show(hehe.Count.ToString());
 
             this.Hide();
-            Results frm3 = new Results(allBars, bar);
-            frm3.Show();
+            new Results(allBars, bar).Show();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBarName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

@@ -20,7 +20,17 @@ namespace Fill_Up_
         
         private void nearestBars_Click(object sender, EventArgs e)
         {
-            new Map().Show();
+            new FindInMap().Show();
+        }
+
+        private void favoriteBars_Click(object sender, EventArgs e)
+        {
+            new Favorites().Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

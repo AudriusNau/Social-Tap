@@ -30,5 +30,20 @@ namespace Fill_Up_
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showMap_Click(object sender, EventArgs e)
+        {
+            new Map(allBars).Show();
+        }
     }
 }

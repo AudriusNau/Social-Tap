@@ -176,7 +176,7 @@ namespace Fill_Up_
             this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.numericUpDown1.Location = new System.Drawing.Point(485, 286);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             20,
             0,
@@ -198,7 +198,7 @@ namespace Fill_Up_
             0,
             65536});
             this.numericUpDown2.Location = new System.Drawing.Point(233, 358);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10,
             0,
@@ -234,18 +234,20 @@ namespace Fill_Up_
             this.label6.Size = new System.Drawing.Size(277, 36);
             this.label6.TabIndex = 23;
             this.label6.Text = "Baro pavadinimas:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBarName
             // 
             this.textBarName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.textBarName.Location = new System.Drawing.Point(379, 90);
-            this.textBarName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBarName.Margin = new System.Windows.Forms.Padding(4);
             this.textBarName.Multiline = true;
             this.textBarName.Name = "textBarName";
             this.textBarName.Size = new System.Drawing.Size(236, 35);
             this.textBarName.TabIndex = 24;
             this.textBarName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBarName.TextChanged += new System.EventHandler(this.textBarName_TextChanged);
             // 
             // label7
             // 
@@ -265,7 +267,7 @@ namespace Fill_Up_
             this.domainUpDownRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.domainUpDownRating.InterceptArrowKeys = false;
             this.domainUpDownRating.Location = new System.Drawing.Point(340, 447);
-            this.domainUpDownRating.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.domainUpDownRating.Margin = new System.Windows.Forms.Padding(4);
             this.domainUpDownRating.Name = "domainUpDownRating";
             this.domainUpDownRating.Size = new System.Drawing.Size(79, 28);
             this.domainUpDownRating.TabIndex = 28;
