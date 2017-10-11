@@ -26,17 +26,9 @@ namespace Fill_Up_
             }
         }
 
-        private void back_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            this.Hide();
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Home)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
+
         }
     }
 }

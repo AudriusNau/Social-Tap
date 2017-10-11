@@ -23,20 +23,6 @@ namespace Fill_Up_
         }
 
 
-        private void atgal_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Home)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
-        }
-
         private void textBoxBaras_TextChanged(object sender, EventArgs e)
         {
 

@@ -15,41 +15,12 @@ namespace Fill_Up_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Rating)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
-
-            Rating f2 = new Rating(allBars);
-            f2.Show();
+            new Rating(allBars).Show();
         }
         
-        private void artimiausiBarai_Click(object sender, EventArgs e)
+        private void nearestBars_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void artimiausiBarai_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Map)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
-
-            Map zemelapis = new Map();
-            zemelapis.Show();
+            new Map().Show();
         }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button1 = new System.Windows.Forms.Button();
-            this.goBack = new System.Windows.Forms.Button();
             this.street = new System.Windows.Forms.Label();
             this.city = new System.Windows.Forms.Label();
             this.bar = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             // 
             this.splitContainer1.Panel1.BackgroundImage = global::Fill_Up_.Properties.Resources._1680175__2_;
             this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.goBack);
             this.splitContainer1.Panel1.Controls.Add(this.street);
             this.splitContainer1.Panel1.Controls.Add(this.city);
             this.splitContainer1.Panel1.Controls.Add(this.bar);
@@ -75,7 +73,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(38, 515);
+            this.button1.Location = new System.Drawing.Point(38, 571);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 51);
@@ -83,20 +81,6 @@
             this.button1.Text = "Ieškoti";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // goBack
-            // 
-            this.goBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.goBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.goBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.goBack.Location = new System.Drawing.Point(38, 584);
-            this.goBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.goBack.Name = "goBack";
-            this.goBack.Size = new System.Drawing.Size(148, 51);
-            this.goBack.TabIndex = 32;
-            this.goBack.Text = "Atgal";
-            this.goBack.UseVisualStyleBackColor = false;
-            this.goBack.Click += new System.EventHandler(this.atgal_Click);
             // 
             // street
             // 
@@ -191,7 +175,7 @@
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Map";
-            this.Text = "Bars";
+            this.Text = "Barai";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -211,7 +195,6 @@
         private System.Windows.Forms.Label bar;
         private System.Windows.Forms.Label street;
         private System.Windows.Forms.Label city;
-        private System.Windows.Forms.Button goBack;
         private System.Windows.Forms.Button button1;
     }
 }

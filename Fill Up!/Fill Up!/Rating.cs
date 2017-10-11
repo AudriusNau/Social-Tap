@@ -14,19 +14,6 @@ namespace Fill_Up_
             Form2_Load();
         }
 
-        private void back_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Home)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e) //issaugoti
         {
             GlassOfBeer glass = new GlassOfBeer();
