@@ -29,7 +29,7 @@ namespace Fill_Up_
 
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Form1)
+                if (frm is Home)
                 {
                     frm.Show();
                     return;

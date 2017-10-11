@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form2 : Form
+    public partial class Rating : Form
     {
         AllBars allBars;
-        public Form2(AllBars a)
+        public Rating(AllBars a)
         {
             allBars = a;
             InitializeComponent();
@@ -19,7 +19,7 @@ namespace Fill_Up_
             this.Hide();
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Form1)
+                if (frm is Home)
                 {
                     frm.Show();
                     return;
@@ -56,7 +56,7 @@ namespace Fill_Up_
             MessageBox.Show(hehe.Count.ToString());
 
             this.Hide();
-            Form3 frm3 = new Form3(allBars, bar);
+            Results frm3 = new Results(allBars, bar);
             frm3.Show();
         }
 

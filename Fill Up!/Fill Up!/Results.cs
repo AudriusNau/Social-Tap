@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form3 : Form
+    public partial class Results : Form
     {
         AllBars allBars;
-        public Form3(AllBars a, Bar bar)
+        public Results(AllBars a, Bar bar)
         {
             allBars = a;
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Fill_Up_
             this.Hide();
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Form1)
+                if (frm is Home)
                 {
                     frm.Show();
                     return;

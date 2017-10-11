@@ -1,6 +1,6 @@
 ﻿namespace Fill_Up_
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.pavadinimas = new System.Windows.Forms.Label();
             this.ivertintiBokala = new System.Windows.Forms.Button();
             this.bokalas = new System.Windows.Forms.PictureBox();

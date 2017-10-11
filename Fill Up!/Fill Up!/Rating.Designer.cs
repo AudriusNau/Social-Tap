@@ -2,7 +2,7 @@
 
 namespace Fill_Up_
 {
-    partial class Form2
+    partial class Rating
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Fill_Up_
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rating));
             this.back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();

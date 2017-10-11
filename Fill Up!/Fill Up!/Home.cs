@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
         AllBars allBars;
 
-        public Form1(AllBars a)
+        public Home(AllBars a)
         {
             allBars = a;
             InitializeComponent();
@@ -19,14 +19,14 @@ namespace Fill_Up_
 
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Form2)
+                if (frm is Rating)
                 {
                     frm.Show();
                     return;
                 }
             }
 
-            Form2 f2 = new Form2(allBars);
+            Rating f2 = new Rating(allBars);
             f2.Show();
         }
         
