@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Fill_Up_\AllBars.cs" />
     <Compile Include="Fill_Up_\Bar.cs" />
+    <Compile Include="Fill_Up_\ILoadable.cs" />
     <Compile Include="Fill_Up_\ReadFile.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>

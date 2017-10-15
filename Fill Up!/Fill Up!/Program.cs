@@ -10,6 +10,7 @@ namespace Fill_Up_
         static void Main()
         {
             AllBars allbars = new AllBars();
+
             ReadFile load = new ReadFile();
             load.LoadData();
             Application.EnableVisualStyles();
