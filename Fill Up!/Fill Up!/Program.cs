@@ -14,7 +14,7 @@ namespace Fill_Up_
             load.LoadData();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(allbars));
+            Application.Run(new Home(allbars));
         }
     }
 }

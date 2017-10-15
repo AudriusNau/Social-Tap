@@ -4,27 +4,14 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form2 : Form
+    public partial class Rating : Form
     {
         AllBars allBars;
-        public Form2(AllBars a)
+        public Rating(AllBars a)
         {
             allBars = a;
             InitializeComponent();
             Form2_Load();
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Form1)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
         }
 
         private void button1_Click(object sender, EventArgs e) //issaugoti
@@ -52,15 +39,24 @@ namespace Fill_Up_
             Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);
 
-            List<Bar> hehe = allBars.GetBarList();
+            List<Bar> hehe = allBars.GetBarList();  
             MessageBox.Show(hehe.Count.ToString());
 
             this.Hide();
-            Form3 frm3 = new Form3(allBars, bar);
-            frm3.Show();
+            new Results(allBars, bar).Show();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBarName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

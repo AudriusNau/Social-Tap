@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace Fill_Up_
 {
-    public partial class Form3 : Form
+    public partial class Results : Form
     {
         AllBars allBars;
-        public Form3(AllBars a, Bar bar)
+        public Results(AllBars a, Bar bar)
         {
             allBars = a;
             InitializeComponent();
@@ -26,17 +26,24 @@ namespace Fill_Up_
             }
         }
 
-        private void back_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            this.Hide();
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm is Form1)
-                {
-                    frm.Show();
-                    return;
-                }
-            }
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showMap_Click(object sender, EventArgs e)
+        {
+            new Map(allBars).Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Fill_Up_
 {
-    partial class Form3
+    partial class Results
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Results));
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.lackOfBeer = new System.Windows.Forms.Label();
             this.priceOfBeer = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.back = new System.Windows.Forms.Button();
+            this.showMap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -50,12 +50,12 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(28, 62);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(37, 76);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 18);
+            this.label6.Size = new System.Drawing.Size(181, 24);
             this.label6.TabIndex = 24;
             this.label6.Text = "Baro pavadinimas:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
@@ -63,10 +63,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(28, 90);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(37, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 18);
+            this.label1.Size = new System.Drawing.Size(109, 24);
             this.label1.TabIndex = 25;
             this.label1.Text = "Įvertinimas";
             // 
@@ -76,10 +75,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(28, 120);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(37, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 18);
+            this.label2.Size = new System.Drawing.Size(253, 24);
             this.label2.TabIndex = 26;
             this.label2.Text = "Užsakyto alaus kiekis: (ml)";
             // 
@@ -89,10 +87,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(28, 149);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(37, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 18);
+            this.label3.Size = new System.Drawing.Size(158, 24);
             this.label3.TabIndex = 27;
             this.label3.Text = "Nedapilta: (mm)";
             // 
@@ -102,10 +99,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(28, 179);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(37, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 18);
+            this.label4.Size = new System.Drawing.Size(68, 24);
             this.label4.TabIndex = 28;
             this.label4.Text = "Kaina:";
             // 
@@ -115,10 +111,9 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(243, 163);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(324, 201);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 24);
+            this.label8.Size = new System.Drawing.Size(0, 29);
             this.label8.TabIndex = 31;
             // 
             // barName
@@ -127,12 +122,12 @@
             this.barName.BackColor = System.Drawing.Color.Transparent;
             this.barName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.barName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.barName.Location = new System.Drawing.Point(264, 62);
-            this.barName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.barName.Location = new System.Drawing.Point(352, 76);
             this.barName.Name = "barName";
-            this.barName.Size = new System.Drawing.Size(23, 18);
+            this.barName.Size = new System.Drawing.Size(28, 24);
             this.barName.TabIndex = 32;
             this.barName.Text = "...";
+            this.barName.Click += new System.EventHandler(this.barName_Click);
             // 
             // barRating
             // 
@@ -140,10 +135,9 @@
             this.barRating.BackColor = System.Drawing.Color.Transparent;
             this.barRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.barRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.barRating.Location = new System.Drawing.Point(264, 90);
-            this.barRating.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.barRating.Location = new System.Drawing.Point(352, 111);
             this.barRating.Name = "barRating";
-            this.barRating.Size = new System.Drawing.Size(23, 18);
+            this.barRating.Size = new System.Drawing.Size(28, 24);
             this.barRating.TabIndex = 33;
             this.barRating.Text = "...";
             // 
@@ -153,10 +147,9 @@
             this.orderedBeer.BackColor = System.Drawing.Color.Transparent;
             this.orderedBeer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.orderedBeer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.orderedBeer.Location = new System.Drawing.Point(264, 120);
-            this.orderedBeer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.orderedBeer.Location = new System.Drawing.Point(352, 148);
             this.orderedBeer.Name = "orderedBeer";
-            this.orderedBeer.Size = new System.Drawing.Size(23, 18);
+            this.orderedBeer.Size = new System.Drawing.Size(28, 24);
             this.orderedBeer.TabIndex = 34;
             this.orderedBeer.Text = "...";
             // 
@@ -166,10 +159,9 @@
             this.lackOfBeer.BackColor = System.Drawing.Color.Transparent;
             this.lackOfBeer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.lackOfBeer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lackOfBeer.Location = new System.Drawing.Point(264, 149);
-            this.lackOfBeer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lackOfBeer.Location = new System.Drawing.Point(352, 183);
             this.lackOfBeer.Name = "lackOfBeer";
-            this.lackOfBeer.Size = new System.Drawing.Size(23, 18);
+            this.lackOfBeer.Size = new System.Drawing.Size(28, 24);
             this.lackOfBeer.TabIndex = 35;
             this.lackOfBeer.Text = "...";
             // 
@@ -179,10 +171,9 @@
             this.priceOfBeer.BackColor = System.Drawing.Color.Transparent;
             this.priceOfBeer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.priceOfBeer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.priceOfBeer.Location = new System.Drawing.Point(264, 179);
-            this.priceOfBeer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.priceOfBeer.Location = new System.Drawing.Point(352, 220);
             this.priceOfBeer.Name = "priceOfBeer";
-            this.priceOfBeer.Size = new System.Drawing.Size(23, 18);
+            this.priceOfBeer.Size = new System.Drawing.Size(28, 24);
             this.priceOfBeer.TabIndex = 36;
             this.priceOfBeer.Text = "...";
             // 
@@ -190,35 +181,37 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.textBox1.Location = new System.Drawing.Point(31, 221);
+            this.textBox1.Location = new System.Drawing.Point(41, 272);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(443, 200);
+            this.textBox1.Size = new System.Drawing.Size(589, 264);
             this.textBox1.TabIndex = 37;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // back
+            // showMap
             // 
-            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.back.Location = new System.Drawing.Point(117, 452);
-            this.back.Margin = new System.Windows.Forms.Padding(2);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(274, 53);
-            this.back.TabIndex = 38;
-            this.back.Text = "Grįžti į pagrindinį puslapį";
-            this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
+            this.showMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.showMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.showMap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.showMap.Location = new System.Drawing.Point(188, 571);
+            this.showMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.showMap.Name = "showMap";
+            this.showMap.Size = new System.Drawing.Size(315, 65);
+            this.showMap.TabIndex = 38;
+            this.showMap.Text = "Rodyti žemėlapyje";
+            this.showMap.UseVisualStyleBackColor = false;
+            this.showMap.Click += new System.EventHandler(this.showMap_Click);
             // 
-            // Form3
+            // Results
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(501, 534);
-            this.Controls.Add(this.back);
+            this.ClientSize = new System.Drawing.Size(668, 657);
+            this.Controls.Add(this.showMap);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.priceOfBeer);
             this.Controls.Add(this.lackOfBeer);
@@ -231,7 +224,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
-            this.Name = "Form3";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Results";
             this.Text = "Rezultatai";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -261,6 +256,6 @@
         private System.Windows.Forms.Label lackOfBeer;
         private System.Windows.Forms.Label priceOfBeer;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button showMap;
     }
 }
