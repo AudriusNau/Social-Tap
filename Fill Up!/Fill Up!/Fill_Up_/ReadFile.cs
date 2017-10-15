@@ -16,12 +16,11 @@ namespace Fill_Up_.Fill_Up_
         private double mug;
         private int lackOfBeer;
         private decimal price;
-        public GlassOfBeer glass { get; set; }
         public void LoadData()
         { 
            
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
-            GlassOfBeer glass = new GlassOfBeer();
+            AllBars allBars = new AllBars();
 
             
             using (System.IO.StreamWriter writer = 
@@ -55,7 +54,10 @@ namespace Fill_Up_.Fill_Up_
                     }
                     if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="bar")
                         {
-                        //glass.GlassOfBeer(mug, lackOfBeer, price);
+                        GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
+                        Bar bar = new Bar(name, rating, glass);
+                        allBars.AddNewBar(bar);
+                        writer.Write(allBars.GetBarList());
                     }
                     
             }

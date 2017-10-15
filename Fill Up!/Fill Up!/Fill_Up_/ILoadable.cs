@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 namespace Fill_Up_.Fill_Up_
 {
     interface ILoadable
-    { string name { get; set; }
+    { string name{ get; set; }
       int rating { get; set; }
-      GlassOfBeer glass { get; set; }
-
+      
         void LoadData();
         
     }
