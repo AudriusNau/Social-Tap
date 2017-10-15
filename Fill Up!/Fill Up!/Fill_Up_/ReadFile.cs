@@ -10,13 +10,13 @@ namespace Fill_Up_.Fill_Up_
 {
     class ReadFile
     {
-        public static void ReadingFile()
+        public void LoadData ()
         {
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
             using (System.IO.StreamWriter writer = 
                 new System.IO.StreamWriter(@"Rez.txt", false))
-
-                while (reader.Read())
+                
+            while (reader.Read())
                 {
                     switch (reader.NodeType)
                     {
@@ -33,9 +33,9 @@ namespace Fill_Up_.Fill_Up_
                             break;
                     }
                 }
-            
 
 
+           
         }
     }
 }
