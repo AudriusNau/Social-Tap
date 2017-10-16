@@ -6,6 +6,7 @@ namespace Fill_Up_
     public partial class Results : Form
     {
         AllBars allBars;
+
         public Results(AllBars a, Bar bar)
         {
             allBars = a;
@@ -14,11 +15,13 @@ namespace Fill_Up_
 
             Bar betterBar = allBars.FindBetterBar(bar);
             Bar cheaperBar = allBars.FindCheaperBar(bar);
-
+            
             if(betterBar != cheaperBar)
             {
-                textBox1.Text = "Sąžiningai alaus įpiltų bare: " + betterBar.Name;
-                textBox1.Text += "Pigesnis alus bare: " + cheaperBar.Name;
+                if(betterBar.Rating >= cheaperBar.Rating)
+                    textBox1.Text = "Apsimoka eiti į barą: " + betterBar.Name;
+                  else
+                    textBox1.Text = "Apsimoka eiti į barą: " + cheaperBar.Name;
             }
             else
             {
@@ -44,6 +47,11 @@ namespace Fill_Up_
         private void showMap_Click(object sender, EventArgs e)
         {
             new Map(allBars).Show();
+        }
+
+        private void Results_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
