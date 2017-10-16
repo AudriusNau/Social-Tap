@@ -10,7 +10,7 @@ namespace Fill_Up_.Fill_Up_
     { string name{ get; set; }
       int rating { get; set; }
       
-        void LoadData();
+        void LoadData(AllBars allbars);
         
     }
 }

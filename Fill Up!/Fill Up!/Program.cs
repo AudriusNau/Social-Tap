@@ -12,7 +12,7 @@ namespace Fill_Up_
             AllBars allbars = new AllBars();
 
             ReadFile load = new ReadFile();
-            load.LoadData();
+            load.LoadData(allbars);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home(allbars));
