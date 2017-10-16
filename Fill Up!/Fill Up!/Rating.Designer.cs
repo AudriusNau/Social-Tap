@@ -57,9 +57,10 @@ namespace Fill_Up_
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(51, 166);
+            this.label1.Location = new System.Drawing.Point(38, 135);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 36);
+            this.label1.Size = new System.Drawing.Size(268, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Užsakyto alaus kiekis:";
             // 
@@ -69,9 +70,10 @@ namespace Fill_Up_
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(51, 277);
+            this.label2.Location = new System.Drawing.Point(38, 225);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(382, 36);
+            this.label2.Size = new System.Drawing.Size(316, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Kiek mm trūksta iki linijos:";
             // 
@@ -81,9 +83,10 @@ namespace Fill_Up_
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(53, 358);
+            this.label3.Location = new System.Drawing.Point(40, 291);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 36);
+            this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Kaina:";
             // 
@@ -93,10 +96,10 @@ namespace Fill_Up_
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.radioButton1.Location = new System.Drawing.Point(415, 166);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton1.Location = new System.Drawing.Point(311, 135);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 40);
+            this.radioButton1.Size = new System.Drawing.Size(73, 33);
             this.radioButton1.TabIndex = 5;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "0,3l";
@@ -108,10 +111,10 @@ namespace Fill_Up_
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.radioButton2.Location = new System.Drawing.Point(509, 166);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton2.Location = new System.Drawing.Point(382, 135);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 40);
+            this.radioButton2.Size = new System.Drawing.Size(73, 33);
             this.radioButton2.TabIndex = 6;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "0,4l";
@@ -123,10 +126,10 @@ namespace Fill_Up_
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.radioButton3.Location = new System.Drawing.Point(415, 214);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton3.Location = new System.Drawing.Point(311, 174);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(89, 40);
+            this.radioButton3.Size = new System.Drawing.Size(73, 33);
             this.radioButton3.TabIndex = 7;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "0,5l";
@@ -138,10 +141,10 @@ namespace Fill_Up_
             this.radioButton4.BackColor = System.Drawing.Color.Transparent;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.radioButton4.Location = new System.Drawing.Point(509, 214);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton4.Location = new System.Drawing.Point(382, 174);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(62, 40);
+            this.radioButton4.Size = new System.Drawing.Size(52, 33);
             this.radioButton4.TabIndex = 8;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "1l";
@@ -153,9 +156,10 @@ namespace Fill_Up_
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(333, 358);
+            this.label4.Location = new System.Drawing.Point(250, 291);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 36);
+            this.label4.Size = new System.Drawing.Size(34, 29);
             this.label4.TabIndex = 15;
             this.label4.Text = " €";
             // 
@@ -165,9 +169,10 @@ namespace Fill_Up_
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(585, 277);
+            this.label5.Location = new System.Drawing.Point(439, 225);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 36);
+            this.label5.Size = new System.Drawing.Size(62, 29);
             this.label5.TabIndex = 16;
             this.label5.Text = " mm";
             // 
@@ -175,15 +180,14 @@ namespace Fill_Up_
             // 
             this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown1.Location = new System.Drawing.Point(485, 286);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown1.Location = new System.Drawing.Point(364, 232);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(93, 28);
+            this.numericUpDown1.Size = new System.Drawing.Size(70, 24);
             this.numericUpDown1.TabIndex = 17;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -197,15 +201,14 @@ namespace Fill_Up_
             0,
             0,
             65536});
-            this.numericUpDown2.Location = new System.Drawing.Point(233, 358);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown2.Location = new System.Drawing.Point(175, 291);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(93, 28);
+            this.numericUpDown2.Size = new System.Drawing.Size(70, 24);
             this.numericUpDown2.TabIndex = 18;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -214,10 +217,10 @@ namespace Fill_Up_
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(419, 562);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(314, 457);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 65);
+            this.button1.Size = new System.Drawing.Size(164, 53);
             this.button1.TabIndex = 22;
             this.button1.Text = "Išsaugoti";
             this.button1.UseVisualStyleBackColor = false;
@@ -229,9 +232,10 @@ namespace Fill_Up_
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(51, 90);
+            this.label6.Location = new System.Drawing.Point(38, 73);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(277, 36);
+            this.label6.Size = new System.Drawing.Size(228, 29);
             this.label6.TabIndex = 23;
             this.label6.Text = "Baro pavadinimas:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -240,11 +244,10 @@ namespace Fill_Up_
             // 
             this.textBarName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.textBarName.Location = new System.Drawing.Point(379, 90);
-            this.textBarName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBarName.Location = new System.Drawing.Point(284, 73);
             this.textBarName.Multiline = true;
             this.textBarName.Name = "textBarName";
-            this.textBarName.Size = new System.Drawing.Size(236, 35);
+            this.textBarName.Size = new System.Drawing.Size(178, 29);
             this.textBarName.TabIndex = 24;
             this.textBarName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBarName.TextChanged += new System.EventHandler(this.textBarName_TextChanged);
@@ -255,9 +258,10 @@ namespace Fill_Up_
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(51, 436);
+            this.label7.Location = new System.Drawing.Point(38, 354);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(251, 36);
+            this.label7.Size = new System.Drawing.Size(208, 29);
             this.label7.TabIndex = 25;
             this.label7.Text = "Baro įvertinimas:";
             // 
@@ -266,20 +270,19 @@ namespace Fill_Up_
             this.domainUpDownRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.domainUpDownRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.domainUpDownRating.InterceptArrowKeys = false;
-            this.domainUpDownRating.Location = new System.Drawing.Point(340, 447);
-            this.domainUpDownRating.Margin = new System.Windows.Forms.Padding(4);
+            this.domainUpDownRating.Location = new System.Drawing.Point(255, 363);
             this.domainUpDownRating.Name = "domainUpDownRating";
-            this.domainUpDownRating.Size = new System.Drawing.Size(79, 28);
+            this.domainUpDownRating.Size = new System.Drawing.Size(59, 24);
             this.domainUpDownRating.TabIndex = 28;
             this.domainUpDownRating.Text = "5";
             this.domainUpDownRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Rating
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(668, 657);
+            this.ClientSize = new System.Drawing.Size(501, 534);
             this.Controls.Add(this.domainUpDownRating);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBarName);
@@ -297,9 +300,10 @@ namespace Fill_Up_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Rating";
             this.Text = "Įvertinti bokalą";
+            this.Load += new System.EventHandler(this.Rating_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);

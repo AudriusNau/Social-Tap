@@ -62,5 +62,10 @@ namespace Fill_Up_
                 MessageBox.Show(ex.Message.ToString(), "Error");
             }
         }
+
+        private void FindInMap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

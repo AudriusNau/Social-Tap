@@ -39,9 +39,6 @@ namespace Fill_Up_
             Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);
 
-            List<Bar> hehe = allBars.GetBarList();  
-            MessageBox.Show(hehe.Count.ToString());
-
             this.Hide();
             new Results(allBars, bar).Show();
         }
@@ -57,6 +54,11 @@ namespace Fill_Up_
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rating_Load(object sender, EventArgs e)
         {
 
         }
