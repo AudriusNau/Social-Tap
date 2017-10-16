@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <Bars>
   <Bar>
-    <name>ne Busi trecias</name>
+    <name>Busi trecias</name>
     <mug>0.5</mug>
     <mmless>2</mmless>
     <price>2.0</price>
@@ -22,7 +22,7 @@
     <rating>4</rating>
   </Bar>
   <Bar>
-    <name>Laiko baras</name>
+    <name>Laiko ratas</name>
     <mug>0.4</mug>
     <mmless>4</mmless>
     <price>3</price>

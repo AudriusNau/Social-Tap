@@ -1,6 +1,6 @@
 ﻿namespace Fill_Up_
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.pavadinimas = new System.Windows.Forms.Label();
             this.ivertintiBokala = new System.Windows.Forms.Button();
             this.bokalas = new System.Windows.Forms.PictureBox();
-            this.megstamiausiBarai = new System.Windows.Forms.Button();
-            this.artimiausiBarai = new System.Windows.Forms.Button();
+            this.nearestBars = new System.Windows.Forms.Button();
+            this.favoriteBars = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bokalas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,37 +80,39 @@
             this.bokalas.TabIndex = 3;
             this.bokalas.TabStop = false;
             // 
-            // megstamiausiBarai
+            // nearestBars
             // 
-            this.megstamiausiBarai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.megstamiausiBarai.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.megstamiausiBarai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.megstamiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.megstamiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.megstamiausiBarai.Location = new System.Drawing.Point(119, 326);
-            this.megstamiausiBarai.Margin = new System.Windows.Forms.Padding(4);
-            this.megstamiausiBarai.Name = "megstamiausiBarai";
-            this.megstamiausiBarai.Size = new System.Drawing.Size(416, 69);
-            this.megstamiausiBarai.TabIndex = 4;
-            this.megstamiausiBarai.Text = "Mano mėgstamiausi barai";
-            this.megstamiausiBarai.UseVisualStyleBackColor = false;
+            this.nearestBars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.nearestBars.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.nearestBars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nearestBars.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nearestBars.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.nearestBars.Location = new System.Drawing.Point(185, 429);
+            this.nearestBars.Margin = new System.Windows.Forms.Padding(4);
+            this.nearestBars.Name = "nearestBars";
+            this.nearestBars.Size = new System.Drawing.Size(276, 69);
+            this.nearestBars.TabIndex = 6;
+            this.nearestBars.Text = "Artimiausi barai";
+            this.nearestBars.UseVisualStyleBackColor = false;
+            this.nearestBars.Click += new System.EventHandler(this.nearestBars_Click);
             // 
-            // artimiausiBarai
+            // favoriteBars
             // 
-            this.artimiausiBarai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.artimiausiBarai.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.artimiausiBarai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.artimiausiBarai.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.artimiausiBarai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.artimiausiBarai.Location = new System.Drawing.Point(185, 439);
-            this.artimiausiBarai.Margin = new System.Windows.Forms.Padding(4);
-            this.artimiausiBarai.Name = "artimiausiBarai";
-            this.artimiausiBarai.Size = new System.Drawing.Size(276, 69);
-            this.artimiausiBarai.TabIndex = 5;
-            this.artimiausiBarai.Text = "Artimiausi barai";
-            this.artimiausiBarai.UseVisualStyleBackColor = false;
+            this.favoriteBars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.favoriteBars.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.favoriteBars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.favoriteBars.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.favoriteBars.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.favoriteBars.Location = new System.Drawing.Point(161, 319);
+            this.favoriteBars.Margin = new System.Windows.Forms.Padding(4);
+            this.favoriteBars.Name = "favoriteBars";
+            this.favoriteBars.Size = new System.Drawing.Size(319, 69);
+            this.favoriteBars.TabIndex = 7;
+            this.favoriteBars.Text = "Mėgstamiausi barai";
+            this.favoriteBars.UseVisualStyleBackColor = false;
+            this.favoriteBars.Click += new System.EventHandler(this.favoriteBars_Click);
             // 
-            // Form1
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,15 +120,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(668, 657);
-            this.Controls.Add(this.artimiausiBarai);
-            this.Controls.Add(this.megstamiausiBarai);
+            this.Controls.Add(this.favoriteBars);
+            this.Controls.Add(this.nearestBars);
             this.Controls.Add(this.ivertintiBokala);
             this.Controls.Add(this.pavadinimas);
             this.Controls.Add(this.bokalas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
-            this.Text = "Home";           
+            this.Name = "Home";
+            this.Text = "Pradžia";
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bokalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,8 +141,8 @@
         private System.Windows.Forms.Label pavadinimas;
         private System.Windows.Forms.Button ivertintiBokala;
         private System.Windows.Forms.PictureBox bokalas;
-        private System.Windows.Forms.Button megstamiausiBarai;
-        private System.Windows.Forms.Button artimiausiBarai;
+        private System.Windows.Forms.Button nearestBars;
+        private System.Windows.Forms.Button favoriteBars;
     }
 }
 
