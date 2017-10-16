@@ -8,31 +8,62 @@ using System.Xml;
 
 namespace Fill_Up_.Fill_Up_
 {
-    class ReadFile
+    class  ReadFile: ILoadable
     {
-        public static void ReadingFile()
-        {
+
+        public string name { get; set; }
+        public int rating { get; set; }
+        private double mug;
+        private int lackOfBeer;
+        private decimal price;
+        public void LoadData()
+        { 
+           
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
+            AllBars allBars = new AllBars();
+
+            
             using (System.IO.StreamWriter writer = 
                 new System.IO.StreamWriter(@"Rez.txt", false))
-
-                while (reader.Read())
-                {
-                    switch (reader.NodeType)
+                
+            while (reader.Read())
+            {
+                    if (reader.NodeType== XmlNodeType.Element)
                     {
-                        case XmlNodeType.Element: // The node is an element.
-                            writer.Write("<" + reader.Name);
-                            writer.Write(">");
-                            break;
-                        case XmlNodeType.Text: //Display the text in each element.
-                            writer.Write(reader.Value);
-                            break;
-                        case XmlNodeType.EndElement: //Display the end of the element.
-                            writer.Write("</" + reader.Name);
-                            writer.WriteLine(">");
-                            break;
+                           
+                        switch (reader.Name)
+                        { case "name":
+                                this.name=reader.ReadElementContentAsString();
+
+                                break;
+                            case "mug":
+                                this.mug= reader.ReadElementContentAsDouble();
+                                break;
+
+                            case "lackOfBeer":
+                                this.lackOfBeer = reader.ReadElementContentAsInt();
+                                break;
+
+                            case "price":
+                                this.price = reader.ReadElementContentAsDecimal();
+                                break;
+                            case "rating":
+                                this.rating = reader.ReadElementContentAsInt();
+                                break;
+                        }
                     }
-                }
+                    if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="bar")
+                        {
+                        GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
+                        Bar bar = new Bar(name, rating, glass);
+                        allBars.AddNewBar(bar);
+                        writer.Write(allBars.GetBarList());
+                    }
+                    
+            }
+
+
+           
         }
     }
 }

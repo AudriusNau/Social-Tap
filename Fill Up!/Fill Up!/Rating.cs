@@ -20,7 +20,7 @@ namespace Fill_Up_
 
             glass.lackOfBeer = (int)numericUpDown1.Value;
             glass.price = numericUpDown2.Value;
-
+                                                //reiktu pakeisti i switch
             if (radioButton1.Checked == true)
             {
                 glass.orderedQuantity = 0.3;
