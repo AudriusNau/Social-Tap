@@ -6,6 +6,7 @@ namespace Fill_Up_
     public partial class Results : Form
     {
         AllBars allBars;
+        string currentBar;
         public Results(AllBars a, Bar bar)
         {
             allBars = a;
@@ -23,6 +24,7 @@ namespace Fill_Up_
             else
             {
                 textBox1.Text = "Apsimoka eiti į barą: " + cheaperBar.Name;
+                this.currentBar = cheaperBar.Name;
             }
         }
 
@@ -43,7 +45,7 @@ namespace Fill_Up_
 
         private void showMap_Click(object sender, EventArgs e)
         {
-            new Map(allBars).Show();
+            new Map(currentBar).Show();
         }
     }
 }
