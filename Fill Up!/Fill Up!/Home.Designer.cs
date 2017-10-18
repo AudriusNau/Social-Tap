@@ -59,10 +59,10 @@
             this.ivertintiBokala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ivertintiBokala.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ivertintiBokala.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ivertintiBokala.Location = new System.Drawing.Point(185, 203);
+            this.ivertintiBokala.Location = new System.Drawing.Point(161, 203);
             this.ivertintiBokala.Margin = new System.Windows.Forms.Padding(4);
             this.ivertintiBokala.Name = "ivertintiBokala";
-            this.ivertintiBokala.Size = new System.Drawing.Size(276, 69);
+            this.ivertintiBokala.Size = new System.Drawing.Size(319, 69);
             this.ivertintiBokala.TabIndex = 1;
             this.ivertintiBokala.Text = "Įvertinti bokalą\r\n";
             this.ivertintiBokala.UseVisualStyleBackColor = false;
@@ -87,10 +87,10 @@
             this.nearestBars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nearestBars.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nearestBars.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.nearestBars.Location = new System.Drawing.Point(185, 429);
+            this.nearestBars.Location = new System.Drawing.Point(161, 429);
             this.nearestBars.Margin = new System.Windows.Forms.Padding(4);
             this.nearestBars.Name = "nearestBars";
-            this.nearestBars.Size = new System.Drawing.Size(276, 69);
+            this.nearestBars.Size = new System.Drawing.Size(319, 69);
             this.nearestBars.TabIndex = 6;
             this.nearestBars.Text = "Artimiausi barai";
             this.nearestBars.UseVisualStyleBackColor = false;

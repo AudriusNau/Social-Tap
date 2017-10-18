@@ -37,7 +37,7 @@ namespace Fill_Up_
             try
             {
                 StringBuilder queryadress = new StringBuilder();
-                queryadress.Append("https://www.google.lt/maps/search/");
+                queryadress.Append("http://maps.google.com/maps?q=");
 
                 if (street != string.Empty)
                 {
@@ -61,6 +61,11 @@ namespace Fill_Up_
             {
                 MessageBox.Show(ex.Message.ToString(), "Error");
             }
+        }
+
+        private void FindInMap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
