@@ -12,17 +12,16 @@ namespace Fill_Up_
 {
     public partial class Map : Form
     {
-        AllBars allBars;
-        public Map(AllBars a)
+        public Map(string currentBar)
         {
             InitializeComponent();
 
-            string bar = "snekutis"; //pakeisti i rekomenduojama bara
+            string bar = currentBar;
 
             try
             {
                 StringBuilder queryadress = new StringBuilder();
-                queryadress.Append("https://www.google.lt/maps/search/");
+                queryadress.Append("http://maps.google.com/maps?q=");
 
                 if (bar != string.Empty)
                 {
