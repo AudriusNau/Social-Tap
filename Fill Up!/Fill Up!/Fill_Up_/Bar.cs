@@ -1,6 +1,9 @@
-﻿namespace Fill_Up_
+﻿using System.Collections.Generic;
+using System;
+
+namespace Fill_Up_
 {
-    public class Bar
+    public class Bar : IComparable <Bar>
     {
         public string Name { get; set; }
         public int Rating { get; set; }
@@ -18,6 +21,11 @@
             Name = name;
             Rating = rating;
             Glass = glass;
+        }
+
+        public int CompareTo(Bar other)
+        {
+            return this.Name.CompareTo(other.Name);
         }
     }
 }
