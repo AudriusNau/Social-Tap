@@ -21,7 +21,7 @@ namespace Fill_Up_
             try
             {
                 StringBuilder queryadress = new StringBuilder();
-                queryadress.Append("https://maps.google.com/maps?q=");
+                queryadress.Append("http://maps.google.com/maps?q=");
 
                 if (bar != string.Empty)
                 {
