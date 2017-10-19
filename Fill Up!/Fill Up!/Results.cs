@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace Fill_Up_
 {
     public partial class Results : Form
     {
+        private const string resxFile = @".\Results.resx";
         AllBars allBars;
 
         public Results(AllBars a, Bar bar)
@@ -19,13 +21,13 @@ namespace Fill_Up_
             if(betterBar != cheaperBar)
             {
                 if(betterBar.Rating >= cheaperBar.Rating)
-                    textBox1.Text = "Apsimoka eiti į barą: " + betterBar.Name;
+                    textBox1.Text = Results1.Message + betterBar.Name;
                   else
-                    textBox1.Text = "Apsimoka eiti į barą: " + cheaperBar.Name;
+                    textBox1.Text = Results1.Message + cheaperBar.Name;
             }
             else
             {
-                textBox1.Text = "Apsimoka eiti į barą: " + cheaperBar.Name;
+                textBox1.Text = Results1.Message + cheaperBar.Name;
             }
         }
 

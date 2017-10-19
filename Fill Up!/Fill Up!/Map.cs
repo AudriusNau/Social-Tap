@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Resources;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Fill_Up_
 {
     public partial class Map : Form
     {
+        private const string resxFile = @".\Map.resx";
+        ResourceManager rm = new ResourceManager(resxFile, typeof(Map).Assembly);
         AllBars allBars;
         public Map(AllBars a)
         {
@@ -34,7 +37,7 @@ namespace Fill_Up_
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Error");
+                MessageBox.Show(ex.Message.ToString(), rm.GetString("Error"));
             }
         }
 

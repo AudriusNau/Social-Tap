@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fill_Up_.Properties {
+namespace Fill_Up_ {
     using System;
     
     
@@ -22,24 +22,24 @@ namespace Fill_Up_.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class FindInMap1 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal FindInMap1() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Fill_Up_.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Fill_Up_.FindInMap", typeof(FindInMap).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Fill_Up_.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,30 +61,29 @@ namespace Fill_Up_.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to ,.
         /// </summary>
-        internal static System.Drawing.Bitmap _1680175__2_ {
+        public static string Comma {
             get {
-                object obj = ResourceManager.GetObject("1680175 (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Comma", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data.xml.
+        ///   Looks up a localized string similar to Error!.
         /// </summary>
-        internal static string DataFile {
+        public static string Error {
             get {
-                return ResourceManager.GetString("DataFile", resourceCulture);
+                return ResourceManager.GetString("Error", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rez.txt.
+        ///   Looks up a localized string similar to +.
         /// </summary>
-        internal static string ResultsFile {
+        public static string Plus {
             get {
-                return ResourceManager.GetString("ResultsFile", resourceCulture);
+                return ResourceManager.GetString("Plus", resourceCulture);
             }
         }
     }
