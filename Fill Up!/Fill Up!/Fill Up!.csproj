@@ -88,6 +88,11 @@
     <Compile Include="Map.Designer.cs">
       <DependentUpon>Map.cs</DependentUpon>
     </Compile>
+    <Compile Include="Map1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Map.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +132,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Map.resx">
       <DependentUpon>Map.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Map1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rating.resx">
       <DependentUpon>Rating.cs</DependentUpon>

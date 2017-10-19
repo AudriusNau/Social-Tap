@@ -34,7 +34,7 @@ namespace Fill_Up_
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), rm.GetString("Error"));
+                MessageBox.Show(ex.Message.ToString(), Map1.Error);
             }
         }
 
