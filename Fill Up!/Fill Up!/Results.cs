@@ -21,13 +21,21 @@ namespace Fill_Up_
             if(betterBar != cheaperBar)
             {
                 if(betterBar.Rating >= cheaperBar.Rating)
+                {
                     textBox1.Text = Results1.Message + betterBar.Name;
+                    currentBar = betterBar.Name;
+                }
                   else
-                    textBox1.Text = Results1.Message + cheaperBar.Name;
+                  {
+                      textBox1.Text = Results1.Message + cheaperBar.Name;
+                      currentBar = betterBar.Name;
+                  }
+                   
             }
             else
             {
                 textBox1.Text = Results1.Message + cheaperBar.Name;
+                currentBar = betterBar.Name;
             }
         }
 
@@ -48,7 +56,8 @@ namespace Fill_Up_
 
         private void showMap_Click(object sender, EventArgs e)
         {
-            new Map(currentBar).Show();
+
+            new Map(this.currentBar).Show();
         }
 
         private void Results_Load(object sender, EventArgs e)
