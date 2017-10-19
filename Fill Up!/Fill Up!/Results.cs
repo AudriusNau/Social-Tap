@@ -8,7 +8,7 @@ namespace Fill_Up_
     {
         private const string resxFile = @".\Results.resx";
         AllBars allBars;
-
+        string currentBar;
         public Results(AllBars a, Bar bar)
         {
             allBars = a;
@@ -48,7 +48,7 @@ namespace Fill_Up_
 
         private void showMap_Click(object sender, EventArgs e)
         {
-            new Map(allBars).Show();
+            new Map(currentBar).Show();
         }
 
         private void Results_Load(object sender, EventArgs e)

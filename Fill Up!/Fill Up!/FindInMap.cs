@@ -41,7 +41,7 @@ namespace Fill_Up_
             try
             {
                 StringBuilder queryadress = new StringBuilder();
-                queryadress.Append("https://www.google.lt/maps/search/");
+                queryadress.Append("http://maps.google.com/maps?q=");
 
                 if (street != string.Empty)
                 {
