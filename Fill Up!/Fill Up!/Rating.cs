@@ -23,18 +23,18 @@ namespace Fill_Up_
                                                 //reiktu pakeisti i switch
             if (radioButton1.Checked == true)
             {
-                glass.orderedQuantity = 0.3;
+                glass.orderedQuantity = Rating1.Value1;
             }
             else if (radioButton2.Checked == true)
             {
-                glass.orderedQuantity = 0.4;
+                glass.orderedQuantity = Rating1.Value2;
             }
             else if (radioButton3.Checked == true)
             {
-                glass.orderedQuantity = 0.5;
+                glass.orderedQuantity = Rating1.Value3;
             }
             else
-                glass.orderedQuantity = 1;
+                glass.orderedQuantity = Rating1.Value4;
 
             Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);

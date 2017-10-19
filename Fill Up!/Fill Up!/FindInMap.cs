@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Resources;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Fill_Up_
 {
     public partial class FindInMap : Form
     {
+        private const string resxFile = @".\FindInMap.resx";
+        ResourceManager rm = new ResourceManager(resxFile, typeof(FindInMap).Assembly);
+
         public FindInMap()
         {
             InitializeComponent();
@@ -41,17 +45,17 @@ namespace Fill_Up_
 
                 if (street != string.Empty)
                 {
-                    queryadress.Append(street + "," + "+");
+                    queryadress.Append(street + FindInMap1.Comma + FindInMap1.Plus);
                 }
 
                 if (city != string.Empty)
                 {
-                    queryadress.Append(city + "," + "+");
+                    queryadress.Append(city + FindInMap1.Comma + FindInMap1.Plus);
                 }
 
                 if (bar != string.Empty)
                 {
-                    queryadress.Append(bar + "," + "+");
+                    queryadress.Append(bar + FindInMap1.Comma + FindInMap1.Plus);
                 }
 
                 webBrowser1.Navigate(queryadress.ToString());
@@ -59,7 +63,7 @@ namespace Fill_Up_
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Error");
+                MessageBox.Show(ex.Message.ToString(), FindInMap1.Error);
             }
         }
 
