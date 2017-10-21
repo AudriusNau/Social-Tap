@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using Fill_Up_.Properties;
 
 namespace Fill_Up_.Fill_Up_
 {
-    class  ReadFile: ILoadable
+    class ReadFile : ILoadable
     {
-
         public string name { get; set; }
         public int rating { get; set; }
         private double mug;
@@ -23,16 +23,18 @@ namespace Fill_Up_.Fill_Up_
            
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
         
+
+      
             while (reader.Read())
             {
                     if (reader.NodeType== XmlNodeType.Element)
-                    {
-                           
+                    {                           
                         switch (reader.Name)
-                        { case "name":
+                        { 
+                            case "name":
                                 this.name=reader.ReadElementContentAsString();
-
                                 break;
+
                             case "mug":
                                 this.mug= reader.ReadElementContentAsDouble();
                                 break;
@@ -49,10 +51,12 @@ namespace Fill_Up_.Fill_Up_
                                 break;
                         }
                     }
+
                     
                     if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar")
                     {
                         
+
                         GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
                         Bar bar = new Bar(name, rating, glass);
                         allbars.AddNewBar(bar);

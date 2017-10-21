@@ -71,6 +71,11 @@
     <Compile Include="Fill_Up_\Bar.cs" />
     <Compile Include="Fill_Up_\ILoadable.cs" />
     <Compile Include="Fill_Up_\ReadFile.cs" />
+    <Compile Include="FindInMap1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindInMap.resx</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +95,11 @@
       <DependentUpon>Rating.cs</DependentUpon>
     </Compile>
     <Compile Include="Fill_Up_\GlassOfBeer.cs" />
+    <Compile Include="Rating1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rating.resx</DependentUpon>
+    </Compile>
     <Compile Include="Results.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +114,11 @@
     <Compile Include="FindInMap.Designer.cs">
       <DependentUpon>FindInMap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Results1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Results.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Favorites.resx">
       <DependentUpon>Favorites.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,9 +130,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rating.resx">
       <DependentUpon>Rating.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rating1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Results.resx">
       <DependentUpon>Results.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Results1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +150,8 @@
     </Compile>
     <EmbeddedResource Include="FindInMap.resx">
       <DependentUpon>FindInMap.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FindInMap1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

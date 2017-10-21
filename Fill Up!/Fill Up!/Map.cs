@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Resources;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,7 @@ namespace Fill_Up_
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Error");
+                MessageBox.Show(ex.Message.ToString(), rm.GetString("Error"));
             }
         }
 
