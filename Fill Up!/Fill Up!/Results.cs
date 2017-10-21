@@ -29,6 +29,7 @@ namespace Fill_Up_
             {
                 textBox1.Text = Results1.Message + cheaperBar.Name;
             }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
