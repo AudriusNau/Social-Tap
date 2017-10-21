@@ -18,7 +18,7 @@ namespace Fill_Up_.Fill_Up_
         private decimal price;
 
 
-        public void LoadData(AllBars allbars)
+        public AllBars LoadData(AllBars allbars)
         { 
            
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
@@ -64,7 +64,7 @@ namespace Fill_Up_.Fill_Up_
                     
             }
 
-
+            return allbars;
             
         }
     }
