@@ -14,9 +14,7 @@ namespace Fill_Up_
             
             ReadFile load = new ReadFile();
             load.LoadData(allbars);
-            List <Bar> x = allbars.GetBarList();
-            MessageBox.Show(x.Count.ToString());
-
+           
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

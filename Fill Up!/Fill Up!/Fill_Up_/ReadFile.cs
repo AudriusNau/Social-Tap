@@ -22,12 +22,7 @@ namespace Fill_Up_.Fill_Up_
         { 
            
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
-           
-
-            
-            using (System.IO.StreamWriter writer = 
-                new System.IO.StreamWriter(@"Rez.txt", false))
-                
+        
             while (reader.Read())
             {
                     if (reader.NodeType== XmlNodeType.Element)
@@ -54,8 +49,10 @@ namespace Fill_Up_.Fill_Up_
                                 break;
                         }
                     }
-                    if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="bar")
-                        {
+                    
+                    if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar")
+                    {
+                        
                         GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
                         Bar bar = new Bar(name, rating, glass);
                         allbars.AddNewBar(bar);
