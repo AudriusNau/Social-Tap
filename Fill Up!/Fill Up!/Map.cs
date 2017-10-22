@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Resources;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Fill_Up_.Exceptions;
 
 namespace Fill_Up_
 {
@@ -22,7 +16,7 @@ namespace Fill_Up_
             try
             {
                 StringBuilder queryadress = new StringBuilder();
-                queryadress.Append("http://maps.google.com/maps?q=");
+                queryadress.Append(Map1.GoogleMaps);
 
                 if (bar != string.Empty)
                 {
@@ -32,9 +26,9 @@ namespace Fill_Up_
                 webBrowser1.Navigate(queryadress.ToString());
 
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message.ToString(), Map1.Error);
+                throw new MapException(Map1.Error);
             }
         }
 

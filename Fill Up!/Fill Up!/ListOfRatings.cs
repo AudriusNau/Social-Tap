@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fill_Up_
@@ -30,6 +24,11 @@ namespace Fill_Up_
                 itm = new ListViewItem(info);
                 listView1.Items.Add(itm);
             }             
+        }
+
+        private void ListOfRatings_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

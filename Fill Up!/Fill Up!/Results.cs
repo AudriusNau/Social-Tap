@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Resources;
 using System.Windows.Forms;
 
 namespace Fill_Up_
@@ -37,6 +36,11 @@ namespace Fill_Up_
                 currentBar = betterBar.Name;
             }
             
+        }
+
+        private void showMap_Click(object sender, EventArgs e)
+        {
+            new Map(currentBar).Show();
         }
     }
 }
