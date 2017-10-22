@@ -2760,6 +2760,12 @@
         fUG/hFNbvmiihAKD1+tQ56/WiimiZCYzxTh97joMUUVQkSUCiipLA0UUUAf/2Q==
 </value>
   </data>
+  <data name="Error1" xml:space="preserve">
+    <value>Prašau, įveskite baro pavadinimą!</value>
+  </data>
+  <data name="Error2" xml:space="preserve">
+    <value>Prašau, įveskite baro įvertinimą!</value>
+  </data>
   <data name="Value1" xml:space="preserve">
     <value>0,3</value>
   </data>
