@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Fill_Up_
@@ -53,6 +52,11 @@ namespace Fill_Up_
 
             this.Hide();
             new Results(allBars, bar).Show();
+        }
+
+        private void textBarName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
