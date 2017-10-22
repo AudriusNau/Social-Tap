@@ -190,7 +190,6 @@ namespace Fill_Up_
             this.numericUpDown1.Size = new System.Drawing.Size(70, 24);
             this.numericUpDown1.TabIndex = 17;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.Value = -1;
             // 
             // numericUpDown2
             // 
@@ -212,7 +211,6 @@ namespace Fill_Up_
             this.numericUpDown2.Size = new System.Drawing.Size(70, 24);
             this.numericUpDown2.TabIndex = 18;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.Value = -1;
             // 
             // button1
             // 
