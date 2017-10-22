@@ -21,9 +21,8 @@ namespace Fill_Up_.Fill_Up_
         { 
            
             XmlTextReader reader = new XmlTextReader(@Resources.DataFile);
-            AllBars allBars = new AllBars();
+            ListsOfBars allBars = new ListsOfBars();
 
-            
             using (System.IO.StreamWriter writer = 
                 new System.IO.StreamWriter(@Resources.ResultsFile, false))
                 
@@ -53,10 +52,11 @@ namespace Fill_Up_.Fill_Up_
                                 break;
                         }
                     }
+
                     if (reader.NodeType == XmlNodeType.EndElement && reader.Name == "bar")
                     {
                         GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
-                        Bar bar = new Bar(name, rating, glass);
+                        VisitedBar bar = new VisitedBar(name, rating, glass);
                         allBars.AddNewBar(bar);
                         writer.Write(allBars.GetBarList());
                     }

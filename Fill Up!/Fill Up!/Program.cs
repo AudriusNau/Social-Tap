@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Fill_Up_.Fill_Up_;
+using System.Collections.Generic;
 
 namespace Fill_Up_
 {
@@ -9,7 +10,7 @@ namespace Fill_Up_
         [STAThread]
         static void Main()
         {
-            AllBars allbars = new AllBars();
+            ListsOfBars allbars = new ListsOfBars();
 
             ReadFile load = new ReadFile();
             load.LoadData();

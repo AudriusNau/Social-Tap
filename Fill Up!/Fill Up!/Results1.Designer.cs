@@ -61,7 +61,7 @@ namespace Fill_Up_ {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apsimoka  eiti į barą: .
+        ///   Looks up a localized string similar to Apsimoka eiti į barą: .
         /// </summary>
         public static string Message {
             get {
