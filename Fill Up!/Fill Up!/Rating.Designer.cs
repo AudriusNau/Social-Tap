@@ -238,7 +238,7 @@ namespace Fill_Up_
             this.label6.Size = new System.Drawing.Size(228, 29);
             this.label6.TabIndex = 23;
             this.label6.Text = "Baro pavadinimas:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBarName
             // 
@@ -250,7 +250,7 @@ namespace Fill_Up_
             this.textBarName.Size = new System.Drawing.Size(178, 29);
             this.textBarName.TabIndex = 24;
             this.textBarName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBarName.TextChanged += new System.EventHandler(this.textBarName_TextChanged);
+            //this.textBarName.TextChanged += new System.EventHandler(this.textBarName_TextChanged);
             // 
             // label7
             // 
@@ -303,7 +303,7 @@ namespace Fill_Up_
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Rating";
             this.Text = "Įvertinti bokalą";
-            this.Load += new System.EventHandler(this.Rating_Load);
+            //this.Load += new System.EventHandler(this.Rating_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
