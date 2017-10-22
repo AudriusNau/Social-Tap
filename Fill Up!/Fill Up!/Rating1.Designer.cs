@@ -61,38 +61,56 @@ namespace Fill_Up_ {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prašau, įveskite baro pavadinimą!.
+        /// </summary>
+        public static string Error1 {
+            get {
+                return ResourceManager.GetString("Error1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prašau, įveskite baro įvertinimą!.
+        /// </summary>
+        public static string Error2 {
+            get {
+                return ResourceManager.GetString("Error2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0,3.
         /// </summary>
-        public static double Value1 {
+        public static string Value1 {
             get {
-                return double.Parse(ResourceManager.GetString("Value1", resourceCulture));
+                return ResourceManager.GetString("Value1", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 0,4.
         /// </summary>
-        public static double Value2 {
+        public static string Value2 {
             get {
-                return double.Parse(ResourceManager.GetString("Value2", resourceCulture));
+                return ResourceManager.GetString("Value2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 0,5.
         /// </summary>
-        public static double Value3 {
+        public static string Value3 {
             get {
-                return double.Parse(ResourceManager.GetString("Value3", resourceCulture));
+                return ResourceManager.GetString("Value3", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
-        public static int Value4 {
+        public static string Value4 {
             get {
-                return int.Parse(ResourceManager.GetString("Value4", resourceCulture));
+                return ResourceManager.GetString("Value4", resourceCulture);
             }
         }
     }
