@@ -9,11 +9,11 @@ namespace FillUpTests
     public class LoadDataTest
     {
         [TestMethod]
-        public void LoadData()
+        public void Readfile_LoadData()
         {
            
             ReadFile readfile = new ReadFile();
-            List<Bar> barList = readfile.LoadData<Bar>();
+            ListsOfBars barList = readfile.LoadData();
             Assert.IsNotNull(barList);
         }
     }
