@@ -37,6 +37,8 @@
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxBar = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -47,12 +49,14 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackgroundImage = global::Fill_Up_.Properties.Resources._1680175__2_;
+            this.splitContainer1.Panel1.Controls.Add(this.listBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.street);
             this.splitContainer1.Panel1.Controls.Add(this.city);
@@ -65,9 +69,8 @@
             // 
             this.splitContainer1.Panel2.BackgroundImage = global::Fill_Up_.Properties.Resources._1680175__2_;
             this.splitContainer1.Panel2.Controls.Add(this.webBrowser1);
-            this.splitContainer1.Size = new System.Drawing.Size(501, 534);
-            this.splitContainer1.SplitterDistance = 166;
-            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.Size = new System.Drawing.Size(668, 657);
+            this.splitContainer1.SplitterDistance = 221;
             this.splitContainer1.TabIndex = 0;
             // 
             // button1
@@ -75,10 +78,10 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(28, 464);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(37, 571);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 41);
+            this.button1.Size = new System.Drawing.Size(148, 50);
             this.button1.TabIndex = 33;
             this.button1.Text = "Ieškoti";
             this.button1.UseVisualStyleBackColor = false;
@@ -90,10 +93,9 @@
             this.street.BackColor = System.Drawing.Color.Transparent;
             this.street.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.street.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.street.Location = new System.Drawing.Point(43, 260);
-            this.street.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.street.Location = new System.Drawing.Point(57, 282);
             this.street.Name = "street";
-            this.street.Size = new System.Drawing.Size(87, 29);
+            this.street.Size = new System.Drawing.Size(107, 36);
             this.street.TabIndex = 30;
             this.street.Text = "Gatvė:";
             // 
@@ -103,12 +105,12 @@
             this.city.BackColor = System.Drawing.Color.Transparent;
             this.city.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.city.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.city.Location = new System.Drawing.Point(33, 154);
-            this.city.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.city.Location = new System.Drawing.Point(43, 162);
             this.city.Name = "city";
-            this.city.Size = new System.Drawing.Size(110, 29);
+            this.city.Size = new System.Drawing.Size(133, 36);
             this.city.TabIndex = 29;
             this.city.Text = "Miestas:";
+            this.city.Click += new System.EventHandler(this.city_Click);
             // 
             // bar
             // 
@@ -116,10 +118,9 @@
             this.bar.BackColor = System.Drawing.Color.Transparent;
             this.bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.bar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.bar.Location = new System.Drawing.Point(44, 39);
-            this.bar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bar.Location = new System.Drawing.Point(57, 40);
             this.bar.Name = "bar";
-            this.bar.Size = new System.Drawing.Size(87, 29);
+            this.bar.Size = new System.Drawing.Size(106, 36);
             this.bar.TabIndex = 28;
             this.bar.Text = "Baras:";
             this.bar.Click += new System.EventHandler(this.label3_Click);
@@ -128,10 +129,11 @@
             // 
             this.textBoxStreet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBoxStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.textBoxStreet.Location = new System.Drawing.Point(28, 292);
+            this.textBoxStreet.Location = new System.Drawing.Point(37, 322);
+            this.textBoxStreet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxStreet.Multiline = true;
             this.textBoxStreet.Name = "textBoxStreet";
-            this.textBoxStreet.Size = new System.Drawing.Size(112, 29);
+            this.textBoxStreet.Size = new System.Drawing.Size(148, 35);
             this.textBoxStreet.TabIndex = 27;
             this.textBoxStreet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -139,10 +141,11 @@
             // 
             this.textBoxCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBoxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.textBoxCity.Location = new System.Drawing.Point(28, 187);
+            this.textBoxCity.Location = new System.Drawing.Point(37, 202);
+            this.textBoxCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxCity.Multiline = true;
             this.textBoxCity.Name = "textBoxCity";
-            this.textBoxCity.Size = new System.Drawing.Size(112, 29);
+            this.textBoxCity.Size = new System.Drawing.Size(148, 35);
             this.textBoxCity.TabIndex = 26;
             this.textBoxCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -150,10 +153,11 @@
             // 
             this.textBoxBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBoxBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.textBoxBar.Location = new System.Drawing.Point(28, 72);
+            this.textBoxBar.Location = new System.Drawing.Point(37, 80);
+            this.textBoxBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxBar.Multiline = true;
             this.textBoxBar.Name = "textBoxBar";
-            this.textBoxBar.Size = new System.Drawing.Size(112, 29);
+            this.textBoxBar.Size = new System.Drawing.Size(148, 35);
             this.textBoxBar.TabIndex = 25;
             this.textBoxBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxBar.TextChanged += new System.EventHandler(this.textBoxBaras_TextChanged);
@@ -162,22 +166,51 @@
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(15, 16);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(332, 534);
+            this.webBrowser1.Size = new System.Drawing.Size(443, 657);
             this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(31, 403);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 36);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Žemėlapis:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 22;
+            this.listBox1.Items.AddRange(new object[] {
+            "Google Maps",
+            "OpenStreetMap"});
+            this.listBox1.Location = new System.Drawing.Point(37, 451);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(148, 48);
+            this.listBox1.TabIndex = 35;
             // 
             // FindInMap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.button1;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Fill_Up_.Properties.Resources._1680175__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(501, 534);
+            this.ClientSize = new System.Drawing.Size(668, 657);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FindInMap";
             this.Text = "Barai";
             this.Load += new System.EventHandler(this.FindInMap_Load);
@@ -201,5 +234,7 @@
         private System.Windows.Forms.Label street;
         private System.Windows.Forms.Label city;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

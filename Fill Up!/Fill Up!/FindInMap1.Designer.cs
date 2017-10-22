@@ -79,6 +79,33 @@ namespace Fill_Up_ {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Google Maps.
+        /// </summary>
+        public static string FirstMap {
+            get {
+                return ResourceManager.GetString("FirstMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://maps.google.com/maps?q=.
+        /// </summary>
+        public static string GoogleMaps {
+            get {
+                return ResourceManager.GetString("GoogleMaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://www.openstreetmap.org/search?query=.
+        /// </summary>
+        public static string OpenStreetMap {
+            get {
+                return ResourceManager.GetString("OpenStreetMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to +.
         /// </summary>
         public static string Plus {

@@ -38,5 +38,10 @@ namespace Fill_Up_
             }
             
         }
+
+        private void showMap_Click(object sender, EventArgs e)
+        {
+            new Map(currentBar).Show();
+        }
     }
 }
