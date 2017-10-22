@@ -54,5 +54,10 @@ namespace Fill_Up_
             this.Hide();
             new Results(allBars, bar).Show();
         }
+
+        private void textBarName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
