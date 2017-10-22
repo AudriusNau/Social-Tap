@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Windows.Forms;
+using Fill_Up_.Exceptions;
 
 namespace Fill_Up_
 {
@@ -25,9 +26,9 @@ namespace Fill_Up_
                 webBrowser1.Navigate(queryadress.ToString());
 
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message.ToString(), Map1.Error);
+                throw new MapException(Map1.Error);
             }
         }
 

@@ -2,6 +2,7 @@
 using System.Resources;
 using System.Text;
 using System.Windows.Forms;
+using Fill_Up_.Exceptions;
 
 namespace Fill_Up_
 {
@@ -81,9 +82,9 @@ namespace Fill_Up_
                 }
 
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message.ToString(), FindInMap1.Error);
+                throw new MapException(FindInMap1.Error);
             }
         }
 

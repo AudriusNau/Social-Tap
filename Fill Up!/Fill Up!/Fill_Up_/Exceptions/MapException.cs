@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Fill_Up_.Exceptions.Register
+namespace Fill_Up_.Exceptions
 {
     class MapException : Exception
     {
