@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fill_Up_
 {
-    public class RatedBar : IBar, IComparable <RatedBar>
+    public class RatedBar : IBar, IEquatable <RatedBar>, IComparable <RatedBar>
     {
         private string name;
         private int rating;
@@ -26,6 +23,23 @@ namespace Fill_Up_
         public int CompareTo(RatedBar other)
         {
             return this.Rating.CompareTo(other.Rating);
+        }
+
+        public bool Equals(RatedBar other)
+        {
+            return Name.Equals(other.Name) && Rating.Equals(other.Rating);
+        }
+
+        public override int GetHashCode()
+        {
+            //Get hash code for the Name field if it is not null. 
+            int hashProductName = Name == null ? 0 : Name.GetHashCode();
+
+            //Get hash code for the Code field. 
+            int hashProductRating = Rating.GetHashCode();
+
+            //Calculate the hash code for the product. 
+            return hashProductName ^ hashProductRating;
         }
     }
 }
