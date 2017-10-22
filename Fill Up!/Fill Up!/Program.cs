@@ -10,12 +10,11 @@ namespace Fill_Up_
         [STAThread]
         static void Main()
         {
-            AllBars allbars = new AllBars();
+            ListsOfBars allbars = new ListsOfBars();
             
             ReadFile load = new ReadFile();
             load.LoadData(allbars);
            
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home(allbars));

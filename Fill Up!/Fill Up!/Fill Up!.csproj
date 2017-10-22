@@ -61,14 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Favorites.cs">
+    <Compile Include="ListOfRatings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Favorites.Designer.cs">
-      <DependentUpon>Favorites.cs</DependentUpon>
+    <Compile Include="ListOfRatings.Designer.cs">
+      <DependentUpon>ListOfRatings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fill_Up_\AllBars.cs" />
-    <Compile Include="Fill_Up_\Bar.cs" />
+    <Compile Include="Fill_Up_\ListsOfBars.cs" />
+    <Compile Include="Fill_Up_\RatedBar.cs" />
+    <Compile Include="Fill_Up_\VisitedBar.cs" />
+    <Compile Include="Fill_Up_\IBar.cs" />
     <Compile Include="Fill_Up_\ILoadable.cs" />
     <Compile Include="Fill_Up_\ReadFile.cs" />
     <Compile Include="FindInMap1.Designer.cs">
@@ -87,6 +89,11 @@
     </Compile>
     <Compile Include="Map.Designer.cs">
       <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Map.resx</DependentUpon>
     </Compile>
     <Compile Include="Rating.cs">
       <SubType>Form</SubType>
@@ -119,14 +126,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Results.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Favorites.resx">
-      <DependentUpon>Favorites.cs</DependentUpon>
+    <EmbeddedResource Include="ListOfRatings.resx">
+      <DependentUpon>ListOfRatings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Map.resx">
       <DependentUpon>Map.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Map1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rating.resx">
       <DependentUpon>Rating.cs</DependentUpon>

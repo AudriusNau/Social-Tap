@@ -22,14 +22,14 @@ namespace Fill_Up_ {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Results1 {
+    public class Map1 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Results1() {
+        internal Map1() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Fill_Up_ {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Fill_Up_.Results", typeof(Results).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Fill_Up_.Map", typeof(Map).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,11 @@ namespace Fill_Up_ {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apsimoka eiti į barą: .
+        ///   Looks up a localized string similar to Error!.
         /// </summary>
-        public static string Message {
+        public static string Error {
             get {
-                return ResourceManager.GetString("Message", resourceCulture);
+                return ResourceManager.GetString("Error", resourceCulture);
             }
         }
     }

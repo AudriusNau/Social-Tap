@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Fill_Up_
 {
     public partial class Home : Form
     {
-        AllBars allBars;
+        ListsOfBars allBars;
 
-        public Home(AllBars a)
+        public Home(ListsOfBars a)
         {
             allBars = a;
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Fill_Up_
 
         private void favoriteBars_Click(object sender, EventArgs e)
         {
-            new Favorites().Show();
+            new ListOfRatings(allBars).Show();
         }
 
         private void Home_Load(object sender, EventArgs e)

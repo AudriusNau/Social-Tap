@@ -18,13 +18,10 @@ namespace Fill_Up_.Fill_Up_
         private decimal price;
 
 
-        public AllBars LoadData(AllBars allbars)
+        public ListsOfBars LoadData(ListsOfBars allbars)
         { 
-           
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
         
-
-      
             while (reader.Read())
             {
                     if (reader.NodeType== XmlNodeType.Element)
@@ -51,22 +48,15 @@ namespace Fill_Up_.Fill_Up_
                                 break;
                         }
                     }
-
                     
                     if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar")
                     {
-                        
-
                         GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
-                        Bar bar = new Bar(name, rating, glass);
+                        VisitedBar bar = new VisitedBar(name, rating, glass);
                         allbars.AddNewBar(bar);
-                       
                     }
-                    
             }
-
             return allbars;
-            
         }
     }
 }

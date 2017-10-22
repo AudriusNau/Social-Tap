@@ -56,7 +56,7 @@
             this.label6.Size = new System.Drawing.Size(147, 18);
             this.label6.TabIndex = 24;
             this.label6.Text = "Baro pavadinimas:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
@@ -134,7 +134,7 @@
             this.barName.Size = new System.Drawing.Size(23, 18);
             this.barName.TabIndex = 32;
             this.barName.Text = "...";
-            this.barName.Click += new System.EventHandler(this.barName_Click);
+            //this.barName.Click += new System.EventHandler(this.barName_Click);
             // 
             // barRating
             // 
@@ -192,28 +192,28 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.textBox1.Location = new System.Drawing.Point(31, 221);
+            this.textBox1.Location = new System.Drawing.Point(31, 254);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(443, 215);
+            this.textBox1.Size = new System.Drawing.Size(443, 95);
             this.textBox1.TabIndex = 37;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // showMap
             // 
             this.showMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.showMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.showMap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.showMap.Location = new System.Drawing.Point(141, 464);
-            this.showMap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showMap.Location = new System.Drawing.Point(143, 414);
+            this.showMap.Margin = new System.Windows.Forms.Padding(2);
             this.showMap.Name = "showMap";
             this.showMap.Size = new System.Drawing.Size(236, 53);
             this.showMap.TabIndex = 38;
             this.showMap.Text = "Rodyti žemėlapyje";
             this.showMap.UseVisualStyleBackColor = false;
-            this.showMap.Click += new System.EventHandler(this.showMap_Click);
+            //this.showMap.Click += new System.EventHandler(this.showMap_Click);
             // 
             // Results
             // 
@@ -237,14 +237,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Results";
             this.Text = "Rezultatai";
-            this.Load += new System.EventHandler(this.Results_Load);
+            //this.Load += new System.EventHandler(this.Results_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        public void ChangeLabels(Bar bar)
+        public void ChangeLabels(VisitedBar bar)
         {
             //pakeiciamaslabel textas pagal tai, kaip ivertinimo langą užpildė vartotojas
             this.barName.Text= bar.Name;

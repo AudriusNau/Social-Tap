@@ -6,8 +6,8 @@ namespace Fill_Up_
 {
     public partial class Rating : Form
     {
-        AllBars allBars;
-        public Rating(AllBars a)
+        ListsOfBars allBars;
+        public Rating(ListsOfBars a)
         {
             allBars = a;
             InitializeComponent();
@@ -36,8 +36,11 @@ namespace Fill_Up_
             else
                 glass.orderedQuantity = Rating1.Value4;
 
-            Bar bar = new Bar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
+            VisitedBar bar = new VisitedBar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);
+
+            List<VisitedBar> x = allBars.GetBarList();
+            MessageBox.Show(x.Count.ToString());
 
             this.Hide();
             new Results(allBars, bar).Show();
