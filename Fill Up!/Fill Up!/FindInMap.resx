@@ -123,6 +123,15 @@
   <data name="Error" xml:space="preserve">
     <value>Error!</value>
   </data>
+  <data name="FirstMap" xml:space="preserve">
+    <value>Google Maps</value>
+  </data>
+  <data name="GoogleMaps" xml:space="preserve">
+    <value>http://maps.google.com/maps?q=</value>
+  </data>
+  <data name="OpenStreetMap" xml:space="preserve">
+    <value>https://www.openstreetmap.org/search?query=</value>
+  </data>
   <data name="Plus" xml:space="preserve">
     <value>+</value>
   </data>

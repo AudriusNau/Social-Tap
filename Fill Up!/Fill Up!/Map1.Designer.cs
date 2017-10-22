@@ -68,5 +68,14 @@ namespace Fill_Up_ {
                 return ResourceManager.GetString("Error", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://maps.google.com/maps?q=.
+        /// </summary>
+        public static string GoogleMaps {
+            get {
+                return ResourceManager.GetString("GoogleMaps", resourceCulture);
+            }
+        }
     }
 }

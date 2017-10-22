@@ -2766,6 +2766,9 @@
   <data name="Error2" xml:space="preserve">
     <value>Prašau, įveskite baro įvertinimą!</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
   <data name="Value1" xml:space="preserve">
     <value>0,3</value>
   </data>

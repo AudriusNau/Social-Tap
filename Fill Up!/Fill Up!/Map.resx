@@ -120,4 +120,7 @@
   <data name="Error" xml:space="preserve">
     <value>Error!</value>
   </data>
+  <data name="GoogleMaps" xml:space="preserve">
+    <value>http://maps.google.com/maps?q=</value>
+  </data>
 </root>
