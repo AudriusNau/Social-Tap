@@ -29,23 +29,23 @@ namespace Fill_Up_
 
             GlassOfBeer glass = new GlassOfBeer();
 
-            glass.lackOfBeer = (int)numericUpDown1.Value;
-            glass.price = numericUpDown2.Value;
+            glass.LackOfBeer = (int)numericUpDown1.Value;
+            glass.Price = numericUpDown2.Value;
 
             if (radioButton1.Checked == true)
             {
-                glass.orderedQuantity = double.Parse(Rating1.Value1);
+                glass.OrderedQuantity = double.Parse(Rating1.Value1);
             }
             else if (radioButton2.Checked == true)
             {
-                glass.orderedQuantity = double.Parse(Rating1.Value2);
+                glass.OrderedQuantity = double.Parse(Rating1.Value2);
             }
             else if (radioButton3.Checked == true)
             {
-                glass.orderedQuantity = double.Parse(Rating1.Value3);
+                glass.OrderedQuantity = double.Parse(Rating1.Value3);
             }
             else 
-                glass.orderedQuantity = double.Parse(Rating1.Value4);
+                glass.OrderedQuantity = double.Parse(Rating1.Value4);
             
             VisitedBar bar = new VisitedBar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);

@@ -61,7 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="Fill_Up_\IWriteable.cs" />
+    <Compile Include="Fill_Up_\WriteFile.cs" />
+
     <Compile Include="Fill_Up_\Exceptions\MapException.cs" />
+
     <Compile Include="ListOfRatings.cs">
       <SubType>Form</SubType>
     </Compile>

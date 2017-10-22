@@ -63,8 +63,8 @@ namespace Fill_Up_
 
             foreach (VisitedBar iterator in barList)
             {
-                if (iterator.Glass.orderedQuantity == betterBar.Glass.orderedQuantity 
-                    && iterator.Glass.lackOfBeer < betterBar.Glass.lackOfBeer)
+                if (iterator.Glass.OrderedQuantity == betterBar.Glass.OrderedQuantity 
+                    && iterator.Glass.LackOfBeer < betterBar.Glass.LackOfBeer)
                     betterBar = iterator; 
             }
             return betterBar;
@@ -76,8 +76,8 @@ namespace Fill_Up_
 
             foreach (VisitedBar iterator in barList)
             {
-                if (iterator.Glass.orderedQuantity == cheaperBar.Glass.orderedQuantity 
-                    && iterator.Glass.price < cheaperBar.Glass.price)
+                if (iterator.Glass.OrderedQuantity == cheaperBar.Glass.OrderedQuantity 
+                    && iterator.Glass.Price < cheaperBar.Glass.Price)
                     cheaperBar = iterator;
             }
             return cheaperBar;
