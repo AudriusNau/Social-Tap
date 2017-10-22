@@ -49,11 +49,11 @@ namespace Fill_Up_.Fill_Up_
                         }
                     }
                     
-                    if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar")
+                    if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar") 
                     {
                         GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
                         VisitedBar bar = new VisitedBar(name, rating, glass);
-                        allbars.AddNewBar(bar);
+                        allbars.AddNewBar(bar);                                         //sudeda nuskaitytus duomenis i lista
                     }
             }
             return allbars;
