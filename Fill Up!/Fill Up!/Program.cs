@@ -11,9 +11,10 @@ namespace Fill_Up_
         static void Main()
         {
             ListsOfBars allbars = new ListsOfBars();
-
+            
             ReadFile load = new ReadFile();
-            load.LoadData();
+            load.LoadData(allbars);
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home(allbars));

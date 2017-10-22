@@ -8,9 +8,6 @@ namespace Fill_Up_.Fill_Up_
 {
     interface ILoadable
     {
-        string name{ get; set; }
-        int rating { get; set; }
-      
-        void LoadData();
+        ListsOfBars LoadData(ListsOfBars allbars);
     }
 }

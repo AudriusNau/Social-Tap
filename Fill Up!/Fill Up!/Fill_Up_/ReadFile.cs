@@ -17,15 +17,11 @@ namespace Fill_Up_.Fill_Up_
         private int lackOfBeer;
         private decimal price;
 
-        public void LoadData()
-        { 
-           
-            XmlTextReader reader = new XmlTextReader(@Resources.DataFile);
-            ListsOfBars allBars = new ListsOfBars();
 
-            using (System.IO.StreamWriter writer = 
-                new System.IO.StreamWriter(@Resources.ResultsFile, false))
-                
+        public ListsOfBars LoadData(ListsOfBars allbars)
+        { 
+            XmlTextReader reader = new XmlTextReader(@"Data.xml");
+        
             while (reader.Read())
             {
                     if (reader.NodeType== XmlNodeType.Element)
@@ -52,19 +48,15 @@ namespace Fill_Up_.Fill_Up_
                                 break;
                         }
                     }
-
-                    if (reader.NodeType == XmlNodeType.EndElement && reader.Name == "bar")
+                    
+                    if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar")
                     {
                         GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
                         VisitedBar bar = new VisitedBar(name, rating, glass);
-                        allBars.AddNewBar(bar);
-                        writer.Write(allBars.GetBarList());
+                        allbars.AddNewBar(bar);
                     }
-                    
             }
-
-
-           
+            return allbars;
         }
     }
 }
