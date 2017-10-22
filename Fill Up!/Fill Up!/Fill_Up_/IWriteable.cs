@@ -8,6 +8,6 @@ namespace Fill_Up_.Fill_Up_
 {
     interface IWriteable
     {
-        void WriteData(ListsOfBars allbars);
+        void WriteToFile (ListsOfBars allbars);
     }
 }
