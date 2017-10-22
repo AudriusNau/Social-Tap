@@ -32,13 +32,8 @@ namespace Fill_Up_
 
         public override int GetHashCode()
         {
-            //Get hash code for the Name field if it is not null. 
             int hashProductName = Name == null ? 0 : Name.GetHashCode();
-
-            //Get hash code for the Code field. 
             int hashProductRating = Rating.GetHashCode();
-
-            //Calculate the hash code for the product. 
             return hashProductName ^ hashProductRating;
         }
     }
