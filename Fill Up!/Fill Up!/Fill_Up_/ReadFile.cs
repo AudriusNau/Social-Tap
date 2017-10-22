@@ -11,8 +11,8 @@ namespace Fill_Up_.Fill_Up_
 {
     class ReadFile : ILoadable
     {
-        public string name { get; set; }
-        public int rating { get; set; }
+        public string name;
+        public int rating;
         private double mug;
         private int lackOfBeer;
         private decimal price;
