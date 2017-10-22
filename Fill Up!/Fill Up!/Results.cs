@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Resources;
 using System.Windows.Forms;
 
 namespace Fill_Up_
