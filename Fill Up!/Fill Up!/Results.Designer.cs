@@ -261,9 +261,9 @@
             //pakeiciamaslabel textas pagal tai, kaip ivertinimo langą užpildė vartotojas
             this.barName.Text= bar.Name;
             this.barRating.Text = bar.Rating.ToString();
-            this.orderedBeer.Text = bar.Glass.orderedQuantity.ToString();
-            this.lackOfBeer.Text = bar.Glass.lackOfBeer.ToString();
-            this.priceOfBeer.Text = bar.Glass.price.ToString();
+            this.orderedBeer.Text = bar.Glass.OrderedQuantity.ToString();
+            this.lackOfBeer.Text = bar.Glass.LackOfBeer.ToString();
+            this.priceOfBeer.Text = bar.Glass.Price.ToString();
         }
 
         private System.Windows.Forms.Label label6;

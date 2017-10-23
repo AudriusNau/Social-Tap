@@ -11,12 +11,17 @@ namespace Fill_Up_
         {
             ListsOfBars allbars = new ListsOfBars();
             
+            
             ReadFile load = new ReadFile();
-            load.LoadData(allbars);
+             load.LoadData(allbars);
            
+         
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home(allbars));
+
+           WriteFile write = new WriteFile();
+            write.WriteToFile(allbars);
         }
     }
 }

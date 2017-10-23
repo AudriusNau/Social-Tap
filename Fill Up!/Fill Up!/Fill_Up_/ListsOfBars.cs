@@ -68,9 +68,9 @@ namespace Fill_Up_
         public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
         {
             var x = from bar in barList
-                    where (bar.Glass.orderedQuantity == visitedBar.Glass.orderedQuantity) &&
-                          (bar.Glass.lackOfBeer < visitedBar.Glass.lackOfBeer) &&
-                          (bar.Glass.price < visitedBar.Glass.price)
+                    where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
+                          (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
+                          (bar.Glass.Price < visitedBar.Glass.Price)
                     select bar.Name;
             return x.Distinct();
         }
@@ -81,8 +81,8 @@ namespace Fill_Up_
 
             foreach (VisitedBar iterator in barList)
             {
-                if (iterator.Glass.orderedQuantity == betterBar.Glass.orderedQuantity 
-                    && iterator.Glass.lackOfBeer < betterBar.Glass.lackOfBeer)
+                if (iterator.Glass.OrderedQuantity == betterBar.Glass.OrderedQuantity 
+                    && iterator.Glass.LackOfBeer < betterBar.Glass.LackOfBeer)
                     betterBar = iterator; 
             }
             return betterBar;
@@ -94,8 +94,8 @@ namespace Fill_Up_
 
             foreach (VisitedBar iterator in barList)
             {
-                if (iterator.Glass.orderedQuantity == cheaperBar.Glass.orderedQuantity 
-                    && iterator.Glass.price < cheaperBar.Glass.price)
+                if (iterator.Glass.OrderedQuantity == cheaperBar.Glass.OrderedQuantity 
+                    && iterator.Glass.Price < cheaperBar.Glass.Price)
                     cheaperBar = iterator;
             }
             return cheaperBar;
