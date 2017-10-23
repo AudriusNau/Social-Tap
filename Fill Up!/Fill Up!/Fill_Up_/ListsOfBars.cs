@@ -70,35 +70,9 @@ namespace Fill_Up_
             var x = from bar in barList
                     where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
                           (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
-                          (bar.Glass.Price < visitedBar.Glass.Price)
+                          (bar.Glass.Price <= visitedBar.Glass.Price)
                     select bar.Name;
             return x.Distinct();
-        }
-
-        public VisitedBar FindBetterBar(VisitedBar bar)
-        {
-            VisitedBar betterBar = bar;
-
-            foreach (VisitedBar iterator in barList)
-            {
-                if (iterator.Glass.OrderedQuantity == betterBar.Glass.OrderedQuantity 
-                    && iterator.Glass.LackOfBeer < betterBar.Glass.LackOfBeer)
-                    betterBar = iterator; 
-            }
-            return betterBar;
-        }
-
-        public VisitedBar FindCheaperBar(VisitedBar bar)
-        {
-            VisitedBar cheaperBar = bar;
-
-            foreach (VisitedBar iterator in barList)
-            {
-                if (iterator.Glass.OrderedQuantity == cheaperBar.Glass.OrderedQuantity 
-                    && iterator.Glass.Price < cheaperBar.Glass.Price)
-                    cheaperBar = iterator;
-            }
-            return cheaperBar;
         }
     }
 }
