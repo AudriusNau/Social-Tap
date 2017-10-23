@@ -246,7 +246,7 @@ namespace Fill_Up_
             this.textBarName.Size = new System.Drawing.Size(236, 35);
             this.textBarName.TabIndex = 24;
             this.textBarName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBarName.TextChanged += new System.EventHandler(this.textBarName_TextChanged);
+            //this.textBarName.TextChanged += new System.EventHandler(this.textBarName_TextChanged);
             // 
             // label7
             // 

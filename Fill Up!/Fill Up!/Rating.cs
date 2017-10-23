@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Fill_Up_
@@ -17,13 +18,13 @@ namespace Fill_Up_
         {
             if (textBarName.Text == string.Empty)
             {
-                MessageBox.Show(Rating1.Error1);
+                MessageBox.Show(Rating.Error1);
                 return;
             }
 
             if (domainUpDownRating.Text == string.Empty)
             {
-                MessageBox.Show(Rating1.Error2);
+                MessageBox.Show(Rating.Error2);
                 return;
             }
 
@@ -34,29 +35,24 @@ namespace Fill_Up_
 
             if (radioButton1.Checked == true)
             {
-                glass.OrderedQuantity = double.Parse(Rating1.Value1);
+                glass.OrderedQuantity = double.Parse(Rating.Value1);
             }
             else if (radioButton2.Checked == true)
             {
-                glass.OrderedQuantity = double.Parse(Rating1.Value2);
+                glass.OrderedQuantity = double.Parse(Rating.Value2);
             }
             else if (radioButton3.Checked == true)
             {
-                glass.OrderedQuantity = double.Parse(Rating1.Value3);
+                glass.OrderedQuantity = double.Parse(Rating.Value3);
             }
             else 
-                glass.OrderedQuantity = double.Parse(Rating1.Value4);
+                glass.OrderedQuantity = double.Parse(Rating.Value4);
             
             VisitedBar bar = new VisitedBar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);
 
             this.Hide();
             new Results(allBars, bar).Show();
-        }
-
-        private void textBarName_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

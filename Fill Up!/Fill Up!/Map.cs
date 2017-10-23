@@ -17,10 +17,10 @@ namespace Fill_Up_
             {
                 StringBuilder queryadress = new StringBuilder();
                 StringBuilder queryadress1 = new StringBuilder();
-                queryadress.Append(Map1.GoogleMaps);
-                queryadress1.Append(Map1.OpenStreetMap);
+                queryadress.Append(Map.GoogleMaps);
+                queryadress1.Append(Map.OpenStreetMap);
 
-                if (text == Map1.FirstMap)
+                if (text == Map.FirstMap)
                 {
                     if (bar != string.Empty)
                     {
@@ -42,7 +42,7 @@ namespace Fill_Up_
             }
             catch
             {
-                throw new MapException(Map1.Error);
+                throw new MapException(Map.Error);
             }
         }
 

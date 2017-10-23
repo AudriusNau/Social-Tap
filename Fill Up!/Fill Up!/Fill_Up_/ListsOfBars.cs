@@ -34,22 +34,30 @@ namespace Fill_Up_
                 ratedBars.Add(new RatedBar{Name = b.Name,  Rating = rating});
             }
 
-            IEnumerable<RatedBar> x = ratedBars.Distinct();
-            List<RatedBar> distinctRatedBars = x.ToList();
-            distinctRatedBars.Sort();
-            distinctRatedBars.Reverse();
+            IEnumerable<RatedBar> distinctList = ratedBars.Distinct();
 
-            return distinctRatedBars;
+            var orderedList = from y in distinctList
+                              orderby y.Rating descending, y.Name ascending
+                              select y;
+            /*
+             * IEnumerable<RatedBar> x = ratedBars.Distinct();
+             * List<RatedBar> distinctRatedBars = x.ToList();
+             * distinctRatedBars.Sort();
+             * distinctRatedBars.Reverse();
+             * return distinctRatedBars();             * 
+             */
+
+            return orderedList.ToList();
         }
 
         public int GetAvarageRating(string name)
         {
             int sum = 0, count = 0;
-            foreach(VisitedBar b in this.barList)
+            foreach(VisitedBar b in barList)
             {
                 if (b.Name == name)
                 {
-                    sum = sum + b.Rating;
+                    sum += b.Rating;
                     count++;
                 }
             }
@@ -57,30 +65,14 @@ namespace Fill_Up_
             return sum / count;
         }
 
-        public VisitedBar FindBetterBar(VisitedBar bar)
+        public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
         {
-            VisitedBar betterBar = bar;
-
-            foreach (VisitedBar iterator in barList)
-            {
-                if (iterator.Glass.OrderedQuantity == betterBar.Glass.OrderedQuantity 
-                    && iterator.Glass.LackOfBeer < betterBar.Glass.LackOfBeer)
-                    betterBar = iterator; 
-            }
-            return betterBar;
-        }
-
-        public VisitedBar FindCheaperBar(VisitedBar bar)
-        {
-            VisitedBar cheaperBar = bar;
-
-            foreach (VisitedBar iterator in barList)
-            {
-                if (iterator.Glass.OrderedQuantity == cheaperBar.Glass.OrderedQuantity 
-                    && iterator.Glass.Price < cheaperBar.Glass.Price)
-                    cheaperBar = iterator;
-            }
-            return cheaperBar;
+            var x = from bar in barList
+                    where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
+                          (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
+                          (bar.Glass.Price <= visitedBar.Glass.Price)
+                    select bar.Name;
+            return x.Distinct();
         }
     }
 }
