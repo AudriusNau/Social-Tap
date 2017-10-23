@@ -12,32 +12,39 @@ namespace Fill_Up_
             
             allBars = a;
             InitializeComponent();
-            listBox1.Items.Clear();
+            listBox2.Items.Clear();
             ChangeLabels(bar);
             
             var betterBars = allBars.GetBetterBars(bar);
             
             foreach (string m in betterBars)
             {
-                listBox1.Items.Add(m);
+                listBox2.Items.Add(m);
             }
 
-            if(listBox1.Items.Count == 0)
+            if(listBox2.Items.Count == 0)
             {
-                listBox1.Items.Add(Results.Message);
+                listBox2.Items.Add(Results.Message);
             }
         }
 
         private void showMap_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem.ToString() == string.Empty)
+            if (listBox2.SelectedItem.ToString() == string.Empty)
             {
                 MessageBox.Show(Results.Error1);
                 return;
             }
 
-            string curItem = listBox1.SelectedItem.ToString();
-            new Map(curItem).Show();
+            if (listBox1.SelectedItem.ToString() == string.Empty)
+            {
+                MessageBox.Show(Results.Error2);
+                return;
+            }
+
+            string curItem = listBox2.SelectedItem.ToString();
+            string text = listBox1.GetItemText(listBox1.SelectedItem);
+            new Map(curItem, text).Show();
         }
     }
 }
