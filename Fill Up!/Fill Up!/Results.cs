@@ -40,7 +40,8 @@ namespace Fill_Up_
 
         private void showMap_Click(object sender, EventArgs e)
         {
-            new Map(currentBar).Show();
+            string text = listBox1.GetItemText(listBox1.SelectedItem);
+            new Map(currentBar, text).Show();
         }
     }
 }

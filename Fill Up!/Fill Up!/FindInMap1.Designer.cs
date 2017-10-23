@@ -79,7 +79,7 @@ namespace Fill_Up_ {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Google Maps.
+        ///   Looks up a localized string similar to OpenStreetMap.
         /// </summary>
         public static string FirstMap {
             get {
