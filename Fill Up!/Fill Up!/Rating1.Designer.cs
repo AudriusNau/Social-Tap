@@ -79,6 +79,15 @@ namespace Fill_Up_ {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pavadinime gali būti tik raidės, skaitmenys ir tarpas.
+        /// </summary>
+        public static string Error3 {
+            get {
+                return ResourceManager.GetString("Error3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string String1 {

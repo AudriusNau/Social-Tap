@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Fill_Up_
@@ -19,6 +20,12 @@ namespace Fill_Up_
             if (textBarName.Text == string.Empty)
             {
                 MessageBox.Show(Rating.Error1);
+                return;
+            }
+            //Regex
+             if (!Regex.IsMatch(textBarName.Text , @"^[a-zA-Z0-9 ]*$")) // Pavadinime gali buti tik raides, skaiciai ir tarpai
+            {
+                MessageBox.Show(Rating.Error3);
                 return;
             }
 
