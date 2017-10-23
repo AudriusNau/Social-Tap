@@ -37,54 +37,54 @@ namespace Fill_Up_
             {
                 StringBuilder queryadress = new StringBuilder();
                 StringBuilder queryadress1 = new StringBuilder();
-                queryadress.Append(FindInMap.GoogleMaps);
-                queryadress1.Append(FindInMap.OpenStreetMap);
+                queryadress.Append(FindInMap1.GoogleMaps);
+                queryadress1.Append(FindInMap1.OpenStreetMap);
 
                 string text = listBox1.GetItemText(listBox1.SelectedItem);
 
-                if (text == FindInMap.FirstMap)
+                if (text == FindInMap1.FirstMap)
                 {
                     if (street != string.Empty)
                     {
-                        queryadress.Append(street + FindInMap.Comma + FindInMap.Plus);
+                        queryadress1.Append(street + FindInMap1.Comma + FindInMap1.Plus);
                     }
 
                     if (city != string.Empty)
                     {
-                        queryadress.Append(city + FindInMap.Comma + FindInMap.Plus);
+                        queryadress1.Append(city + FindInMap1.Comma + FindInMap1.Plus);
                     }
 
                     if (bar != string.Empty)
                     {
-                        queryadress.Append(bar + FindInMap.Comma + FindInMap.Plus);
+                        queryadress1.Append(bar + FindInMap1.Comma + FindInMap1.Plus);
                     }
 
-                    webBrowser1.Navigate(queryadress.ToString());
+                    webBrowser1.Navigate(queryadress1.ToString());
                 }
                 else
                 {
                     if (street != string.Empty)
                     {
-                        queryadress1.Append(street + FindInMap.Comma + FindInMap.Plus);
+                        queryadress.Append(street + FindInMap1.Comma + FindInMap1.Plus);
                     }
 
                     if (city != string.Empty)
                     {
-                        queryadress1.Append(city + FindInMap.Comma + FindInMap.Plus);
+                        queryadress.Append(city + FindInMap1.Comma + FindInMap1.Plus);
                     }
 
                     if (bar != string.Empty)
                     {
-                        queryadress1.Append(bar + FindInMap.Comma + FindInMap.Plus);
+                        queryadress.Append(bar + FindInMap1.Comma + FindInMap1.Plus);
                     }
 
-                    webBrowser1.Navigate(queryadress1.ToString());
+                    webBrowser1.Navigate(queryadress.ToString());
                 }
 
             }
             catch
             {
-                throw new MapException(FindInMap.Error);
+                throw new MapException(FindInMap1.Error);
             }
         }
 

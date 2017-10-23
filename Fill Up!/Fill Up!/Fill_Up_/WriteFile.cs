@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace Fill_Up_.Fill_Up_
 {
-    class WriteFile : IWriteable
+    public class WriteFile : IWriteable
     {
         //List<VisitedBar> barList = new GetBarList();
 
