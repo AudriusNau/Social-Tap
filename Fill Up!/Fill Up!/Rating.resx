@@ -2766,6 +2766,9 @@
   <data name="Error2" xml:space="preserve">
     <value>Prašau, įveskite baro įvertinimą!</value>
   </data>
+  <data name="Error3" xml:space="preserve">
+    <value>Pavadinime gali būti tik raidės, skaitmenys ir tarpas</value>
+  </data>
   <data name="String1" xml:space="preserve">
     <value />
   </data>
