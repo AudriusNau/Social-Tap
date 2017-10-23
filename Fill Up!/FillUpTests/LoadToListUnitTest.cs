@@ -9,7 +9,7 @@ namespace FillUpTests
     [TestClass]
     public class LoadDataTest
     {
-       [TestMethod]
+        [TestMethod]
         public void Readfile_LoadData()
         {
             ListsOfBars barList = new ListsOfBars();

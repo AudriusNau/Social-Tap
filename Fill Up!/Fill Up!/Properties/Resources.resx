@@ -124,7 +124,4 @@
   <data name="DataFile" xml:space="preserve">
     <value>Data.xml</value>
   </data>
-  <data name="ResultsFile" xml:space="preserve">
-    <value>Rez.txt</value>
-  </data>
 </root>

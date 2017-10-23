@@ -22,14 +22,14 @@ namespace Fill_Up_ {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Map1 {
+    public partial class Map {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Map1() {
+        internal Map() {
         }
         
         /// <summary>
@@ -70,11 +70,29 @@ namespace Fill_Up_ {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OpenStreetMap.
+        /// </summary>
+        public static string FirstMap {
+            get {
+                return ResourceManager.GetString("FirstMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://maps.google.com/maps?q=.
         /// </summary>
         public static string GoogleMaps {
             get {
                 return ResourceManager.GetString("GoogleMaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://www.openstreetmap.org/search?query=.
+        /// </summary>
+        public static string OpenStreetMap {
+            get {
+                return ResourceManager.GetString("OpenStreetMap", resourceCulture);
             }
         }
     }

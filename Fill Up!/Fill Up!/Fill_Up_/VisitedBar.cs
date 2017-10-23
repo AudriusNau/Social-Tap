@@ -5,8 +5,8 @@ namespace Fill_Up_
 {
     public class VisitedBar : IBar
     {
-        private string name;
-        private int rating;
+        public string Name { get; set; }
+        public int Rating { get; set; }
         public GlassOfBeer Glass { get; set; }
 
         public VisitedBar()
@@ -21,18 +21,6 @@ namespace Fill_Up_
             this.Name = name;
             this.Rating = rating;
             Glass = glass;
-        }
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public int Rating
-        {
-            get { return rating; }
-            set { rating = value; }
         }
     }
 }
