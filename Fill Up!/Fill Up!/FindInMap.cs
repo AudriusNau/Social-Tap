@@ -46,25 +46,6 @@ namespace Fill_Up_
                 {
                     if (street != string.Empty)
                     {
-                        queryadress.Append(street + FindInMap1.Comma + FindInMap1.Plus);
-                    }
-
-                    if (city != string.Empty)
-                    {
-                        queryadress.Append(city + FindInMap1.Comma + FindInMap1.Plus);
-                    }
-
-                    if (bar != string.Empty)
-                    {
-                        queryadress.Append(bar + FindInMap1.Comma + FindInMap1.Plus);
-                    }
-
-                    webBrowser1.Navigate(queryadress.ToString());
-                }
-                else
-                {
-                    if (street != string.Empty)
-                    {
                         queryadress1.Append(street + FindInMap1.Comma + FindInMap1.Plus);
                     }
 
@@ -79,6 +60,25 @@ namespace Fill_Up_
                     }
 
                     webBrowser1.Navigate(queryadress1.ToString());
+                }
+                else
+                {
+                    if (street != string.Empty)
+                    {
+                        queryadress.Append(street + FindInMap1.Comma + FindInMap1.Plus);
+                    }
+
+                    if (city != string.Empty)
+                    {
+                        queryadress.Append(city + FindInMap1.Comma + FindInMap1.Plus);
+                    }
+
+                    if (bar != string.Empty)
+                    {
+                        queryadress.Append(bar + FindInMap1.Comma + FindInMap1.Plus);
+                    }
+
+                    webBrowser1.Navigate(queryadress.ToString());
                 }
 
             }

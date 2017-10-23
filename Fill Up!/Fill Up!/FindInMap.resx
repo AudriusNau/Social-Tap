@@ -124,7 +124,7 @@
     <value>Error!</value>
   </data>
   <data name="FirstMap" xml:space="preserve">
-    <value>Google Maps</value>
+    <value>OpenStreetMap</value>
   </data>
   <data name="GoogleMaps" xml:space="preserve">
     <value>http://maps.google.com/maps?q=</value>
