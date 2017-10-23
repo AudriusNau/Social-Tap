@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using Fill_Up_.Properties;
 
+
 namespace Fill_Up_.Fill_Up_
 {
     class ReadFile : ILoadable
@@ -18,7 +19,7 @@ namespace Fill_Up_.Fill_Up_
         private decimal price;
 
 
-        public ListsOfBars LoadData(ListsOfBars allbars)
+        public ListsOfBars ReadData(ListsOfBars allbars)
         { 
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
         
@@ -51,12 +52,20 @@ namespace Fill_Up_.Fill_Up_
                     
                     if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar") 
                     {
-                        GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price);
-                        VisitedBar bar = new VisitedBar(name, rating, glass);
-                        allbars.AddNewBar(bar);                                         //sudeda nuskaitytus duomenis i lista
+                    LoadToList(allbars, name, rating, mug, lackOfBeer, price);                                
                     }
             }
+            reader.Close();
             return allbars;
+
+
+        }
+        public void LoadToList (ListsOfBars allbars, string name, int rating, double mug, int lackOfBeer, decimal price)
+        {
+
+                        GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price); //sudeda nuskaitytus duomenis i lista
+                        VisitedBar bar = new VisitedBar(name, rating, glass);
+                        allbars.AddNewBar(bar);    
         }
     }
 }

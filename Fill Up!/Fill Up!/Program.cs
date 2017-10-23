@@ -14,7 +14,7 @@ namespace Fill_Up_
             
             
             ReadFile load = new ReadFile();
-             load.LoadData(allbars);
+             load.ReadData(allbars);
            
          
             Application.EnableVisualStyles();
