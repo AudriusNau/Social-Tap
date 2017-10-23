@@ -22,7 +22,7 @@ namespace Fill_Up_ {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Results {
+    public partial class Results {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -57,6 +57,33 @@ namespace Fill_Up_ {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pasirinkite barą!.
+        /// </summary>
+        public static string Error1 {
+            get {
+                return ResourceManager.GetString("Error1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pasirinkite žemėlapį!.
+        /// </summary>
+        public static string Error2 {
+            get {
+                return ResourceManager.GetString("Error2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verta apsilankyti čia dar kartą!.
+        /// </summary>
+        public static string Message {
+            get {
+                return ResourceManager.GetString("Message", resourceCulture);
             }
         }
     }
