@@ -9,7 +9,6 @@ namespace Fill_Up_
 
         public Results(ListsOfBars a, VisitedBar bar)
         {
-            
             allBars = a;
             InitializeComponent();
             listBox2.Items.Clear();
@@ -24,25 +23,25 @@ namespace Fill_Up_
 
             if(listBox2.Items.Count == 0)
             {
-                listBox2.Items.Add(Results.Message);
+                listBox2.Items.Add(bar.Name);
             }
         }
 
         private void showMap_Click(object sender, EventArgs e)
         {
-            if (listBox2.SelectedItem.ToString() == string.Empty)
+            if (listBox2.GetItemText(listBox2.SelectedItem) == string.Empty)
             {
                 MessageBox.Show(Results.Error1);
                 return;
             }
 
-            if (listBox1.SelectedItem.ToString() == string.Empty)
+            if (listBox1.GetItemText(listBox1.SelectedItem) == string.Empty)
             {
                 MessageBox.Show(Results.Error2);
                 return;
             }
 
-            string curItem = listBox2.SelectedItem.ToString();
+            string curItem = listBox2.GetItemText(listBox2.SelectedItem);
             string text = listBox1.GetItemText(listBox1.SelectedItem);
             new Map(curItem, text).Show();
         }
