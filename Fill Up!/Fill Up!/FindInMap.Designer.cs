@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.street = new System.Windows.Forms.Label();
             this.city = new System.Windows.Forms.Label();
@@ -37,8 +39,6 @@
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxBar = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -72,6 +72,33 @@
             this.splitContainer1.Size = new System.Drawing.Size(668, 657);
             this.splitContainer1.SplitterDistance = 221;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 22;
+            this.listBox1.Items.AddRange(new object[] {
+            "Google Maps",
+            "OpenStreetMap"});
+            this.listBox1.Location = new System.Drawing.Point(29, 453);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(170, 48);
+            this.listBox1.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(31, 403);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 36);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Žemėlapis:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -130,7 +157,7 @@
             this.textBoxStreet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBoxStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.textBoxStreet.Location = new System.Drawing.Point(37, 322);
-            this.textBoxStreet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxStreet.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxStreet.Multiline = true;
             this.textBoxStreet.Name = "textBoxStreet";
             this.textBoxStreet.Size = new System.Drawing.Size(148, 35);
@@ -142,7 +169,7 @@
             this.textBoxCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBoxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.textBoxCity.Location = new System.Drawing.Point(37, 202);
-            this.textBoxCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCity.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCity.Multiline = true;
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(148, 35);
@@ -154,7 +181,7 @@
             this.textBoxBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBoxBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.textBoxBar.Location = new System.Drawing.Point(37, 80);
-            this.textBoxBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBar.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBar.Multiline = true;
             this.textBoxBar.Name = "textBoxBar";
             this.textBoxBar.Size = new System.Drawing.Size(148, 35);
@@ -172,33 +199,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(443, 657);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(31, 403);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 36);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Žemėlapis:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Items.AddRange(new object[] {
-            "Google Maps",
-            "OpenStreetMap"});
-            this.listBox1.Location = new System.Drawing.Point(37, 451);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(148, 48);
-            this.listBox1.TabIndex = 35;
             // 
             // FindInMap
             // 

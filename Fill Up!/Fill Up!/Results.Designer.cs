@@ -42,6 +42,7 @@
             this.priceOfBeer = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.showMap = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label6
@@ -180,7 +181,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.textBox1.Location = new System.Drawing.Point(41, 313);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -202,6 +203,20 @@
             this.showMap.UseVisualStyleBackColor = false;
             this.showMap.Click += new System.EventHandler(this.showMap_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 22;
+            this.listBox1.Items.AddRange(new object[] {
+            "Google Maps",
+            "OpenStreetMap"});
+            this.listBox1.Location = new System.Drawing.Point(273, 447);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(164, 48);
+            this.listBox1.TabIndex = 39;
+            // 
             // Results
             // 
             this.AcceptButton = this.showMap;
@@ -209,6 +224,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(668, 657);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.showMap);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.priceOfBeer);
@@ -223,7 +239,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Results";
             this.Text = "Rezultatai";
             this.ResumeLayout(false);
@@ -255,5 +271,6 @@
         private System.Windows.Forms.Label priceOfBeer;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button showMap;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

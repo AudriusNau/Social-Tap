@@ -7,7 +7,7 @@ namespace Fill_Up_
 {
     public partial class Map : Form
     {
-        public Map(string currentBar)
+        public Map(string currentBar, string text)
         {
             InitializeComponent();
 
@@ -16,14 +16,28 @@ namespace Fill_Up_
             try
             {
                 StringBuilder queryadress = new StringBuilder();
+                StringBuilder queryadress1 = new StringBuilder();
                 queryadress.Append(Map1.GoogleMaps);
+                queryadress1.Append(Map1.OpenStreetMap);
 
-                if (bar != string.Empty)
+                if (text == Map1.FirstMap)
                 {
-                    queryadress.Append(bar);
-                }
+                    if (bar != string.Empty)
+                    {
+                        queryadress1.Append(bar);
+                    }
 
-                webBrowser1.Navigate(queryadress.ToString());
+                    webBrowser1.Navigate(queryadress1.ToString());
+                }
+                else
+                {
+                    if (bar != string.Empty)
+                    {
+                        queryadress.Append(bar);
+                    }
+
+                    webBrowser1.Navigate(queryadress.ToString());
+                }
 
             }
             catch
@@ -35,6 +49,11 @@ namespace Fill_Up_
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

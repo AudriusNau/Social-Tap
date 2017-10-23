@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="FirstMap" xml:space="preserve">
+    <value>OpenStreetMap</value>
+  </data>
+  <data name="GoogleMaps" xml:space="preserve">
+    <value>http://maps.google.com/maps?q=</value>
+  </data>
+  <data name="OpenStreetMap" xml:space="preserve">
+    <value>https://www.openstreetmap.org/search?query=</value>
+  </data>
 </root>
