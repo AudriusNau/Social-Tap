@@ -5,42 +5,51 @@ namespace Fill_Up_
 {
     public partial class Results : Form
     {
-        private const string resxFile = @".\Results.resx";
         ListsOfBars allBars;
-        string currentBar;
+        //string currentBar;
+
         public Results(ListsOfBars a, VisitedBar bar)
         {
             allBars = a;
             InitializeComponent();
             ChangeLabels(bar);
+            
+            var betterBars = allBars.GetBetterBars(bar);
 
-            VisitedBar betterBar = allBars.FindBetterBar(bar);
+            foreach (string m in betterBars)
+            {
+                listBox1.Items.Add(m);
+            }
+
+            /*VisitedBar betterBar = allBars.FindBetterBar(bar);
             VisitedBar cheaperBar = allBars.FindCheaperBar(bar);
             
             if(betterBar != cheaperBar)
             {
                 if(betterBar.Rating >= cheaperBar.Rating)
                 {
-                    textBox1.Text = Results1.Message + betterBar.Name;
+                    textBox1.Text = Results.Message + betterBar.Name;
                     currentBar = betterBar.Name;
                 }
                   else
                   {
-                      textBox1.Text = Results1.Message + cheaperBar.Name;
+                      textBox1.Text = Results.Message + cheaperBar.Name;
                       currentBar = betterBar.Name;
                   } 
             }
             else
             {
-                textBox1.Text = Results1.Message + cheaperBar.Name;
+                textBox1.Text = Results.Message + cheaperBar.Name;
                 currentBar = betterBar.Name;
-            }
-            
+            }*/
+
         }
 
         private void showMap_Click(object sender, EventArgs e)
         {
-            new Map(currentBar).Show();
+            string curItem = listBox1.SelectedItem.ToString();
+            new Map(curItem).Show();
+            //new Map(currentBar).Show();
         }
     }
 }

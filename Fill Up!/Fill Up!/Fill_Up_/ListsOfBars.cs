@@ -34,27 +34,45 @@ namespace Fill_Up_
                 ratedBars.Add(new RatedBar{Name = b.Name,  Rating = rating});
             }
 
-            IEnumerable<RatedBar> x = ratedBars.Distinct();
-            List<RatedBar> distinctRatedBars = x.ToList();
-            distinctRatedBars.Sort();
-            distinctRatedBars.Reverse();
+            IEnumerable<RatedBar> distinctList = ratedBars.Distinct();
 
-            return distinctRatedBars;
+            var orderedList = from y in distinctList
+                              orderby y.Rating descending, y.Name ascending
+                              select y;
+            /*
+             * IEnumerable<RatedBar> x = ratedBars.Distinct();
+             * List<RatedBar> distinctRatedBars = x.ToList();
+             * distinctRatedBars.Sort();
+             * distinctRatedBars.Reverse();
+             * return distinctRatedBars();             * 
+             */
+
+            return orderedList.ToList();
         }
 
         public int GetAvarageRating(string name)
         {
             int sum = 0, count = 0;
-            foreach(VisitedBar b in this.barList)
+            foreach(VisitedBar b in barList)
             {
                 if (b.Name == name)
                 {
-                    sum = sum + b.Rating;
+                    sum += b.Rating;
                     count++;
                 }
             }
 
             return sum / count;
+        }
+
+        public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
+        {
+            var x = from bar in barList
+                    where (bar.Glass.orderedQuantity == visitedBar.Glass.orderedQuantity) &&
+                          (bar.Glass.lackOfBeer < visitedBar.Glass.lackOfBeer) &&
+                          (bar.Glass.price < visitedBar.Glass.price)
+                    select bar.Name;
+            return x.Distinct();
         }
 
         public VisitedBar FindBetterBar(VisitedBar bar)

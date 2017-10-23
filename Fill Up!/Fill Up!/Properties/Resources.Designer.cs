@@ -78,14 +78,5 @@ namespace Fill_Up_.Properties {
                 return ResourceManager.GetString("DataFile", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Rez.txt.
-        /// </summary>
-        internal static string ResultsFile {
-            get {
-                return ResourceManager.GetString("ResultsFile", resourceCulture);
-            }
-        }
     }
 }

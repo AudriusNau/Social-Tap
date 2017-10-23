@@ -16,7 +16,7 @@ namespace Fill_Up_
             try
             {
                 StringBuilder queryadress = new StringBuilder();
-                queryadress.Append(Map1.GoogleMaps);
+                queryadress.Append(Map.GoogleMaps);
 
                 if (bar != string.Empty)
                 {
@@ -28,7 +28,7 @@ namespace Fill_Up_
             }
             catch
             {
-                throw new MapException(Map1.Error);
+                throw new MapException(Map.Error);
             }
         }
 
