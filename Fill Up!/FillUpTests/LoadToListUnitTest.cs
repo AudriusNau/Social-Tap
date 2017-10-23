@@ -6,15 +6,16 @@ using Fill_Up_.Fill_Up_;
 
 namespace FillUpTests
 {
-    //[TestClass]
+    [TestClass]
     public class LoadDataTest
     {
-      //  [TestMethod]
+        [TestMethod]
         public void Readfile_LoadData()
         {
-            //ListsOfBars barList = new ListsOfBars();
-            //LoadToList(barList, "name", 4, 1, 2, 3);
-            //Assert.IsNotNull(barList);
+            ListsOfBars barList = new ListsOfBars();
+            ReadFile t = new ReadFile();
+            t.LoadToList(barList, "name", 4, 1, 2, 3);
+            Assert.IsNotNull(barList);
         }
     }
 }

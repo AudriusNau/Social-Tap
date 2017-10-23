@@ -10,7 +10,7 @@ using Fill_Up_.Properties;
 
 namespace Fill_Up_.Fill_Up_
 {
-    class ReadFile : ILoadable
+    public  class ReadFile : ILoadable
     {
         private string name;
         private int rating;
