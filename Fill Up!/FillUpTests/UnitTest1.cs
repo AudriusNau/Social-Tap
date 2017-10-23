@@ -1,19 +1,19 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-
+using Fill_Up_;
+using Fill_Up_.Fill_Up_;
 
 namespace FillUpTests
 {
-    [TestClass]
+    //[TestClass]
     public class LoadDataTest
     {
-        [TestMethod]
+      //  [TestMethod]
         public void Readfile_LoadData()
         {
-           
-            //ReadFile readfile = new ReadFile();
-            //ListsOfBars barList = readfile.LoadData();
+            //ListsOfBars barList = new ListsOfBars();
+            //LoadToList(barList, "name", 4, 1, 2, 3);
             //Assert.IsNotNull(barList);
         }
     }
