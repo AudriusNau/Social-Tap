@@ -10,7 +10,7 @@ using Fill_Up_.Properties;
 
 namespace Fill_Up_.Fill_Up_
 {
-    class ReadFile : ILoadable
+    public class ReadFile : ILoadable
     {
         private string name;
         private int rating;
@@ -52,7 +52,7 @@ namespace Fill_Up_.Fill_Up_
                     
                     if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar") 
                     {
-                    LoadToList(allbars, name, rating, mug, lackOfBeer, price);                                
+                        LoadToList(allbars, name, rating, mug, lackOfBeer, price);                                
                     }
             }
             reader.Close();
