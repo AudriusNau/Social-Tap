@@ -62,10 +62,9 @@ namespace Fill_Up_.Fill_Up_
         }
         public void LoadToList (ListsOfBars allbars, string name, int rating, double mug, int lackOfBeer, decimal price)
         {
-
-                        GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price); //sudeda nuskaitytus duomenis i lista
-                        VisitedBar bar = new VisitedBar(name, rating, glass);
-                        allbars.AddNewBar(bar);    
+            GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price); //sudeda nuskaitytus duomenis i lista
+            VisitedBar bar = new VisitedBar(name, rating, glass);
+            allbars.AddNewBar(bar);    
         }
     }
 }
