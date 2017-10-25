@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fill_Up_\Extension.cs" />
     <Compile Include="Fill_Up_\GoogleMaps.cs" />
     <Compile Include="Fill_Up_\IMap.cs" />
     <Compile Include="Fill_Up_\IWriteable.cs" />
