@@ -32,6 +32,12 @@ namespace Fill_Up_
                 StringBuilder queryadress = new StringBuilder();
                 string text = listBox1.GetItemText(listBox1.SelectedItem);
 
+                if (listBox1.GetItemText(listBox1.SelectedItem) == string.Empty)
+                {
+                    MessageBox.Show(Results.Error2);
+                    return;
+                }
+
                 queryadress.Append(mf.GetUrl(text));
 
                 if (street != string.Empty)

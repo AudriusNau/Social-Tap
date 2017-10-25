@@ -11,9 +11,6 @@ namespace Fill_Up_.Fill_Up_
         public string Name { get { return "GoogleMaps"; } }
         public string Url { get { return FindInMap1.GoogleMaps; } }
 
-        public GoogleMaps()
-        {
-
-        }
+        public GoogleMaps() {}
     }
 }

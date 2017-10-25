@@ -11,10 +11,6 @@ namespace Fill_Up_.Fill_Up_
         public string Name { get { return "OpenStreetMap"; } }
         public string Url { get { return FindInMap1.OpenStreetMap; } }
 
-        public OpenStreetMap()
-        {
-
-        }
-
+        public OpenStreetMap() {}
     }
 }
