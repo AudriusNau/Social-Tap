@@ -80,7 +80,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 22;
             this.listBox1.Items.AddRange(new object[] {
-            "Google Maps",
+            "GoogleMaps",
             "OpenStreetMap"});
             this.listBox1.Location = new System.Drawing.Point(29, 453);
             this.listBox1.Name = "listBox1";
@@ -98,7 +98,6 @@
             this.label1.Size = new System.Drawing.Size(168, 36);
             this.label1.TabIndex = 34;
             this.label1.Text = "Žemėlapis:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -137,7 +136,6 @@
             this.city.Size = new System.Drawing.Size(133, 36);
             this.city.TabIndex = 29;
             this.city.Text = "Miestas:";
-            this.city.Click += new System.EventHandler(this.city_Click);
             // 
             // bar
             // 
@@ -150,7 +148,6 @@
             this.bar.Size = new System.Drawing.Size(106, 36);
             this.bar.TabIndex = 28;
             this.bar.Text = "Baras:";
-            this.bar.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxStreet
             // 
@@ -187,7 +184,6 @@
             this.textBoxBar.Size = new System.Drawing.Size(148, 35);
             this.textBoxBar.TabIndex = 25;
             this.textBoxBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxBar.TextChanged += new System.EventHandler(this.textBoxBaras_TextChanged);
             // 
             // webBrowser1
             // 
@@ -198,7 +194,6 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(443, 657);
             this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // FindInMap
             // 
@@ -213,7 +208,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FindInMap";
             this.Text = "Barai";
-            this.Load += new System.EventHandler(this.FindInMap_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

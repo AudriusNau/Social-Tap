@@ -1686,4 +1686,7 @@
   <data name="Message" xml:space="preserve">
     <value>Verta apsilankyti čia dar kartą!</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
 </root>

@@ -62,7 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fill_Up_\Extension.cs" />
+    <Compile Include="Fill_Up_\GoogleMaps.cs" />
+    <Compile Include="Fill_Up_\IMap.cs" />
     <Compile Include="Fill_Up_\IWriteable.cs" />
+    <Compile Include="Fill_Up_\MapFactory.cs" />
+    <Compile Include="Fill_Up_\OpenStreetMap.cs" />
     <Compile Include="Fill_Up_\WriteFile.cs" />
     <Compile Include="Fill_Up_\Exceptions\MapException.cs" />
     <Compile Include="ListOfRatings.cs">
