@@ -3,6 +3,7 @@ using System.Resources;
 using System.Text;
 using System.Windows.Forms;
 using Fill_Up_.Exceptions;
+using Fill_Up_.Fill_Up_;
 
 namespace Fill_Up_
 {
@@ -16,17 +17,6 @@ namespace Fill_Up_
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void textBoxBaras_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string street = textBoxStreet.Text;
@@ -35,82 +25,42 @@ namespace Fill_Up_
 
             try
             {
-                StringBuilder queryadress = new StringBuilder();
-                StringBuilder queryadress1 = new StringBuilder();
-                queryadress.Append(FindInMap.GoogleMaps);
-                queryadress1.Append(FindInMap.OpenStreetMap);
+                MapFactory mf = new MapFactory();
+                mf.AddNewMap(new GoogleMaps());
+                mf.AddNewMap(new OpenStreetMap());
 
+                StringBuilder queryadress = new StringBuilder();
                 string text = listBox1.GetItemText(listBox1.SelectedItem);
 
-                if (text == FindInMap.FirstMap)
+                if (listBox1.GetItemText(listBox1.SelectedItem) == string.Empty)
                 {
-                    if (street != string.Empty)
-                    {
-                        queryadress1.Append(street + FindInMap.Comma + FindInMap.Plus);
-                    }
-
-                    if (city != string.Empty)
-                    {
-                        queryadress1.Append(city + FindInMap.Comma + FindInMap.Plus);
-                    }
-
-                    if (bar != string.Empty)
-                    {
-                        queryadress1.Append(bar + FindInMap.Comma + FindInMap.Plus);
-                    }
-
-                    webBrowser1.Navigate(queryadress1.ToString());
-                }
-                else
-                {
-                    if (street != string.Empty)
-                    {
-                        queryadress.Append(street + FindInMap.Comma + FindInMap.Plus);
-                    }
-
-                    if (city != string.Empty)
-                    {
-                        queryadress.Append(city + FindInMap.Comma + FindInMap.Plus);
-                    }
-
-                    if (bar != string.Empty)
-                    {
-                        queryadress.Append(bar + FindInMap.Comma + FindInMap.Plus);
-                    }
-
-                    webBrowser1.Navigate(queryadress.ToString());
+                    MessageBox.Show(Results.Error2);
+                    return;
                 }
 
+                queryadress.Append(mf.GetUrl(text));
+
+                if (street != string.Empty)
+                {
+                    queryadress.Append(FindInMap1.Comma + FindInMap1.Plus + street);
+                }
+
+                if (city != string.Empty)
+                {
+                    queryadress.Append(FindInMap1.Comma + FindInMap1.Plus + city);
+                }
+
+                if (bar != string.Empty)
+                {
+                    queryadress.Append(bar);
+                }
+
+                webBrowser1.Navigate(queryadress.ToString());
             }
             catch
             {
-                throw new MapException(FindInMap.Error);
+                throw new MapException(FindInMap1.Error);
             }
-        }
-
-        private void FindInMap_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void city_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

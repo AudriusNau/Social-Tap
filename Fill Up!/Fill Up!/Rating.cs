@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using Fill_Up_.Fill_Up_;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -42,19 +43,19 @@ namespace Fill_Up_
 
             if (radioButton1.Checked == true)
             {
-                glass.OrderedQuantity = double.Parse(Rating.Value1);
+               glass.OrderedQuantity = Rating.Value1.StringToDouble();
             }
             else if (radioButton2.Checked == true)
             {
-                glass.OrderedQuantity = double.Parse(Rating.Value2);
+                glass.OrderedQuantity = Rating.Value2.StringToDouble();
             }
             else if (radioButton3.Checked == true)
             {
-                glass.OrderedQuantity = double.Parse(Rating.Value3);
+                glass.OrderedQuantity = Rating.Value3.StringToDouble();
             }
             else 
-                glass.OrderedQuantity = double.Parse(Rating.Value4);
-            
+                glass.OrderedQuantity = Rating.Value4.StringToDouble();
+
             VisitedBar bar = new VisitedBar(textBarName.Text, int.Parse(domainUpDownRating.Text), glass);
             allBars.AddNewBar(bar);
 
