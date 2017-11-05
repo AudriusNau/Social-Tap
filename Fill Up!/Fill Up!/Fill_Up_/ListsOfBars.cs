@@ -8,6 +8,7 @@ namespace Fill_Up_
         private List<VisitedBar> barList;
         private List<RatedBar> ratedBars;
 
+
         public ListsOfBars()
         {
             this.barList = new List<VisitedBar>();
