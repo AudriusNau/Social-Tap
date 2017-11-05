@@ -12,12 +12,21 @@ namespace Fill_Up_.Fill_Up_
 {
     public  class ReadFile : ILoadable
     {
+        private Lazy<ReadFile> _lazyProperty = new Lazy<ReadFile>(() => new ReadFile());
+
         private string name;
         private int rating;
         private double mug;
         private int lackOfBeer;
         private decimal price;
 
+        public ReadFile MyProperty
+        {
+            get
+            {
+                return _lazyProperty.Value;
+            }
+        }
 
         public ListsOfBars ReadData(ListsOfBars allbars)
         { 
