@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace Fill_Up_App
 {
-    [Activity(Label = "Fill_Up_App", MainLauncher = true, Icon = "@drawable/beer-icon.png")]
+    [Activity(Label = "Fill_Up_App", MainLauncher = true)]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
