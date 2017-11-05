@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@drawable/mainbackground">
+    <Button
+        android:text="Įvertinti bokalą"
+        android:layout_width="200.5dip"
+        android:layout_height="75.25dip"
+        android:id="@+id/button1"
+        android:background="#771B0C"
+        android:layout_marginTop="140dip"
+        android:layout_marginLeft="90dip" />
+    <Button
+        android:text="Barų reitingai"
+        android:layout_width="200.5dip"
+        android:layout_height="75.25dip"
+        android:id="@+id/button1"
+        android:background="#771B0C"
+        android:layout_marginTop="70dip"
+        android:layout_marginLeft="90dip" />
+</LinearLayout>
