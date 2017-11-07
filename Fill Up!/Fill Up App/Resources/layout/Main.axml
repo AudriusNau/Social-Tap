@@ -13,13 +13,15 @@
         android:id="@+id/button1"
         android:background="#771B0C"
         android:layout_marginTop="140dip"
-        android:layout_marginLeft="90dip" />
+        android:layout_marginLeft="90dip"
+        android:onClick="Button1OnClick" />
     <Button
         android:text="Barų reitingai"
         android:layout_width="200.5dip"
         android:layout_height="75.25dip"
-        android:id="@+id/button1"
+        android:id="@+id/button2"
         android:background="#771B0C"
         android:layout_marginTop="70dip"
-        android:layout_marginLeft="90dip" />
+        android:layout_marginLeft="90dip"
+        android:onClick="Button2OnClick" />
 </LinearLayout>
