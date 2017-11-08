@@ -10,18 +10,16 @@
         android:text="Įvertinti bokalą"
         android:layout_width="200.5dip"
         android:layout_height="75.25dip"
-        android:id="@+id/button1"
+        android:id="@+id/evaluationButton"
         android:background="#771B0C"
         android:layout_marginTop="140dip"
-        android:layout_marginLeft="90dip"
-        android:onClick="Button1OnClick" />
+        android:layout_marginLeft="90dip"/>
     <Button
         android:text="Barų reitingai"
         android:layout_width="200.5dip"
         android:layout_height="75.25dip"
-        android:id="@+id/button2"
+        android:id="@+id/ratingsButton"
         android:background="#771B0C"
         android:layout_marginTop="70dip"
-        android:layout_marginLeft="90dip"
-        android:onClick="Button2OnClick" />
+        android:layout_marginLeft="90dip"/>
 </LinearLayout>

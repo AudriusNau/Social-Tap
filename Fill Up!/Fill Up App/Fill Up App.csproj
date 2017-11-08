@@ -58,11 +58,19 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity2.cs" />
-    <Compile Include="Activity3.cs" />
+    <Compile Include="Code\GlassOfBeer.cs" />
+    <Compile Include="Code\IBar.cs" />
+    <Compile Include="Code\ILoadable.cs" />
+    <Compile Include="Code\ListsOfBars.cs" />
+    <Compile Include="Code\RatedBar.cs" />
+    <Compile Include="Code\ReadFile.cs" />
+    <Compile Include="Code\VisitedBar.cs" />
+    <Compile Include="Evaluation.cs" />
+    <Compile Include="Ratings.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -71,7 +79,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\Layout1.axml">
+    <AndroidResource Include="Resources\layout\EvaluationLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ResultsLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -82,7 +93,6 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
     <Folder Include="Resources\mipmap-hdpi\" />
     <Folder Include="Resources\mipmap-mdpi\" />
     <Folder Include="Resources\mipmap-xhdpi\" />
@@ -94,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\beerIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Code\Data.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
