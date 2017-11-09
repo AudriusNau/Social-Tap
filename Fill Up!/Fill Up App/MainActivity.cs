@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Widget;
+using Fill_Up_App.Code;
 using Android.OS;
 
 namespace Fill_Up_App
@@ -7,21 +8,26 @@ namespace Fill_Up_App
     [Activity(Label = "Fill_Up_App", MainLauncher = true)]
     public class MainActivity : Activity
     {
+        ListsOfBars allbars;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
 
+            allbars = new ListsOfBars();
 
-            Button button1 = FindViewById<Button>(Resource.Id.button1);
-            Button button2 = FindViewById<Button>(Resource.Id.button2);
+            //ReadFile load = new ReadFile();
+            //load.ReadData(allbars);
+
+            Button button1 = FindViewById<Button>(Resource.Id.evaluationButton);
+            Button button2 = FindViewById<Button>(Resource.Id.ratingsButton);
 
             button1.Click += delegate {
-                StartActivity(typeof(Activity2));
+                StartActivity(typeof(Evaluation));
             };
 
             button2.Click += delegate {
-                StartActivity(typeof(Activity3));
+                StartActivity(typeof(Ratings));
             };
         }
     }
