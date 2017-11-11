@@ -1,11 +1,9 @@
-﻿using Android.OS;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 
 namespace Fill_Up_App.Code
 {
-    public class ListsOfBars : ISerializable
+    public class ListsOfBars
     {
         private List<VisitedBar> barList;
         private List<RatedBar> ratedBars;
@@ -76,12 +74,6 @@ namespace Fill_Up_App.Code
                           (bar.Glass.Price <= visitedBar.Glass.Price)
                     select bar.Name;
             return x.Distinct();
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("barlist", barList, typeof(List<VisitedBar>));
-            info.AddValue("ratedbars", ratedBars, typeof(List<RatedBar>));
         }
     }
 }

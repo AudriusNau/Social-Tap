@@ -11,31 +11,20 @@
         android:minHeight="25px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView1"
         android:divider="#771B0C"
         android:dividerHeight="2dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp" />
-    <TextView
-        android:text="Rezultatas"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12pt"
-        android:gravity="center"
-        android:id="@+id/textView1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp" />
+        android:layout_marginLeft="10dp"
+        android:id="@+id/listView2" />
     <Button
         android:text="Grįžti atgal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/goBackBut"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:id="@+id/goBackButton1"
+        android:textSize="12pt"
         android:background="#771B0C"
-        android:textSize="12pt" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp" />
 </LinearLayout>

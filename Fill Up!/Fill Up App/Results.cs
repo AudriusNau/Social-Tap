@@ -27,6 +27,13 @@ namespace Fill_Up_App
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
             list.Adapter = adapter;
 
+            Button gobackbutton = FindViewById<Button>(Resource.Id.goBackBut);
+            gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
+        }
+
+        void gobackbutton_Click(Object sender, EventArgs e)
+        {
+            Finish();
         }
     }
 }

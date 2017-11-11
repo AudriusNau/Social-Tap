@@ -16,9 +16,6 @@ namespace Fill_Up_App
 
             allbars = new ListsOfBars();
 
-            //ReadFile load = new ReadFile();
-            //load.ReadData(allbars);
-
             Button button1 = FindViewById<Button>(Resource.Id.evaluationButton);
             Button button2 = FindViewById<Button>(Resource.Id.ratingsButton);
 

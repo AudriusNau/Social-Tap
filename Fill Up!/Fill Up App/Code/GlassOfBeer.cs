@@ -1,8 +1,9 @@
-﻿namespace Fill_Up_App.Code
+﻿using System.Runtime.Serialization;
+
+namespace Fill_Up_App.Code
 {
     public struct GlassOfBeer
     {
-
         private double orderedQuantity; 
         private int lackOfBeer;
         private double price;

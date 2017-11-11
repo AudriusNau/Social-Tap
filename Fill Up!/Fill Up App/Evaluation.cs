@@ -55,14 +55,14 @@ namespace Fill_Up_App
             
             GlassOfBeer glass = new GlassOfBeer();
             glass.OrderedQuantity = Double.Parse(((EditText)FindViewById(Resource.Id.orderedQuantity)).Text);
-            glass.LackOfBeer = int.Parse(((EditText)FindViewById(Resource.Id.lackOfBeer)).Text);
+            glass.LackOfBeer = int.Parse(((EditText)FindViewById(Resource.Id.lackOfBeer)).Text);   //suapvalinimas iš decimal skaičiaus
             glass.Price = Double.Parse(((EditText)FindViewById(Resource.Id.price)).Text);
 
-            VisitedBar bar = new VisitedBar(((EditText)FindViewById(Resource.Id.barName)).Text, ((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating, glass);
+            VisitedBar bar = new VisitedBar(((EditText)FindViewById(Resource.Id.barName)).Text, 
+                (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating, glass);   //suapvalinti
 
-            /* 
-             * allBars.AddNewBar(bar);
-            */
+            // allBars.AddNewBar(bar);
+          
 
             StartActivity(typeof(Results));
         }
