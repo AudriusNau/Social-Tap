@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fill Up App", "Fill Up App\Fill Up App.csproj", "{24F86ABA-82EC-4D2E-BE67-59A0B4A0ECA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillUpWeb", "FillUpWeb\FillUpWeb.csproj", "{AF8A27FC-3D87-4A46-873F-D7BB49AA0C37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{24F86ABA-82EC-4D2E-BE67-59A0B4A0ECA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24F86ABA-82EC-4D2E-BE67-59A0B4A0ECA2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24F86ABA-82EC-4D2E-BE67-59A0B4A0ECA2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AF8A27FC-3D87-4A46-873F-D7BB49AA0C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8A27FC-3D87-4A46-873F-D7BB49AA0C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8A27FC-3D87-4A46-873F-D7BB49AA0C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8A27FC-3D87-4A46-873F-D7BB49AA0C37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
