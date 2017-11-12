@@ -6,6 +6,15 @@ namespace Fill_Up_
     public partial class Results : Form
     {
         ListsOfBars allBars;
+        private Lazy<Results> _lazyProperty = new Lazy<Results>(() => new Results());
+
+        public Results MyProperty
+        {
+            get
+            {
+                return _lazyProperty.Value;
+            }
+        }
 
         public Results(ListsOfBars a, VisitedBar bar)
         {

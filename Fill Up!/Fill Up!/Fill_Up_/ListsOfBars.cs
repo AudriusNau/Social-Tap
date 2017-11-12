@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
+using System;
 namespace Fill_Up_
 {
     public class ListsOfBars
@@ -51,10 +51,25 @@ namespace Fill_Up_
             return orderedList.ToList();
         }
 
+
+        //public Func <string, int> GetAvarageRating = (name) =>
+        //{
+        //    List<VisitedBar> tepmBar= new List<VisitedBar>(); 
+        //    int sum = 0, count = 0;
+        //    foreach (VisitedBar b in barList)
+        //    {
+        //        if (b.Name == name)
+        //        {
+        //            sum += b.Rating;
+        //            count++;
+        //        }
+        //    }
+        //    return sum / count;
+        //};
         public int GetAvarageRating(string name)
         {
             int sum = 0, count = 0;
-            foreach(VisitedBar b in barList)
+            foreach (VisitedBar b in barList)
             {
                 if (b.Name == name)
                 {
