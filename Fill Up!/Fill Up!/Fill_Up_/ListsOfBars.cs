@@ -31,7 +31,7 @@ namespace Fill_Up_
 
             foreach (VisitedBar b in this.barList)
             {
-                rating = GetAvarageRating(b.Name);
+                rating = GetAvarageRating(b.Name,barList);
                 ratedBars.Add(new RatedBar{Name = b.Name,  Rating = rating});
             }
 
@@ -51,22 +51,7 @@ namespace Fill_Up_
             return orderedList.ToList();
         }
 
-
-        //public Func <string, int> GetAvarageRating = (name) =>
-        //{
-        //    List<VisitedBar> tepmBar= new List<VisitedBar>(); 
-        //    int sum = 0, count = 0;
-        //    foreach (VisitedBar b in barList)
-        //    {
-        //        if (b.Name == name)
-        //        {
-        //            sum += b.Rating;
-        //            count++;
-        //        }
-        //    }
-        //    return sum / count;
-        //};
-        public int GetAvarageRating(string name)
+        public Func<string, List<VisitedBar>, int> GetAvarageRating = (name, barList) =>
         {
             int sum = 0, count = 0;
             foreach (VisitedBar b in barList)
@@ -77,11 +62,11 @@ namespace Fill_Up_
                     count++;
                 }
             }
-
             return sum / count;
-        }
-
-        public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
+        };
+    
+ 
+    public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
         {
             var x = from bar in barList
                     where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
