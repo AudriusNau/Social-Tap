@@ -8,12 +8,12 @@ Programėlės pavadinimas - “Fill up!”.<br>
 
 <ol>
 <li><strong>Lazy initialization.</strong></li>
-<li>Generics (in delegates, events and<strong> methods</strong>)</li>
+<li>Generics (in<strong> delegates</strong>, events and<strong> methods</strong>)</li>
 <li><strong>Delegates.</strong></li>
 <li>Events and their usage: standard and custom.</li>
 <li>Exceptions and dealing with them in a meaningfull way.</li>
 <li>Variation and covariation usage (at least demonstration).</li>
-<li>Anonymous methods.</li>
+<li><strong>Anonymous methods.</strong></li>
 <li><strong>Lambda expressions.</strong></li>
 <li>concurrent programming (threading or async/await (for your own written classes); common resource usage between threads).</li>
 <li>Config file usage (both - app and user).</li>
