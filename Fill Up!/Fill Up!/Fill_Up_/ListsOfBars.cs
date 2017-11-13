@@ -50,8 +50,8 @@ namespace Fill_Up_
 
             return orderedList.ToList();
         }
-
-        public Func<string, List<VisitedBar>, int> GetAvarageRating = (name, barList) =>
+        // Delegatas+ anoniminis metodas+ generic delegatas
+        public Func<string, List<VisitedBar>, int> GetAvarageRating =delegate (string name,List<VisitedBar> barList) 
         {
             int sum = 0, count = 0;
             foreach (VisitedBar b in barList)
@@ -64,28 +64,16 @@ namespace Fill_Up_
             }
             return sum / count;
         };
-        //Anoniminis metodas
-        public Func<VisitedBar, string> GetBetterBars = delegate (VisitedBar visitedBar)
-         {
-             var x = from bar in barList
-                     where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
-                           (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
-                           (bar.Glass.Price <= visitedBar.Glass.Price)
-                     select bar.Name;
-             return x.Distinct();
-         };
-
-
-
-
-    //public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
-    //    {
-    //        var x = from bar in barList
-    //                where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
-    //                      (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
-    //                      (bar.Glass.Price <= visitedBar.Glass.Price)
-    //                select bar.Name;
-    //        return x.Distinct();
-    //    }
+        
+        
+        public IEnumerable<string> GetBetterBars(VisitedBar visitedBar)
+        {
+            var x = from bar in barList
+                    where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
+                          (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
+                          (bar.Glass.Price <= visitedBar.Glass.Price)
+                    select bar.Name;
+            return x.Distinct();
+        }
     }
 }
