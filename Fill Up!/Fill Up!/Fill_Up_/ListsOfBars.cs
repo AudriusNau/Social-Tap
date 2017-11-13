@@ -64,16 +64,28 @@ namespace Fill_Up_
             }
             return sum / count;
         };
-    
- 
-    public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
-        {
-            var x = from bar in barList
-                    where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
-                          (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
-                          (bar.Glass.Price <= visitedBar.Glass.Price)
-                    select bar.Name;
-            return x.Distinct();
-        }
+        //Anoniminis metodas
+        public Func<VisitedBar, string> GetBetterBars = delegate (VisitedBar visitedBar)
+         {
+             var x = from bar in barList
+                     where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
+                           (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
+                           (bar.Glass.Price <= visitedBar.Glass.Price)
+                     select bar.Name;
+             return x.Distinct();
+         };
+
+
+
+
+    //public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
+    //    {
+    //        var x = from bar in barList
+    //                where (bar.Glass.OrderedQuantity == visitedBar.Glass.OrderedQuantity) &&
+    //                      (bar.Glass.LackOfBeer < visitedBar.Glass.LackOfBeer) &&
+    //                      (bar.Glass.Price <= visitedBar.Glass.Price)
+    //                select bar.Name;
+    //        return x.Distinct();
+    //    }
     }
 }
