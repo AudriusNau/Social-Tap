@@ -10,8 +10,8 @@ namespace FillUpWeb
     {
         BarData[] bars = new BarData[]
         {
-            new BarData { Name = "Snekutis", Rating = 5 },
-            new BarData { Name = "Skybar", Rating = 4 }
+            new BarData { Name = "", Rating = 5 },
+            new BarData { Name = "", Rating = 5 }
         };
 
         public IEnumerable<BarData> GetAllBars()
