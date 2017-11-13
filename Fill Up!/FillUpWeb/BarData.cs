@@ -8,7 +8,7 @@ namespace FillUpWeb
 {
     public class BarData
     {
-        public string Name { get; set; }
-        public int Rating { get; set; }
+        public string Name { get; set; } // pavadinimas
+        public int Rating { get; set; }  // ivetinimas
     }
 }
