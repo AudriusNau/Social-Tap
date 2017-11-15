@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using System;
+
 
 namespace Fill_Up_App.Code
 {
@@ -32,7 +34,7 @@ namespace Fill_Up_App.Code
 
             foreach (VisitedBar b in this.barList)
             {
-                rating = GetAvarageRating(b.Name);
+                rating = GetAvarageRating(b.Name, barList);
                 ratedBars.Add(new RatedBar{Name = b.Name,  Rating = rating});
             }
 
@@ -51,11 +53,12 @@ namespace Fill_Up_App.Code
 
             return orderedList.ToList();
         }
-
-        public int GetAvarageRating(string name)
+        // Generic delegatas+ lambda israiska
+        public Func<string, List<VisitedBar>, int> GetAvarageRating = (name, barList) =>
         {
-            float sum = 0, count = 0;
-            foreach(VisitedBar b in barList)
+            float sum = 0;
+            int count = 0;
+            foreach (VisitedBar b in barList)
             {
                 if (b.Name == name)
                 {
@@ -63,10 +66,9 @@ namespace Fill_Up_App.Code
                     count++;
                 }
             }
-            float rez = sum / count;
-            int rezz = (int)rez;
-            return rezz;
-        }
+            int rez = (int)(sum / count);
+            return rez;
+        };
 
         public IEnumerable <string> GetBetterBars(VisitedBar visitedBar)
         {
