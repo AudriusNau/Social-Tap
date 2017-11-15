@@ -9,12 +9,12 @@ namespace Fill_Up_App.Code
         private double mug;
         private int lackOfBeer;
         private decimal price;
-        
+
         public void ReadData(ListsOfBars allbars)
         { 
             XmlTextReader reader = new XmlTextReader(@"Data.xml");
         
-            while (reader.Read())
+            while (reader.Read())   //exception'as - neranda failo!!!!!!
             {
                     if (reader.NodeType== XmlNodeType.Element)
                     {                           
@@ -43,7 +43,7 @@ namespace Fill_Up_App.Code
                     
                     if (reader.NodeType== XmlNodeType.EndElement && reader.Name=="Bar") 
                     {
-                        LoadToList(allbars, name, rating, mug, lackOfBeer, price);                                
+                    LoadToList(allbars, name, rating, mug, lackOfBeer, price);                                
                     }
             }
             reader.Close();
@@ -51,8 +51,7 @@ namespace Fill_Up_App.Code
 
         public void LoadToList (ListsOfBars allbars, string name, int rating, double mug, int lackOfBeer, decimal price)
         {
-            double pr = (double)price;
-            GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, pr); //sudeda nuskaitytus duomenis i lista
+            GlassOfBeer glass = new GlassOfBeer (mug, lackOfBeer, price); //sudeda nuskaitytus duomenis i lista
             VisitedBar bar = new VisitedBar(name, rating, glass);
             allbars.AddNewBar(bar);    
         }
