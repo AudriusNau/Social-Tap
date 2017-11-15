@@ -5,7 +5,7 @@ using Android.OS;
 
 namespace Fill_Up_App
 {
-    [Activity(Label = "Fill_Up_App", MainLauncher = true)]
+    [Activity(Label = "Fill Up!", MainLauncher = true, Icon = "@drawable/beerIcon")]
     public class MainActivity : Activity
     {
         ListsOfBars allbars;

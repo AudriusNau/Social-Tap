@@ -6,9 +6,9 @@ namespace Fill_Up_App.Code
     {
         private double orderedQuantity; 
         private int lackOfBeer;
-        private double price;
+        private decimal price;
 
-        public GlassOfBeer(double orderedQuantity, int lackOfBeer, double price)
+        public GlassOfBeer(double orderedQuantity, int lackOfBeer, decimal price)
         {
             this.orderedQuantity = orderedQuantity;
             this.lackOfBeer = lackOfBeer;
@@ -24,7 +24,7 @@ namespace Fill_Up_App.Code
             get { return lackOfBeer; }
             set { lackOfBeer = value; }
         }
-        public double Price
+        public decimal Price
         {
             get { return price; }
             set { price = value; }

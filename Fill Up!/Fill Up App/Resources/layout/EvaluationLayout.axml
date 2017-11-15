@@ -1,99 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:background="@drawable/mainbackground">
-    <TextView
-        android:text="Baro pavadinimas:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="184.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/barNameText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp" />
-    <EditText
-        android:maxLength="30"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/barName" />
-    <TextView
-        android:text="Užsakytas bokalas:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="220.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/orderedQuantityText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp" />
-    <EditText
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/orderedQuantity" />
-    <TextView
-        android:text="Neįpilta (mm):"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="184.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lackOfBeerText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp" />
-    <EditText
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lackOfBeer" />
-    <TextView
-        android:text="Kaina:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="184.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/priceText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp" />
-    <EditText
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/price" />
-    <TextView
-        android:text="Baro įvertinimas:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="184.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/barEvaluationText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp" />
-    <RatingBar
-        android:layout_width="236.5dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/ratingOfBar"
-        android:isIndicator="false"
-        android:numStars="5"
-        android:stepSize="1"
-        android:rating="1"
-        android:layout_marginTop="10dp" />
-    <Button
-        android:text="Išsaugoti"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/saveButton"
-        android:background="#771B0C"
-        android:textSize="12pt"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <Button
-        android:text="Grįžti atgal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/goBackButton"
-        android:background="#771B0C"
-        android:textSize="12pt"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:background="@drawable/mainbackground"
+        android:scrollIndicators="right"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
+        android:fadeScrollbars="true"
+        android:scrollbarSize="4dp"
+        android:scrollbarThumbVertical="@drawable/mainbackground">
+        <TextView
+            android:text="Baro pavadinimas:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/barNameText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17dp" />
+        <EditText
+            android:maxLength="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/barName" />
+        <TextView
+            android:text="Užsakytas bokalas:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderedQuantityText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:textSize="17dp" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderedQuantity" />
+        <TextView
+            android:text="Neįpilta (mm):"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lackOfBeerText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17dp" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lackOfBeer" />
+        <TextView
+            android:text="Kaina:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/priceText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17dp" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price" />
+        <TextView
+            android:text="Baro įvertinimas:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/barEvaluationText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17dp" />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ratingOfBar"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:stepSize="1"
+            android:rating="1"
+            android:layout_marginTop="10dp" />
+        <Button
+            android:text="Išsaugoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveButton"
+            android:background="#771B0C"
+            android:textSize="12pt"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <Button
+            android:text="Grįžti atgal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/goBackButton"
+            android:background="#771B0C"
+            android:textSize="12pt"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</ScrollView>

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Fill_Up_App
 {
-    [Activity(Label = "Fill_Up_App")]
+    [Activity(Label = "Fill Up!")]
     internal class Ratings : Activity
     {
         private ListView list;

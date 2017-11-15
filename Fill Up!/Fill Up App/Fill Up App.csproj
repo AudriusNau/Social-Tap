@@ -61,9 +61,13 @@
     <Compile Include="Code\Extension.cs" />
     <Compile Include="Code\GlassOfBeer.cs" />
     <Compile Include="Code\IBar.cs" />
+    <Compile Include="Code\ILoadable.cs" />
+    <Compile Include="Code\IWriteable.cs" />
     <Compile Include="Code\ListsOfBars.cs" />
     <Compile Include="Code\RatedBar.cs" />
+    <Compile Include="Code\ReadFile.cs" />
     <Compile Include="Code\VisitedBar.cs" />
+    <Compile Include="Code\WriteFile.cs" />
     <Compile Include="Evaluation.cs" />
     <Compile Include="Ratings.cs" />
     <Compile Include="MainActivity.cs" />
@@ -107,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\beerIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Code\Data.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

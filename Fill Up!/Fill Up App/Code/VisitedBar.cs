@@ -1,8 +1,9 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace Fill_Up_App.Code
 {
-    public class VisitedBar :IBar
+    public class VisitedBar : IBar
     {
         public string Name { get; set; }
         public int Rating { get; set; }

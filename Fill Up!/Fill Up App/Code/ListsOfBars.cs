@@ -39,13 +39,6 @@ namespace Fill_Up_App.Code
             var orderedList = from y in distinctList
                               orderby y.Rating descending, y.Name ascending
                               select y;
-            /*
-             * IEnumerable<RatedBar> x = ratedBars.Distinct();
-             * List<RatedBar> distinctRatedBars = x.ToList();
-             * distinctRatedBars.Sort();
-             * distinctRatedBars.Reverse();
-             * return distinctRatedBars();             * 
-             */
 
             return orderedList.ToList();
         }
@@ -61,8 +54,10 @@ namespace Fill_Up_App.Code
                     count++;
                 }
             }
+
             float rez = sum / count;
             int rezz = (int)rez;
+
             return rezz;
         }
 

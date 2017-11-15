@@ -1,13 +1,14 @@
 ﻿using Android.App;
 using Android.OS;
-using Fill_Up_App.Code;
 using Android.Widget;
 using System;
 using System.Text.RegularExpressions;
+using Fill_Up_.Code;
+using Android.Content;
 
 namespace Fill_Up_App
 {
-    [Activity(Label = "Fill_Up_App")]
+    [Activity(Label = "Fill Up!")]
     public class Evaluation : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -17,6 +18,7 @@ namespace Fill_Up_App
 
             Button savebutton = FindViewById<Button>(Resource.Id.saveButton);
             savebutton.Click += new EventHandler(this.savebutton_Click);
+
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton);
             gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
         }
@@ -52,19 +54,16 @@ namespace Fill_Up_App
                 Toast.MakeText(Application.Context, "Įveskite kainą!", ToastLength.Long).Show();
                 return;
             }
-            
-            GlassOfBeer glass = new GlassOfBeer();
-            glass.OrderedQuantity = Double.Parse(((EditText)FindViewById(Resource.Id.orderedQuantity)).Text);
-            glass.LackOfBeer = int.Parse(((EditText)FindViewById(Resource.Id.lackOfBeer)).Text);   //suapvalinimas iš decimal skaičiaus
-            glass.Price = Double.Parse(((EditText)FindViewById(Resource.Id.price)).Text);
-
-            VisitedBar bar = new VisitedBar(((EditText)FindViewById(Resource.Id.barName)).Text, 
-                (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating, glass);   //suapvalinti
-
-            // allBars.AddNewBar(bar);
           
-
-            StartActivity(typeof(Results));
+            Intent intent = new Intent(this, typeof(Results));
+            Bundle bundle = new Bundle();
+            bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
+            bundle.PutDouble("mug", (((EditText)FindViewById(Resource.Id.orderedQuantity)).Text).StringToDouble());
+            bundle.PutInt("lack", (((EditText)FindViewById(Resource.Id.lackOfBeer)).Text).StringToInt());
+            bundle.PutDouble("price", (((EditText)FindViewById(Resource.Id.price)).Text).StringToDouble());
+            bundle.PutInt("rating", (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+            intent.PutExtras(bundle);
+            StartActivity(intent);
         }
 
         void gobackbutton_Click(Object sender, EventArgs e)
