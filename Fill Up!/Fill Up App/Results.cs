@@ -21,9 +21,6 @@ namespace Fill_Up_App
 
             ListsOfBars allBars = new ListsOfBars();
 
-            //ReadFile load = new ReadFile();
-            //load.ReadData(allbars);
-
             GlassOfBeer glass = new GlassOfBeer(Intent.GetDoubleExtra("mug", -1), Intent.GetIntExtra("lack", -1), Intent.GetDoubleExtra("price", -1).DoubleToDecimal());
             VisitedBar bar = new VisitedBar(Intent.GetStringExtra("name"), Intent.GetIntExtra("rating", -1), glass);
 
@@ -31,11 +28,26 @@ namespace Fill_Up_App
 
             list = FindViewById<ListView>(Resource.Id.listView1);
             a = new List<string>();
-            a.Add("Baras:" + " " + bar.Name);
-            a.Add("Užsakytas kiekis:" + " " + bar.Glass.OrderedQuantity.ToString());
-            a.Add("Neįpilta:" + " " + bar.Glass.LackOfBeer.ToString());
-            a.Add("Kaina:" + " " + bar.Glass.Price.ToString());
-            a.Add("Įvertinimas:" + " " + bar.Rating.ToString());
+            a.Add("Jūsų duomenys:");
+            a.Add("Baras - " + bar.Name);
+            a.Add("Užsakytas kiekis - " + bar.Glass.OrderedQuantity.ToString());
+            a.Add("Neįpilta - " + bar.Glass.LackOfBeer.ToString());
+            a.Add("Kaina - " + bar.Glass.Price.ToString());
+            a.Add("Įvertinimas - " + bar.Rating.ToString());
+            a.Add(" ");
+
+            var betterBars = allBars.GetBetterBars(bar); //ka jei tuscias
+            if (betterBars != null && betterBars.GetEnumerator().MoveNext())
+            {
+                a.Add("Siūlome Jums apsilankyti:");
+                foreach (string m in betterBars)
+                {
+                    a.Add(m);
+                }
+            }
+            else
+                a.Add("Aplankytas baras puikus!");
+
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
             list.Adapter = adapter;
 

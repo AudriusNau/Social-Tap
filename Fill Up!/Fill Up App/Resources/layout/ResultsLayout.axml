@@ -18,17 +18,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="0.0dp" />
-    <TextView
-        android:text="Rezultatas"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12pt"
-        android:gravity="center"
-        android:id="@+id/textView1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp" />
     <Button
         android:text="Grįžti atgal"
         android:layout_width="match_parent"
