@@ -53,8 +53,8 @@ namespace Fill_Up_App.Code
 
             return orderedList.ToList();
         }
-        // Generic delegatas+ lambda israiska
-        public Func<string, List<VisitedBar>, int> GetAvarageRating = (name, barList) =>
+        // Generic delegatas+ anoniminis metodas
+        public Func<string, List<VisitedBar>, int> GetAvarageRating = delegate (string name,List<VisitedBar> barList) 
         {
             float sum = 0;
             int count = 0;

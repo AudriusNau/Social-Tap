@@ -21,11 +21,12 @@ namespace Fill_Up_App
             Button button1 = FindViewById<Button>(Resource.Id.evaluationButton);
             Button button2 = FindViewById<Button>(Resource.Id.ratingsButton);
 
-            button1.Click += delegate {
+            // Lambda israiskos
+            button1.Click += () => {
                 StartActivity(typeof(Evaluation));
             };
 
-            button2.Click += delegate {
+            button2.Click += () => {
                 StartActivity(typeof(Ratings));
             };
         }
