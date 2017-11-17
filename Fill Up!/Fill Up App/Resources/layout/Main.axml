@@ -7,6 +7,11 @@
     android:minHeight="25px"
     android:background="@drawable/mainbackground">
     <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2" />
+    <Button
         android:text="Įvertinti bokalą"
         android:layout_width="200.5dip"
         android:layout_height="75.25dip"
