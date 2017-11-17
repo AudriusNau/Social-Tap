@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace Fill_Up_App.Code
 {
-    public class VisitedBar //: IBar
+    public class VisitedBar : IBar
     {
         public string Name { get; set; }
-        public float Rating { get; set; }
+        public int Rating { get; set; }
         public GlassOfBeer Glass { get; set; }
 
         public VisitedBar()
@@ -16,7 +16,7 @@ namespace Fill_Up_App.Code
             Glass = new GlassOfBeer();
         }
 
-        public VisitedBar(string name, float rating, GlassOfBeer glass)
+        public VisitedBar(string name, int rating, GlassOfBeer glass)
         {
             this.Name = name;
             this.Rating = rating;

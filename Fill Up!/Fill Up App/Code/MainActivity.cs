@@ -5,19 +5,18 @@ using Android.OS;
 
 namespace Fill_Up_App
 {
-    [Activity(Label = "Fill_Up_App", MainLauncher = true)]
+    [Activity(Label = "Fill Up!", MainLauncher = true, Icon = "@drawable/beerIcon")]
     public class MainActivity : Activity
     {
         ListsOfBars allbars;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            // Pagrindinio view'o inicializacija
             SetContentView(Resource.Layout.Main);
 
             allbars = new ListsOfBars();
-
-            //ReadFile load = new ReadFile();
-            //load.ReadData(allbars);
 
             Button button1 = FindViewById<Button>(Resource.Id.evaluationButton);
             Button button2 = FindViewById<Button>(Resource.Id.ratingsButton);
@@ -29,6 +28,12 @@ namespace Fill_Up_App
             button2.Click += delegate {
                 StartActivity(typeof(Ratings));
             };
+        }
+
+        public static void ReportAddBarReviewState(bool status)
+        {
+            var reportContent = status ? "Išsaugota." : "Išsaugoti nepavyko.";
+            Toast.MakeText(Application.Context, reportContent, ToastLength.Short).Show();
         }
     }
 }
