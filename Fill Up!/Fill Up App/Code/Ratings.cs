@@ -3,7 +3,6 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using Fill_Up_App.Code;
 
 namespace Fill_Up_App
 {
@@ -17,19 +16,10 @@ namespace Fill_Up_App
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RatingsLayout);
-
-            ListsOfBars allBars = new ListsOfBars();
-
-            List<RatedBar> x = allBars.GetRatings();
-            a = new List<string>();
-
-            foreach (RatedBar bar in x)
-            {
-                a.Add(bar.Name + bar.Rating.ToString());
-            }
-
+            int number = 5;
             list = FindViewById<ListView>(Resource.Id.listView2);
-            
+            a = new List<string>();
+            a.Add("Baras" + number.ToString());
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
             list.Adapter = adapter;
 

@@ -12,6 +12,8 @@ namespace Fill_Up_App
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            // Pagrindinio view'o inicializacija
             SetContentView(Resource.Layout.Main);
 
             allbars = new ListsOfBars();
@@ -26,6 +28,12 @@ namespace Fill_Up_App
             button2.Click += delegate {
                 StartActivity(typeof(Ratings));
             };
+        }
+
+        public static void ReportAddBarReviewState(bool status)
+        {
+            var reportContent = status ? "Išsaugota." : "Išsaugoti nepavyko.";
+            Toast.MakeText(Application.Context, reportContent, ToastLength.Short).Show();
         }
     }
 }

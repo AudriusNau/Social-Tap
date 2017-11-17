@@ -75,8 +75,8 @@ namespace Fill_Up_App
 			// aapt resource value: 0x7f05000c
 			public const int evaluationButton = 2131034124;
 			
-			// aapt resource value: 0x7f050011
-			public const int goBackBut = 2131034129;
+			// aapt resource value: 0x7f050012
+			public const int goBackBut = 2131034130;
 			
 			// aapt resource value: 0x7f05000b
 			public const int goBackButton = 2131034123;
@@ -116,6 +116,9 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f05000a
 			public const int saveButton = 2131034122;
+			
+			// aapt resource value: 0x7f050011
+			public const int textView1 = 2131034129;
 			
 			static Id()
 			{
