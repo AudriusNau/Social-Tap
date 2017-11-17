@@ -13,7 +13,17 @@ namespace Fill_Up_App
     {
         private ListView list;
         private List <string> a;
-       
+
+        private Lazy<Results> _lazyProperty = new Lazy<Results>(() => new Results());
+
+        public Results MyProperty
+        {
+            get
+            {
+                return _lazyProperty.Value;
+            }
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
