@@ -2,26 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace FillUpWeb
 {
     public class Calculations : ICalculations
     {
         private static Dictionary<string, List<int>> _barRates = new Dictionary<string, List<int>>();
-        public double _max;
+        public static Dictionary<string, BarData> _barData = new Dictionary<string, BarData>();
+        public double _max = 1;
         public static string _bestbar;
         public const int MAX_RATING = 5; // kiek daugiausiai gali duoti žvaigždučių 
         public const int MIN_NAME_LENGHT = 1; //trumpiausias įmanomas baro pavadinimas
         public const int MIN_RATING = 0; //kiek mažiausiai gali duoti žvaigždučių 
-
-        public static Dictionary<string, BarData> _barData = new Dictionary<string, BarData>();
-
-        public Calculations()
-        {
-
-        }
 
         public string BarNameAdaptation(string barName)
         {
@@ -31,12 +23,12 @@ namespace FillUpWeb
 
             return barName;
         }
+
         /// Į metodą paduodamas baro pavadinimas ir jo įvertinimas, web service laikome baro pavadinimą ir jo įvertinimų Listą 
         /// Atgal grąžiname tik baro įvertinimų vidurkį
         /// http://localhost:.../api/values/barrate/string_baropavadinimas/string_įvertinimas
         public double BarRateAverage(string barName, int ratingOfBar)
         {
-
             if (_barRates.Keys.Contains(barName))
             {
                 _barRates[barName].Add(ratingOfBar);
@@ -84,7 +76,6 @@ namespace FillUpWeb
         {
             foreach (string barName in _barData.Keys)
             {
-
                 if (_barData[barName].RateAvg > _max)
                 {
                     _max = _barData[barName].RateAvg;
@@ -103,6 +94,15 @@ namespace FillUpWeb
             stats.RateAvg = _barData[bestBar].RateAvg;
 
             return stats.ToString();
+        }
+
+        //metodas, kuris grazina sąrašą barų su geresniais reitingais nei įvestas baras
+        public IEnumerable<string> FindBetterBars(string name, int rating)
+        {
+            var x = from bar in _barData
+                    where (bar.Value.RateAvg > rating)
+                    select bar.Key;
+            return x;
         }
     }
 }
