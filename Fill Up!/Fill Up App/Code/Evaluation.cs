@@ -4,7 +4,6 @@ using Android.Widget;
 using System;
 using System.Text.RegularExpressions;
 using Android.Content;
-using FillUpWeb;
 
 namespace Fill_Up_App
 {
@@ -44,8 +43,10 @@ namespace Fill_Up_App
             intent.PutExtras(bundle);
             StartActivity(intent);
 
-            ValuesController vs = new ValuesController();
-            bool value = vs.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+
+            //ValuesController vs = new ValuesController();
+            localhost.FillUpWebService client = new localhost.FillUpWebService();
+            bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
 
         }
 
