@@ -3,7 +3,6 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Text.RegularExpressions;
-using Fill_Up_.Code;
 using Android.Content;
 
 namespace Fill_Up_App
@@ -30,45 +29,30 @@ namespace Fill_Up_App
                 Toast.MakeText(Application.Context, "Įveskite baro pavadinimą", ToastLength.Long).Show();
                 return;
             }
-            
+
             if (!Regex.IsMatch(((EditText)FindViewById(Resource.Id.barName)).Text, @"^[a-zA-Z0-9 ]*$"))
             {
                 Toast.MakeText(Application.Context, "Pavadinime gali būti tik raidės, skaičiai ir tarpai!", ToastLength.Long).Show();
                 return;
             }
 
-            if (((EditText)FindViewById(Resource.Id.orderedQuantity)).Text == string.Empty)
-            {
-                Toast.MakeText(Application.Context, "Įveskite užsakytą kiekį!", ToastLength.Long).Show();
-                return;
-            }
-
-            if (((EditText)FindViewById(Resource.Id.lackOfBeer)).Text == string.Empty)
-            {
-                Toast.MakeText(Application.Context, "Įveskite kiek neįpylė!", ToastLength.Long).Show();
-                return;
-            }
-
-            if (((EditText)FindViewById(Resource.Id.price)).Text == string.Empty)
-            {
-                Toast.MakeText(Application.Context, "Įveskite kainą!", ToastLength.Long).Show();
-                return;
-            }
-          
             Intent intent = new Intent(this, typeof(Results));
             Bundle bundle = new Bundle();
             bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
-            bundle.PutDouble("mug", (((EditText)FindViewById(Resource.Id.orderedQuantity)).Text).StringToDouble());
-            bundle.PutInt("lack", (((EditText)FindViewById(Resource.Id.lackOfBeer)).Text).StringToInt());
-            bundle.PutDouble("price", (((EditText)FindViewById(Resource.Id.price)).Text).StringToDouble());
             bundle.PutInt("rating", (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
             intent.PutExtras(bundle);
             StartActivity(intent);
+
+
+            //ValuesController vs = new ValuesController();
+            localhost.FillUpWebService client = new localhost.FillUpWebService();
+            bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+
         }
 
         void gobackbutton_Click(Object sender, EventArgs e)
         {
             Finish();
         }
-    };
+    }
 }

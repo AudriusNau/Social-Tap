@@ -4,7 +4,7 @@ using Android.Widget;
 using System;
 using System.Collections.Generic;
 using Fill_Up_App.Code;
-using Fill_Up_.Code;
+using Fill_Up_App.localhost;
 
 namespace Fill_Up_App
 {
@@ -28,24 +28,30 @@ namespace Fill_Up_App
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ResultsLayout);
-
-            ListsOfBars allBars = new ListsOfBars();
-
-            //ReadFile load = new ReadFile();
-            //load.ReadData(allBars);
-
-            GlassOfBeer glass = new GlassOfBeer(Intent.GetDoubleExtra("mug", -1), Intent.GetIntExtra("lack", -1), Intent.GetDoubleExtra("price", -1).DoubleToDecimal());
-            VisitedBar bar = new VisitedBar(Intent.GetStringExtra("name"), Intent.GetIntExtra("rating", -1), glass);
-
-            allBars.AddNewBar(bar);
+            BarReview bar = new BarReview(Intent.GetStringExtra("name"), Intent.GetIntExtra("rating", -1));
 
             list = FindViewById<ListView>(Resource.Id.listView1);
             a = new List<string>();
-            a.Add("Baras:" + " " + bar.Name);
-            a.Add("Užsakytas kiekis:" + " " + bar.Glass.OrderedQuantity.ToString());
-            a.Add("Neįpilta:" + " " + bar.Glass.LackOfBeer.ToString());
-            a.Add("Kaina:" + " " + bar.Glass.Price.ToString());
-            a.Add("Įvertinimas:" + " " + bar.Rating.ToString());
+            a.Add("Baras:" + " " + bar.BarName);
+            a.Add("Įvertinimas:" + " " + bar.RatingOfBar.ToString());
+            a.Add("");
+
+            localhost.FillUpWebService client = new localhost.FillUpWebService();
+            string betterBars = client.FindBetterBarName(bar.BarName, bar.RatingOfBar);
+
+            if(betterBars != null && betterBars.GetEnumerator().MoveNext())
+            {
+                a.Add("Siūlome jums apsilankyti geresniuose baruose:");
+                foreach (string n in betterBars)
+                {
+                    a.Add(n);
+                }                
+            }
+            else
+            {
+                a.Add("Jūsų baras puikus!");
+            }
+
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
             list.Adapter = adapter;
 
