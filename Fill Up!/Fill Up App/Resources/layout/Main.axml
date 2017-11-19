@@ -8,18 +8,20 @@
     android:background="@drawable/mainbackground">
     <Button
         android:text="Įvertinti bokalą"
-        android:layout_width="200.5dip"
+        android:layout_width="match_parent"
         android:layout_height="75.25dip"
         android:id="@+id/evaluationButton"
         android:background="#771B0C"
         android:layout_marginTop="140dip"
-        android:layout_marginLeft="90dip" />
+        android:layout_marginLeft="90dip"
+        android:layout_marginRight="90dip" />
     <Button
         android:text="Barų reitingai"
-        android:layout_width="200.5dip"
+        android:layout_width="match_parent"
         android:layout_height="75.25dip"
         android:id="@+id/ratingsButton"
         android:background="#771B0C"
         android:layout_marginTop="70dip"
-        android:layout_marginLeft="90dip" />
+        android:layout_marginLeft="90dip"
+        android:layout_marginRight="90dip" />
 </LinearLayout>

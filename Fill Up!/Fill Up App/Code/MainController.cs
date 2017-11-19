@@ -18,8 +18,7 @@ namespace Fill_Up_App.Code
         {
 
             var client = new RestClient(Url);
-            var request = new RestRequest($"/api/values/AddBarReview/{barReview.BarName}/{barReview.OrderedQuantity}/{barReview.LackOfBeer}/" +
-                                          $"{barReview.Price}/{barReview.RatingOfBar}", Method.POST)
+            var request = new RestRequest($"/api/values/AddBarReview/{barReview.BarName}/{barReview.RatingOfBar}", Method.POST)
             {
                 Timeout = PostRequestTimeout
             };

@@ -17,7 +17,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -58,13 +58,16 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Extension.cs" />
     <Compile Include="Code\GlassOfBeer.cs" />
     <Compile Include="Code\IBar.cs" />
     <Compile Include="Code\ILoadable.cs" />
+    <Compile Include="Code\IWriteable.cs" />
     <Compile Include="Code\ListsOfBars.cs" />
     <Compile Include="Code\RatedBar.cs" />
     <Compile Include="Code\ReadFile.cs" />
     <Compile Include="Code\VisitedBar.cs" />
+    <Compile Include="Code\WriteFile.cs" />
     <Compile Include="Evaluation.cs" />
     <Compile Include="Ratings.cs" />
     <Compile Include="MainActivity.cs" />
@@ -84,6 +87,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ResultsLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RatingsLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
