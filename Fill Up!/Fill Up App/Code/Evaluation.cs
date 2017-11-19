@@ -25,7 +25,7 @@ namespace Fill_Up_App
 
         void savebutton_Click(Object sender, EventArgs e)
         {
-            if (((EditText)FindViewById(Resource.Id.barName)).Text == string.Empty)
+            /*if (((EditText)FindViewById(Resource.Id.barName)).Text == string.Empty)
             {
                 Toast.MakeText(Application.Context, "Įveskite baro pavadinimą", ToastLength.Long).Show();
                 return;
@@ -35,23 +35,36 @@ namespace Fill_Up_App
             {
                 Toast.MakeText(Application.Context, "Pavadinime gali būti tik raidės, skaičiai ir tarpai!", ToastLength.Long).Show();
                 return;
+            }*/
+            try
+            {
+                Intent intent = new Intent(this, typeof(Results));
+                Bundle bundle = new Bundle();
+                bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
+                bundle.PutInt("rating", (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+                intent.PutExtras(bundle);
+                StartActivity(intent);
+
+                ValuesController vs = new ValuesController();
+                bool value = vs.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
             }
-
-            Intent intent = new Intent(this, typeof(Results));
-            Bundle bundle = new Bundle();
-            bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
-            bundle.PutInt("rating", (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
-            intent.PutExtras(bundle);
-            StartActivity(intent);
-
-            ValuesController vs = new ValuesController();
-            bool value = vs.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
-
+            catch(ArgumentNullException ex) //ar toks exceptionas ar reikia returnų???
+            {
+                throw new BarNameEmptyException("Įveskite baro pavadinimą");
+                return;
+            }
+            catch(Exception ex)
+            {
+                throw new RegexException("Pavadinime gali būti tik raidės, skaičiai ir tarpai!");
+                return;
+            }
         }
 
         void gobackbutton_Click(Object sender, EventArgs e)
         {
             Finish();
         }
+
+
     }
 }

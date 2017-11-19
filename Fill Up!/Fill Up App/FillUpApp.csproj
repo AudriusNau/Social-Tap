@@ -19,7 +19,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -427,6 +427,8 @@
   <ItemGroup>
     <Compile Include="Code\BarData.cs" />
     <Compile Include="Code\BarReview.cs" />
+    <Compile Include="Code\Exceptions\BarNameEmptyException.cs" />
+    <Compile Include="Code\Exceptions\RegexException.cs" />
     <Compile Include="Code\Extension.cs" />
     <Compile Include="Code\IBarData.cs" />
     <Compile Include="Code\IBarReview.cs" />
