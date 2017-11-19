@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FillUpWeb
 {
-    public class ICalculations
+    public interface ICalculations
     {
         string BarNameAdaptation(string barName);
         double BarRateAverage(string barName, int ratingOfBar);

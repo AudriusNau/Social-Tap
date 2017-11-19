@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace FillUpWeb
 {
-    public class IValues
+    public interface IValues
     {
-        Boolean AddBarReview(string barName, double orderedQuantity, int lackOfBeer, double price, int ratingOfBar);
+        Boolean AddBarReview(string barName, int ratingOfBar);
         IDictionary<string, BarData> GetBarData();
+        IOrderedEnumerable<KeyValuePair<string, BarData>> GetSortedBarData();
         string GetStats();
     }
 }

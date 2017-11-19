@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
+using FillUpWeb;
 
 namespace Fill_Up_App
 {
@@ -10,17 +11,25 @@ namespace Fill_Up_App
     internal class Ratings : Activity
     {
         private ListView list;
-        private List<string> a;
+        private List<string> list1;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            ValuesController vs = new ValuesController();
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RatingsLayout);
-            int number = 5;
+
             list = FindViewById<ListView>(Resource.Id.listView2);
-            a = new List<string>();
-            a.Add("Baras" + number.ToString());
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
+            list1 = new List<string>();
+
+            list1.Add("Baras - Įvertinimas:");
+            var ratings = vs.GetSortedBarData();
+            foreach(KeyValuePair < string, BarData> a in ratings)
+            {
+                list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
+            }
+            
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, list1);
             list.Adapter = adapter;
 
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton1);
