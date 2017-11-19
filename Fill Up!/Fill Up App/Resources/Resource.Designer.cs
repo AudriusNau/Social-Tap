@@ -73,16 +73,19 @@ namespace Fill_Up_App
 			public const int barNameText = 2131034112;
 			
 			// aapt resource value: 0x7f05000c
-			public const int evaluationButton = 2131034124;
+			public const int button2 = 2131034124;
 			
-			// aapt resource value: 0x7f050012
-			public const int goBackBut = 2131034130;
+			// aapt resource value: 0x7f05000d
+			public const int evaluationButton = 2131034125;
+			
+			// aapt resource value: 0x7f050013
+			public const int goBackBut = 2131034131;
 			
 			// aapt resource value: 0x7f05000b
 			public const int goBackButton = 2131034123;
 			
-			// aapt resource value: 0x7f05000f
-			public const int goBackButton1 = 2131034127;
+			// aapt resource value: 0x7f050010
+			public const int goBackButton1 = 2131034128;
 			
 			// aapt resource value: 0x7f050005
 			public const int lackOfBeer = 2131034117;
@@ -90,11 +93,11 @@ namespace Fill_Up_App
 			// aapt resource value: 0x7f050004
 			public const int lackOfBeerText = 2131034116;
 			
-			// aapt resource value: 0x7f050010
-			public const int listView1 = 2131034128;
+			// aapt resource value: 0x7f050011
+			public const int listView1 = 2131034129;
 			
-			// aapt resource value: 0x7f05000e
-			public const int listView2 = 2131034126;
+			// aapt resource value: 0x7f05000f
+			public const int listView2 = 2131034127;
 			
 			// aapt resource value: 0x7f050003
 			public const int orderedQuantity = 2131034115;
@@ -111,14 +114,14 @@ namespace Fill_Up_App
 			// aapt resource value: 0x7f050009
 			public const int ratingOfBar = 2131034121;
 			
-			// aapt resource value: 0x7f05000d
-			public const int ratingsButton = 2131034125;
+			// aapt resource value: 0x7f05000e
+			public const int ratingsButton = 2131034126;
 			
 			// aapt resource value: 0x7f05000a
 			public const int saveButton = 2131034122;
 			
-			// aapt resource value: 0x7f050011
-			public const int textView1 = 2131034129;
+			// aapt resource value: 0x7f050012
+			public const int textView1 = 2131034130;
 			
 			static Id()
 			{
