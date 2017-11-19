@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fill Up App", "Fill Up App\Fill Up App.csproj", "{24F86ABA-82EC-4D2E-BE67-59A0B4A0ECA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillUpApp", "Fill Up App\FillUpApp.csproj", "{24F86ABA-82EC-4D2E-BE67-59A0B4A0ECA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillUpWeb", "FillUpWeb\FillUpWeb.csproj", "{AF8A27FC-3D87-4A46-873F-D7BB49AA0C37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillUpWeb", "FillUpWeb\FillUpWeb.csproj", "{AF8A27FC-3D87-4A46-873F-D7BB49AA0C37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
