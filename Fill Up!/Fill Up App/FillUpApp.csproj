@@ -124,6 +124,7 @@
     <Compile Include="Code\Evaluation.cs" />
     <Compile Include="Code\Ratings.cs" />
     <Compile Include="Code\MainActivity.cs" />
+    <Compile Include="Code\SoundTracks.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Code\Results.cs" />
@@ -195,6 +196,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\localhost\FillUpWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Fly_Me_To_The_Moon.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
