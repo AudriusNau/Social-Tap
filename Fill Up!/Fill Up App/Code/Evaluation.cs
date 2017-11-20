@@ -5,7 +5,7 @@ using System;
 using System.Text.RegularExpressions;
 using Android.Content;
 
-namespace Fill_Up_App
+namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!")]
     public class Evaluation : Activity
@@ -24,30 +24,41 @@ namespace Fill_Up_App
 
         void savebutton_Click(Object sender, EventArgs e)
         {
-            if (((EditText)FindViewById(Resource.Id.barName)).Text == string.Empty)
+            try
             {
-                Toast.MakeText(Application.Context, "Įveskite baro pavadinimą", ToastLength.Long).Show();
+                if (((EditText)FindViewById(Resource.Id.barName)).Text == string.Empty)
+                {
+                    throw new BarNameEmptyException("Įveskite baro pavadinimą");
+                }
+
+                if (!Regex.IsMatch(((EditText)FindViewById(Resource.Id.barName)).Text, @"^[a-zA-Z0-9 ]*$"))
+                {
+                    throw new RegexException("Pavadinime gali būti tik raidės, skaičiai ir tarpai!");
+                }
+
+                Intent intent = new Intent(this, typeof(Results));
+                Bundle bundle = new Bundle();
+                bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
+                bundle.PutInt("rating", (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+                intent.PutExtras(bundle);
+                StartActivity(intent);
+
+                localhost.FillUpWebService client = new localhost.FillUpWebService();
+                bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+            }
+            catch (BarNameEmptyException ex)
+            {
                 return;
             }
-
-            if (!Regex.IsMatch(((EditText)FindViewById(Resource.Id.barName)).Text, @"^[a-zA-Z0-9 ]*$"))
+            catch (RegexException ex)
             {
-                Toast.MakeText(Application.Context, "Pavadinime gali būti tik raidės, skaičiai ir tarpai!", ToastLength.Long).Show();
                 return;
             }
-
-            Intent intent = new Intent(this, typeof(Results));
-            Bundle bundle = new Bundle();
-            bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
-            bundle.PutInt("rating", (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
-            intent.PutExtras(bundle);
-            StartActivity(intent);
-
-
-            //ValuesController vs = new ValuesController();
-            localhost.FillUpWebService client = new localhost.FillUpWebService();
-            bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
-
+            catch (Exception ex)
+            {
+                Toast.MakeText(Application.Context, "Įvyko klaida!", ToastLength.Long).Show();
+                return;
+            }
         }
 
         void gobackbutton_Click(Object sender, EventArgs e)

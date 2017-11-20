@@ -36,18 +36,14 @@ namespace Fill_Up_App
             a.Add("Įvertinimas:" + " " + bar.RatingOfBar.ToString());
             a.Add("");
 
-            localhost.FillUpWebService client = new localhost.FillUpWebService();
-            string betterBars = client.FindBetterBarName(bar.BarName, bar.RatingOfBar);
+            FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
+            string betterBar = client.FindBetterBarName(bar.BarName, bar.RatingOfBar);
 
-            if(betterBars != null && betterBars.GetEnumerator().MoveNext())
+            if(betterBar != null && betterBar != bar.BarName)
             {
-                a.Add("Siūlome jums apsilankyti geresniuose baruose:");
-                //foreach (string n in betterBars)
-                //{
-                //    a.Add(n);
-                //}                
+                a.Add("Siūlome jums apsilankyti:" + betterBar);             
             }
-            else
+            else if(betterBar == bar.BarName)
             {
                 a.Add("Jūsų baras puikus!");
             }
