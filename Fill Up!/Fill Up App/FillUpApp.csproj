@@ -126,6 +126,7 @@
     <Compile Include="Code\Evaluation.cs" />
     <Compile Include="Code\Ratings.cs" />
     <Compile Include="Code\MainActivity.cs" />
+    <Compile Include="Code\SoundTracks.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Code\Results.cs" />

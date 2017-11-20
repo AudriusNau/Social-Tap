@@ -3,10 +3,8 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using Fill_Up_App.Code;
-using Fill_Up_App.localhost;
 
-namespace Fill_Up_App
+namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!")]
     public class Results: Activity

@@ -18,7 +18,7 @@ namespace Fill_Up_App.Code
         {
             var play = new MediaPlayer();
             MediaPlayer player = new MediaPlayer();
-            string path = @"Fly_Me_To_The_Moon.wav";
+            string path = @"C:\Users\Rūta\Desktop\Fly_Me_To_The_Moon.wav";
             player.SetDataSource(path);
             player.Start();
 

@@ -4,11 +4,12 @@ using Android.Widget;
 using System;
 using System.Text.RegularExpressions;
 using Android.Content;
+using Fill_Up_App.Code.Exceptions;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code 
 {
     [Activity(Label = "Fill Up!")]
-    public class Evaluation : Activity
+    public class Evaluation : Activity 
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -43,7 +44,7 @@ namespace Fill_Up_App.Code
                 intent.PutExtras(bundle);
                 StartActivity(intent);
 
-                localhost.FillUpWebService client = new localhost.FillUpWebService();
+                FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
                 bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
             }
             catch (BarNameEmptyException ex)

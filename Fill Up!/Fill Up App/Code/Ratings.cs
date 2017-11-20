@@ -3,9 +3,8 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using Fill_Up_App.localhost;
 
-namespace Fill_Up_App
+namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!")]
     internal class Ratings : Activity
@@ -15,7 +14,7 @@ namespace Fill_Up_App
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            localhost.FillUpWebService client = new localhost.FillUpWebService();
+            FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RatingsLayout);
 

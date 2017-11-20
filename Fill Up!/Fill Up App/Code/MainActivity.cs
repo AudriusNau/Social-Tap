@@ -2,14 +2,16 @@
 using Android.Widget;
 using Android.OS;
 using System;
+using System.Threading;
 
-namespace Fill_Up_App
+namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!", MainLauncher = true, Icon = "@drawable/beerIcon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             Thread th = new Thread(SoundTracks.SoundTrack);
             th.Start();
 
