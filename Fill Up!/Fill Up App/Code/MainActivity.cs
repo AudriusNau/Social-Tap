@@ -10,7 +10,7 @@ namespace Fill_Up_App
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            Thread th = new Thread(SoundTrack);
+            Thread th = new Thread(SoundTracks.SoundTrack);
             th.Start();
 
             base.OnCreate(savedInstanceState);
