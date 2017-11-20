@@ -10,20 +10,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebService", "http://localh
 		UseIISExpress = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
 		Debug.AspNetCompiler.VirtualPath = "/WebService"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\inetpub\wwwroot\WebService\"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\WebService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebService\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/WebService"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\inetpub\wwwroot\WebService\"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\WebService\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebService\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\..\inetpub\wwwroot\WebService\"
+		SlnRelativePath = "..\..\..\..\..\..\inetpub\wwwroot\WebService\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -45,6 +45,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebService", "..\..\WebServ
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "54318"
+		SlnRelativePath = "..\..\WebService\"
 	EndProjectSection
 EndProject
 Global
