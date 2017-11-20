@@ -27,27 +27,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebService", "http://localh
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebService", "..\..\WebService\", "{4FDE8693-9A5F-4912-B3B6-7883164573A1}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_54318"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\WebService\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54318\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_54318"
-		Release.AspNetCompiler.PhysicalPath = "..\..\WebService\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54318\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "54318"
-		SlnRelativePath = "..\..\WebService\"
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,10 +43,6 @@ Global
 		{1ECC8A3D-8696-424A-A101-AA634B7B3786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ECC8A3D-8696-424A-A101-AA634B7B3786}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{1ECC8A3D-8696-424A-A101-AA634B7B3786}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{4FDE8693-9A5F-4912-B3B6-7883164573A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FDE8693-9A5F-4912-B3B6-7883164573A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FDE8693-9A5F-4912-B3B6-7883164573A1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FDE8693-9A5F-4912-B3B6-7883164573A1}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
