@@ -4,7 +4,7 @@ using Android.Widget;
 using System;
 using System.Collections.Generic;
 using Fill_Up_App.Code;
-using FillUpWeb;
+using Fill_Up_App.localhost;
 
 namespace Fill_Up_App
 {
@@ -36,8 +36,8 @@ namespace Fill_Up_App
             a.Add("Įvertinimas:" + " " + bar.RatingOfBar.ToString());
             a.Add("");
 
-            Calculations calc = new Calculations();
-            var betterBars = calc.FindBetterBars(bar.BarName, bar.RatingOfBar);
+            localhost.FillUpWebService client = new localhost.FillUpWebService();
+            string betterBars = client.FindBetterBarName(bar.BarName, bar.RatingOfBar);
 
             if(betterBars != null && betterBars.GetEnumerator().MoveNext())
             {

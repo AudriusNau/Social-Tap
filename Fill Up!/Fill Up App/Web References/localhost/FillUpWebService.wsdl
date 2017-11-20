@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dotnet-revanth.blogspot.com/webservices" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dotnet-revanth.blogspot.com/webservices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dotnet-revanth.blogspot.com/webservices">
+      <s:element name="BarNameAdaptation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BarNameAdaptationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BarNameAdaptationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBarReview">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ratingOfBar" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBarReviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddBarReviewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BarRateAverage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ratingOfBar" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BarRateAverageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BarRateAverageResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Validation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ratingOfBar" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="barName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsBarNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsBarNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsBarNewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BestBarRate">
+        <s:complexType />
+      </s:element>
+      <s:element name="BestBarRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BestBarRateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Stats">
+        <s:complexType />
+      </s:element>
+      <s:element name="StatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StatsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindBetterBarName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rating" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindBetterBarNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindBetterBarNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BarNameAdaptationSoapIn">
+    <wsdl:part name="parameters" element="tns:BarNameAdaptation" />
+  </wsdl:message>
+  <wsdl:message name="BarNameAdaptationSoapOut">
+    <wsdl:part name="parameters" element="tns:BarNameAdaptationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddBarReviewSoapIn">
+    <wsdl:part name="parameters" element="tns:AddBarReview" />
+  </wsdl:message>
+  <wsdl:message name="AddBarReviewSoapOut">
+    <wsdl:part name="parameters" element="tns:AddBarReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="BarRateAverageSoapIn">
+    <wsdl:part name="parameters" element="tns:BarRateAverage" />
+  </wsdl:message>
+  <wsdl:message name="BarRateAverageSoapOut">
+    <wsdl:part name="parameters" element="tns:BarRateAverageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidationSoapIn">
+    <wsdl:part name="parameters" element="tns:Validation" />
+  </wsdl:message>
+  <wsdl:message name="ValidationSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsBarNewSoapIn">
+    <wsdl:part name="parameters" element="tns:IsBarNew" />
+  </wsdl:message>
+  <wsdl:message name="IsBarNewSoapOut">
+    <wsdl:part name="parameters" element="tns:IsBarNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="BestBarRateSoapIn">
+    <wsdl:part name="parameters" element="tns:BestBarRate" />
+  </wsdl:message>
+  <wsdl:message name="BestBarRateSoapOut">
+    <wsdl:part name="parameters" element="tns:BestBarRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="StatsSoapIn">
+    <wsdl:part name="parameters" element="tns:Stats" />
+  </wsdl:message>
+  <wsdl:message name="StatsSoapOut">
+    <wsdl:part name="parameters" element="tns:StatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindBetterBarNameSoapIn">
+    <wsdl:part name="parameters" element="tns:FindBetterBarName" />
+  </wsdl:message>
+  <wsdl:message name="FindBetterBarNameSoapOut">
+    <wsdl:part name="parameters" element="tns:FindBetterBarNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FillUpWebServiceSoap">
+    <wsdl:operation name="BarNameAdaptation">
+      <wsdl:input message="tns:BarNameAdaptationSoapIn" />
+      <wsdl:output message="tns:BarNameAdaptationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBarReview">
+      <wsdl:input message="tns:AddBarReviewSoapIn" />
+      <wsdl:output message="tns:AddBarReviewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BarRateAverage">
+      <wsdl:input message="tns:BarRateAverageSoapIn" />
+      <wsdl:output message="tns:BarRateAverageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Validation">
+      <wsdl:input message="tns:ValidationSoapIn" />
+      <wsdl:output message="tns:ValidationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsBarNew">
+      <wsdl:input message="tns:IsBarNewSoapIn" />
+      <wsdl:output message="tns:IsBarNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BestBarRate">
+      <wsdl:input message="tns:BestBarRateSoapIn" />
+      <wsdl:output message="tns:BestBarRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Stats">
+      <wsdl:input message="tns:StatsSoapIn" />
+      <wsdl:output message="tns:StatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBetterBarName">
+      <wsdl:input message="tns:FindBetterBarNameSoapIn" />
+      <wsdl:output message="tns:FindBetterBarNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FillUpWebServiceSoap" type="tns:FillUpWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BarNameAdaptation">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/BarNameAdaptation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBarReview">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/AddBarReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BarRateAverage">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/BarRateAverage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validation">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/Validation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsBarNew">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/IsBarNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BestBarRate">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/BestBarRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stats">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/Stats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBetterBarName">
+      <soap:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/FindBetterBarName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FillUpWebServiceSoap12" type="tns:FillUpWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BarNameAdaptation">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/BarNameAdaptation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBarReview">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/AddBarReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BarRateAverage">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/BarRateAverage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validation">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/Validation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsBarNew">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/IsBarNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BestBarRate">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/BestBarRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stats">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/Stats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBetterBarName">
+      <soap12:operation soapAction="http://dotnet-revanth.blogspot.com/webservices/FindBetterBarName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FillUpWebService">
+    <wsdl:port name="FillUpWebServiceSoap" binding="tns:FillUpWebServiceSoap">
+      <soap:address location="http://localhost/WebService/FillUpWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FillUpWebServiceSoap12" binding="tns:FillUpWebServiceSoap12">
+      <soap12:address location="http://localhost/WebService/FillUpWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

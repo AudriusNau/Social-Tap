@@ -3,7 +3,7 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using FillUpWeb;
+using Fill_Up_App.localhost;
 
 namespace Fill_Up_App
 {
@@ -15,7 +15,7 @@ namespace Fill_Up_App
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            ValuesController vs = new ValuesController();
+            localhost.FillUpWebService client = new localhost.FillUpWebService();
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RatingsLayout);
 
@@ -23,7 +23,7 @@ namespace Fill_Up_App
             list1 = new List<string>();
 
             list1.Add("Baras - Įvertinimas:");
-            var ratings = vs.GetSortedBarData();
+            var ratings = client.GetSortedBarData();
             foreach(KeyValuePair < string, BarData> a in ratings)
             {
                 list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
