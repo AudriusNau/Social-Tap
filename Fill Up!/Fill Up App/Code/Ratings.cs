@@ -23,11 +23,11 @@ namespace Fill_Up_App
             list1 = new List<string>();
 
             list1.Add("Baras - Įvertinimas:");
-            var ratings = client.GetSortedBarData();
-            foreach(KeyValuePair < string, BarData> a in ratings)
-            {
-                list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
-            }
+            //var ratings = client.GetSortedBarData();
+            //foreach(KeyValuePair < string, BarData> a in ratings)
+            //{
+            //    list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
+            //}
             
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, list1);
             list.Adapter = adapter;

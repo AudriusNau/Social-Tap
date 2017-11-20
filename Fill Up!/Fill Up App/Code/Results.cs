@@ -42,10 +42,10 @@ namespace Fill_Up_App
             if(betterBars != null && betterBars.GetEnumerator().MoveNext())
             {
                 a.Add("Siūlome jums apsilankyti geresniuose baruose:");
-                foreach (string n in betterBars)
-                {
-                    a.Add(n);
-                }                
+                //foreach (string n in betterBars)
+                //{
+                //    a.Add(n);
+                //}                
             }
             else
             {
