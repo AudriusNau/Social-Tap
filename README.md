@@ -7,17 +7,11 @@ Programėlės pavadinimas - “Fill up!”.<br>
 <p>Programos reikalavimų įgyvendinimas:</p>
 
 <ol>
-<li><strong>Lazy initialization.</strong></li>
-<li>Generics (in<strong> delegates</strong>, events and<strong> methods</strong>)</li>
-<li><strong>Delegates.</strong></li>
-<li>Events and their usage: standard and custom.</li>
-<li>Exceptions and dealing with them in a meaningfull way.</li>
-<li>Variation and covariation usage (at least demonstration).</li>
-<li><strong>Anonymous methods.</strong></li>
-<li><strong>Lambda expressions.</strong></li>
-<li>concurrent programming (threading or async/await (for your own written classes); common resource usage between threads).</li>
-<li>Config file usage (both - app and user).</li>
-<li>Dependency Injection.</li>
+<li>Prepair ER diagram and create the database (MS SQL, but not mandatory - only important to be able to integrate to your solution).</li>
+<li>Transfer/update data using DataTable and DataAdapter.</li>
+<li>Select/insert/update/delete usage.</li>
+<li>LINQ usage: Join, Group, Skip and Take, Agregate function.</li>
+<li>Entity Framework usage.</li>
 </ol>
 
 
