@@ -16,9 +16,9 @@ namespace Fill_Up_App.Code
     {
         public static void SoundTrack()
         {
-            var play = new MediaPlayer();
+            //var play = new MediaPlayer();
             MediaPlayer player = new MediaPlayer();
-            string path = @"C:\Users\Rūta\source\repos\Social-Tap\Fill Up!\Fill Up\Fly_Me_To_The_Moon.wav";
+            string path = @"C:\Users\Rūta\source\repos\Social-Tap\Fill Up!\Fill Up App\FlyMe .mp3";
             player.SetDataSource(path);
             player.Start();
 
