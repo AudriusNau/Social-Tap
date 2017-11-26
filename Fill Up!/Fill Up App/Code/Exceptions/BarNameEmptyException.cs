@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Android.Widget;
+using System;
+using Android.App;
 
 namespace Fill_Up_App.Code.Exceptions
 {

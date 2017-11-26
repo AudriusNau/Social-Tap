@@ -3,10 +3,8 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using Fill_Up_App.Code;
-using FillUpWeb;
 
-namespace Fill_Up_App
+namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!")]
     public class Results: Activity
@@ -36,18 +34,14 @@ namespace Fill_Up_App
             a.Add("Įvertinimas:" + " " + bar.RatingOfBar.ToString());
             a.Add("");
 
-            Calculations calc = new Calculations();
-            var betterBars = calc.FindBetterBars(bar.BarName, bar.RatingOfBar);
+            FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
+            string betterBar = client.FindBetterBarName(bar.BarName, bar.RatingOfBar);
 
-            if(betterBars != null && betterBars.GetEnumerator().MoveNext())
+            if(betterBar != null && betterBar != bar.BarName)
             {
-                a.Add("Siūlome jums apsilankyti geresniuose baruose:");
-                foreach (string n in betterBars)
-                {
-                    a.Add(n);
-                }                
+                a.Add("Siūlome jums apsilankyti:" + betterBar);             
             }
-            else
+            else if(betterBar == bar.BarName)
             {
                 a.Add("Jūsų baras puikus!");
             }

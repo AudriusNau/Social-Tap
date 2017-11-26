@@ -3,9 +3,8 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using FillUpWeb;
 
-namespace Fill_Up_App
+namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!")]
     internal class Ratings : Activity
@@ -15,7 +14,7 @@ namespace Fill_Up_App
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            ValuesController vs = new ValuesController();
+            FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RatingsLayout);
 
@@ -23,11 +22,11 @@ namespace Fill_Up_App
             list1 = new List<string>();
 
             list1.Add("Baras - Įvertinimas:");
-            var ratings = vs.GetSortedBarData();
-            foreach(KeyValuePair < string, BarData> a in ratings)
-            {
-                list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
-            }
+            //var ratings = client.GetSortedBarData();
+            //foreach(KeyValuePair < string, BarData> a in ratings)
+            //{
+            //    list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
+            //}
             
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, list1);
             list.Adapter = adapter;

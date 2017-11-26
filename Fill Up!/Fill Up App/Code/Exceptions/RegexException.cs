@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Android.App;
+using Android.Widget;
+using System;
 
 namespace Fill_Up_App.Code.Exceptions
 {
@@ -11,4 +13,5 @@ namespace Fill_Up_App.Code.Exceptions
         }
         public RegexException(string message, Exception inner) : base(message, inner) { }
     }
+
 }
