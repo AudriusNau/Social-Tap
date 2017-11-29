@@ -23,7 +23,7 @@ namespace Fill_Up_App.Code
 
             // Lambda israiskos
             button1.Click += (object sender, EventArgs e) => {
-                StartActivity(typeof(Evaluation));
+                StartActivity(typeof(TakePicture));
             };
 
             button2.Click += (object sender, EventArgs e) => {
