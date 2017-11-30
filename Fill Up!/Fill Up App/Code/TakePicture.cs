@@ -15,7 +15,6 @@ namespace Fill_Up_App.Code
     class TakePicture : Activity
     {
         ImageView imageView;
-        Button buttonCam;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -28,9 +27,9 @@ namespace Fill_Up_App.Code
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton);
             gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
 
-            buttonCam = FindViewById<Button>(Resource.Id.takePictureButton);
+            Button buttonCam = FindViewById<Button>(Resource.Id.takePictureButton);
             imageView = FindViewById<ImageView>(Resource.Id.imageView1);
-
+            imageView.SetImageResource(Resource.Drawable.beerIconPng);
             buttonCam.Click += ButtonCam_Click;
         }
 
@@ -39,7 +38,6 @@ namespace Fill_Up_App.Code
             base.OnActivityResult(requestCode, resultCode, data);
             Bitmap bitmap = (Bitmap)data.Extras.Get("data");
             imageView.SetImageBitmap(bitmap);
-            imageView.Visibility = Android.Views.ViewStates.Visible;
         }
 
         private void ButtonCam_Click(object sender, EventArgs a)

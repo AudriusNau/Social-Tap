@@ -201,6 +201,9 @@
   <ItemGroup>
     <None Include="Web References\FillUpWeb\FillUpWebService.disco" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\beerIconPng.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
