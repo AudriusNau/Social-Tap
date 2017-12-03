@@ -105,5 +105,14 @@ namespace FillUpWeb
                     select bar.Key;
             return x;
         }
+
+        //metodas, kuris grazina sąrašą barų su geresniais reitingais nei įvestas baras
+        public IEnumerable<string> FindBetterBars(string name, int rating)
+        {
+            var x = from bar in _barData
+                    where (bar.Value.RateAvg > rating)
+                    select bar.Key;
+            return x;
+        }
     }
 }
