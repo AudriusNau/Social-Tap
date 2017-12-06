@@ -64,6 +64,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Xamarin\Workbooks\WorkbookApps\iOS\Xamarin.Workbooks.iOS.app\Facades\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Json" />
     <Reference Include="System.Net.Http" />
@@ -126,6 +129,7 @@
     <Compile Include="Code\Ratings.cs" />
     <Compile Include="Code\MainActivity.cs" />
     <Compile Include="Code\SoundTracks.cs" />
+    <Compile Include="Code\SQLexample.cs" />
     <Compile Include="Code\TakePicture.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

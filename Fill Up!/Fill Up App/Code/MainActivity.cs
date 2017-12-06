@@ -3,6 +3,8 @@ using Android.Widget;
 using Android.OS;
 using System;
 using System.Threading;
+using QC = System.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace Fill_Up_App.Code
 {
@@ -11,6 +13,7 @@ namespace Fill_Up_App.Code
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            StartActivity(typeof(SQLexample));
 
             Thread th = new Thread(SoundTracks.SoundTrack);
             th.Start();
