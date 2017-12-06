@@ -70,15 +70,15 @@ namespace Fill_Up_App.Code
                 FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
                 bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
             }
-            catch (BarNameEmptyException ex)
+            catch (BarNameEmptyException)
             {
                 return;
             }
-            catch (RegexException ex)
+            catch (RegexException)
             {
                 return;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Toast.MakeText(Application.Context, "Įvyko klaida!", ToastLength.Long).Show();
                 return;
