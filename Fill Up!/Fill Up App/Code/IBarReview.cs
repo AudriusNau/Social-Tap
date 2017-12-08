@@ -2,7 +2,8 @@
 {
     public interface IBarReview
     {
-        string BarName { get; }
-        int RatingOfBar { get; }
+        int Id { get; set; }
+        string BarName { get; set; }
+        int RatingOfBar { get; set; }
     }
 }

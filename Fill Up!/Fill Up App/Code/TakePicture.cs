@@ -8,13 +8,22 @@ using Android.Runtime;
 using Android.Graphics;
 using Fill_Up_App.Code.Exceptions;
 using System.Text.RegularExpressions;
+using FillUpApp.Standart;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!")]
-    class TakePicture : Activity
+    class TakePicture : Activity//, INotifyPropertyChanged
     {
         ImageView imageView;
+
+        private readonly IBarsRepository _barsRepository;
+        private IEnumerable<Bar> _bars;
+
+        
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -31,6 +40,8 @@ namespace Fill_Up_App.Code
             imageView = FindViewById<ImageView>(Resource.Id.imageView1);
             imageView.SetImageResource(Resource.Drawable.beerIconPng);
             buttonCam.Click += ButtonCam_Click;
+
+            _barsRepository = barsRepository;
         }
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)

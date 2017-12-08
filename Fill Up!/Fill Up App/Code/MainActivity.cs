@@ -3,8 +3,8 @@ using Android.Widget;
 using Android.OS;
 using System;
 using System.Threading;
-using QC = System.Data.SqlClient;
-using System.Data.SqlClient;
+using System.IO;
+using FillUpApp.Standart;
 
 namespace Fill_Up_App.Code
 {
@@ -13,8 +13,11 @@ namespace Fill_Up_App.Code
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            StartActivity(typeof(SQLexample));
+            var dbPath = Path.Combine(System.Environment.GetFolderPath
+                (System.Environment.SpecialFolder.Personal), "barsDB.db");
 
+            var barsRepository = new BarsRepository(dbPath); //duombaze
+//--------------------------------------------------------------------------------------
             Thread th = new Thread(SoundTracks.SoundTrack);
             th.Start();
 
