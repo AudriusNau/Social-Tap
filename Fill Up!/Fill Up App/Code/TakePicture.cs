@@ -8,6 +8,7 @@ using Android.Runtime;
 using Android.Graphics;
 using Fill_Up_App.Code.Exceptions;
 using System.Text.RegularExpressions;
+using Fill_Up_App.Code.Extensions;
 
 namespace Fill_Up_App.Code
 {
@@ -15,6 +16,7 @@ namespace Fill_Up_App.Code
     class TakePicture : Activity
     {
         ImageView imageView;
+        int result = 0;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,6 +29,9 @@ namespace Fill_Up_App.Code
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton);
             gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
 
+            Button openPicbutton = FindViewById<Button>(Resource.Id.openPictureButton);
+            openPicbutton.Click += new EventHandler(this.openPicbutton_Click);
+
             Button buttonCam = FindViewById<Button>(Resource.Id.takePictureButton);
             imageView = FindViewById<ImageView>(Resource.Id.imageView1);
             imageView.SetImageResource(Resource.Drawable.beerIconPng);
@@ -36,8 +41,31 @@ namespace Fill_Up_App.Code
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            Bitmap bitmap = (Bitmap)data.Extras.Get("data");
-            imageView.SetImageBitmap(bitmap);
+            if(requestCode == 0)
+            {
+                if (resultCode == Result.Ok)
+                {
+                    Bitmap bitmap = (Bitmap)data.Extras.Get("data");
+                    imageView.SetImageBitmap(bitmap);
+                    PictureAnalysis pa = new PictureAnalysis();
+                    result = pa.GetBeerPercentage(bitmap);
+                }
+                else return;
+            }
+            else if(requestCode == 1)
+            {
+                if (resultCode == Result.Ok)
+                {
+                    imageView.SetImageURI(data.Data);
+                    imageView.BuildDrawingCache(true);
+                    Bitmap bmap = imageView.GetDrawingCache(true);
+                    imageView.SetImageBitmap(bmap);
+                    Bitmap b = Bitmap.CreateBitmap(imageView.GetDrawingCache(true));
+                    PictureAnalysis pa = new PictureAnalysis();
+                    result = pa.GetBeerPercentage(b);
+                }
+                else return;
+            }
         }
 
         private void ButtonCam_Click(object sender, EventArgs a)
@@ -63,7 +91,9 @@ namespace Fill_Up_App.Code
                 Intent intent = new Intent(this, typeof(Results));
                 Bundle bundle = new Bundle();
                 bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
+                bundle.PutDouble("mug", (((EditText)FindViewById(Resource.Id.orderedMug)).Text).StringToDouble());
                 bundle.PutInt("rating", (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+                bundle.PutInt("result", result);
                 intent.PutExtras(bundle);
                 StartActivity(intent);
 
@@ -88,6 +118,14 @@ namespace Fill_Up_App.Code
         void gobackbutton_Click(Object sender, EventArgs e)
         {
             Finish();
+        }
+
+        void openPicbutton_Click(Object sender, EventArgs e)
+        {
+            var imageIntent = new Intent();
+            imageIntent.SetType("image/*");
+            imageIntent.SetAction(Intent.ActionGetContent);
+            StartActivityForResult(Intent.CreateChooser(imageIntent, "Select photo"), 1);
         }
     }
 }

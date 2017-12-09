@@ -129,10 +129,11 @@
     <Compile Include="Code\BarReview.cs" />
     <Compile Include="Code\Exceptions\BarNameEmptyException.cs" />
     <Compile Include="Code\Exceptions\RegexException.cs" />
-    <Compile Include="Code\Extension.cs" />
+    <Compile Include="Code\Extensions\Extension.cs" />
     <Compile Include="Code\IBarData.cs" />
     <Compile Include="Code\IBarReview.cs" />
     <Compile Include="Code\MainController.cs" />
+    <Compile Include="Code\PictureAnalysis.cs" />
     <Compile Include="Code\Ratings.cs" />
     <Compile Include="Code\MainActivity.cs" />
     <Compile Include="Code\SoundTracks.cs" />
