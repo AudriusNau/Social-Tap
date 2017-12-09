@@ -1,120 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@drawable/mainbackground"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="Baro pavadinimas:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/barNameText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:textSize="17dp" />
-    <EditText
-        android:maxLength="30"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/mainbackground"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/barName" />
-    <TextView
-        android:text="Užsakytas bokalas:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_height="wrap_content"
-        android:id="@+id/orderedQuantityText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
-        android:textSize="17dp" />
-    <RadioGroup
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroup1">
-        <RadioButton
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Baro pavadinimas:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="0.3l"
-            android:id="@+id/radioButton1"
-            android:layout_marginLeft="60dp" />
-        <RadioButton
+            android:id="@+id/barNameText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17dp" />
+        <EditText
+            android:maxLength="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/barName" />
+        <TextView
+            android:text="Užsakytas bokalas:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderedQuantityText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:textSize="17dp" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:maxLength="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderedMug" />
+        <TextView
+            android:text="Baro įvertinimas:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.5l"
-            android:id="@+id/radioButton2" />
-        <RadioButton
+            android:id="@+id/barEvaluationText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17dp" />
+        <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="1.0l"
-            android:id="@+id/radioButton3" />
-    </RadioGroup>
-    <TextView
-        android:text="Baro įvertinimas:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/barEvaluationText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:textSize="17dp" />
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/ratingOfBar"
-        android:isIndicator="false"
-        android:numStars="5"
-        android:stepSize="1"
-        android:rating="1"
-        android:layout_marginTop="10dp" />
-    <Button
-        android:text="Fotografuoti bokalą"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/takePictureButton"
-        android:background="#771B0C"
-        android:textSize="12pt"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="wrap_content"
-        android:id="@+id/imageView1"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_weight="0"
-        android:minWidth="100dp"
-        android:minHeight="100dp" />
-    <Button
-        android:text="Išsaugoti"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/saveButton"
-        android:background="#771B0C"
-        android:textSize="12pt"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <Button
-        android:text="Grįžti atgal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/goBackButton"
-        android:background="#771B0C"
-        android:textSize="12pt"
-        android:gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp" />
-</LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ratingOfBar"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:stepSize="1"
+            android:rating="1"
+            android:layout_marginTop="10dp" />
+        <Button
+            android:text="Fotografuoti bokalą"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/takePictureButton"
+            android:background="#771B0C"
+            android:textSize="12pt"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <Button
+            android:text="Įkelti nuotrauką"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/openPictureButton"
+            android:background="#771B0C"
+            android:textSize="12pt"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:minWidth="100dp"
+            android:minHeight="100dp" />
+        <Button
+            android:text="Išsaugoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveButton"
+            android:background="#771B0C"
+            android:textSize="12pt"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <Button
+            android:text="Grįžti atgal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/goBackButton"
+            android:background="#771B0C"
+            android:textSize="12pt"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</ScrollView>

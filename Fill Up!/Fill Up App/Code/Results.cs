@@ -27,11 +27,16 @@ namespace Fill_Up_App.Code
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ResultsLayout);
             BarReview bar = new BarReview(Intent.GetStringExtra("name"), Intent.GetIntExtra("rating", -1));
+            double orderedMug = Intent.GetDoubleExtra("mug", -1);
+            double percent = Intent.GetIntExtra("result", -1);
+            double result = orderedMug * percent / 100;
 
             list = FindViewById<ListView>(Resource.Id.listView1);
             a = new List<string>();
-            a.Add("Baras:" + " " + bar.BarName);
-            a.Add("Įvertinimas:" + " " + bar.RatingOfBar.ToString());
+            a.Add("Baras: " + bar.BarName);
+            a.Add("Užsakytas bokalas: " + orderedMug);
+            a.Add("Įvertinimas: " + bar.RatingOfBar.ToString());
+            a.Add("Rezultatas: " + result + " l");
             a.Add("");
 
             FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
@@ -39,7 +44,8 @@ namespace Fill_Up_App.Code
 
             if(betterBar != null && betterBar != bar.BarName)
             {
-                a.Add("Siūlome jums apsilankyti:" + betterBar);             
+                a.Add("Siūlome jums apsilankyti:" + betterBar);
+                a.Add(bar.BarName);
             }
             else if(betterBar == bar.BarName)
             {
