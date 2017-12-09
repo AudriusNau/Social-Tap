@@ -45,7 +45,6 @@ namespace Fill_Up_App.Code
             if(betterBar != null && betterBar != bar.BarName)
             {
                 a.Add("Siūlome jums apsilankyti:" + betterBar);
-                a.Add(bar.BarName);
             }
             else if(betterBar == bar.BarName)
             {
