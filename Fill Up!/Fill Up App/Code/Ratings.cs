@@ -3,6 +3,9 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using FillUpApp.Standart;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fill_Up_App.Code
 {
@@ -12,7 +15,7 @@ namespace Fill_Up_App.Code
         private ListView list;
         private List<string> list1;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
             base.OnCreate(savedInstanceState);
@@ -27,7 +30,29 @@ namespace Fill_Up_App.Code
             //{
             //    list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
             //}
-            
+            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
+            var db = new BarContext(dbFullPath);
+            //TextView textView = FindViewById<TextView>(Resource.Id.TextView1);
+
+            try
+            {
+                using (db)
+                {
+                    
+                    var barsInDatabase = await db.Bars.ToListAsync();
+
+                    foreach (var bar in barsInDatabase)
+                    {
+                        list1.Add($"{bar.BarName} - {bar.RatingOfBar}" + System.Environment.NewLine);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, list1);
             list.Adapter = adapter;
 

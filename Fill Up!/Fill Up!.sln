@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.0
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillUpApp", "Fill Up App\FillUpApp.csproj", "{24F86ABA-82EC-4D2E-BE67-59A0B4A0ECA2}"
 EndProject
@@ -47,7 +47,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebService", "http://localh
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillUpApp.Standart", "FillUpApp.Standart\FillUpApp.Standart.csproj", "{5191B1EA-A8E9-4067-AB68-AF1FE1870188}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillUpApp.Standart", "FillUpApp.Standart\FillUpApp.Standart.csproj", "{5191B1EA-A8E9-4067-AB68-AF1FE1870188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationsBait", "MigrationsBait\MigrationsBait.csproj", "{04555C80-4AF7-4BCF-9F49-43660212EACE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{5191B1EA-A8E9-4067-AB68-AF1FE1870188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5191B1EA-A8E9-4067-AB68-AF1FE1870188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5191B1EA-A8E9-4067-AB68-AF1FE1870188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04555C80-4AF7-4BCF-9F49-43660212EACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04555C80-4AF7-4BCF-9F49-43660212EACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04555C80-4AF7-4BCF-9F49-43660212EACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04555C80-4AF7-4BCF-9F49-43660212EACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
