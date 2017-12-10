@@ -16,11 +16,37 @@ namespace Fill_Up_App.Code
         private ListView list;
         private List<string> a;
 
-        protected override async void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SetLayout);
 
+            if(Intent.GetIntExtra("metodas", -1) == 1)
+            {
+                DoSkip();
+            }else if(Intent.GetIntExtra("metodas", -1) == 2)
+            {
+                DoTake();
+            }else if(Intent.GetIntExtra("metodas", -1) == 3)
+            {
+                DoAgregate();
+            }
+            else if (Intent.GetIntExtra("metodas", -1) == 4)
+            {
+                DoGroup();
+            }
+
+            Button gobackbutton = FindViewById<Button>(Resource.Id.goBackBut);
+            gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
+        }
+
+        void gobackbutton_Click(Object sender, EventArgs e)
+        {
+            Finish();
+        }
+
+        async void DoSkip()
+        {
             list = FindViewById<ListView>(Resource.Id.listView1);
             a = new List<string>();
             a.Add("Visi barai, išskyrus pirmąjį:");
@@ -48,14 +74,21 @@ namespace Fill_Up_App.Code
 
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
             list.Adapter = adapter;
-
-            Button gobackbutton = FindViewById<Button>(Resource.Id.goBackBut);
-            gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
         }
 
-        void gobackbutton_Click(Object sender, EventArgs e)
+        async void DoTake()
         {
-            Finish();
+
+        }
+
+        async void DoAgregate()
+        {
+
+        }
+
+        async void DoGroup()
+        {
+
         }
     }
 }

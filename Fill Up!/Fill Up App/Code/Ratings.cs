@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using FillUpApp.Standart;
 using Microsoft.EntityFrameworkCore;
+using Android.Content;
 
 namespace Fill_Up_App.Code
 {
@@ -66,8 +67,12 @@ namespace Fill_Up_App.Code
             Button skipbutton = FindViewById<Button>(Resource.Id.skipbutton);
             skipbutton.Click += (object sender, EventArgs e) =>
             {
+                Intent intent = new Intent(this, typeof(Skip));
+                Bundle bundle = new Bundle();
+                bundle.PutInt("metodas", 1);
+                intent.PutExtras(bundle);
+                StartActivity(intent);
                 Finish();
-                //StartActivity(typeof(Skip));
             };
 
             Button takebutton = FindViewById<Button>(Resource.Id.takebutton);
@@ -86,14 +91,29 @@ namespace Fill_Up_App.Code
         }
         void takebutton_Click(Object sender, EventArgs e)
         {
+            Intent intent = new Intent(this, typeof(Skip));
+            Bundle bundle = new Bundle();
+            bundle.PutInt("metodas", 2);
+            intent.PutExtras(bundle);
+            StartActivity(intent);
             Finish();
         }
         void agregatebutton_Click(Object sender, EventArgs e)
         {
+            Intent intent = new Intent(this, typeof(Skip));
+            Bundle bundle = new Bundle();
+            bundle.PutInt("metodas", 3);
+            intent.PutExtras(bundle);
+            StartActivity(intent);
             Finish();
         }
         void groupbutton_Click(Object sender, EventArgs e)
         {
+            Intent intent = new Intent(this, typeof(Skip));
+            Bundle bundle = new Bundle();
+            bundle.PutInt("metodas", 4);
+            intent.PutExtras(bundle);
+            StartActivity(intent);
             Finish();
         }
     }
