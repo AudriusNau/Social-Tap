@@ -132,15 +132,15 @@ namespace Fill_Up_App.Code
                 bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, 
                     (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
             }
-            catch (BarNameEmptyException)
+            catch (BarNameEmptyException ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
-            catch (RegexException)
+            catch (RegexException ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Toast.MakeText(Application.Context, "Įvyko klaida!", ToastLength.Long).Show();
                 System.Diagnostics.Debug.WriteLine(ex.ToString());

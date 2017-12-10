@@ -2302,9 +2302,9 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f07002f
 			public const int auto = 2131165231;
-
-			// aapt resource value: 0x7f0700a7
-			public const int barEvaluationText = 2131165351;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int barEvaluationText = 2131165348;
 			
 			// aapt resource value: 0x7f0700a1
 			public const int barName = 2131165345;
@@ -2422,10 +2422,10 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f07009f
 			public const int goBackBut = 2131165343;
-
-			// aapt resource value: 0x7f0700ac
-			public const int goBackButton = 2131165356;
-
+			
+			// aapt resource value: 0x7f0700aa
+			public const int goBackButton = 2131165354;
+			
 			// aapt resource value: 0x7f070099
 			public const int goBackButton1 = 2131165337;
 			
@@ -2449,10 +2449,10 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f070046
 			public const int image = 2131165254;
-
-			// aapt resource value: 0x7f0700aa
-			public const int imageView1 = 2131165354;
-
+			
+			// aapt resource value: 0x7f0700a8
+			public const int imageView1 = 2131165352;
+			
 			// aapt resource value: 0x7f07008e
 			public const int info = 2131165326;
 			
@@ -2482,10 +2482,10 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f070048
 			public const int list_item = 2131165256;
-
-			// aapt resource value: 0x7f0700ae
-			public const int masked = 2131165358;
-
+			
+			// aapt resource value: 0x7f0700ac
+			public const int masked = 2131165356;
+			
 			// aapt resource value: 0x7f070087
 			public const int media_actions = 2131165319;
 			
@@ -2518,16 +2518,16 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f070089
 			public const int notification_main_column_container = 2131165321;
-
+			
+			// aapt resource value: 0x7f0700a7
+			public const int openPictureButton = 2131165351;
+			
 			// aapt resource value: 0x7f0700a3
-			public const int openPictureButton = 2131165347;
+			public const int orderedMug = 2131165347;
 			
-			// aapt resource value: 0x7f07009f
-			public const int orderedMug = 2131165343;
+			// aapt resource value: 0x7f0700a2
+			public const int orderedQuantityText = 2131165346;
 			
-			// aapt resource value: 0x7f07009e
-			public const int orderedQuantityText = 2131165342;
-
 			// aapt resource value: 0x7f070037
 			public const int parallax = 2131165239;
 			
@@ -2546,9 +2546,9 @@ namespace Fill_Up_App
 			// aapt resource value: 0x7f07005d
 			public const int radio = 2131165277;
 			
-			// aapt resource value: 0x7f0700a1
-			public const int ratingOfBar = 2131165345;
-      
+			// aapt resource value: 0x7f0700a5
+			public const int ratingOfBar = 2131165349;
+			
 			// aapt resource value: 0x7f070080
 			public const int ratingsButton = 2131165312;
 			
@@ -2560,10 +2560,10 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f07008b
 			public const int right_side = 2131165323;
-
-			// aapt resource value: 0x7f0700ab
-			public const int savebutton = 2131165355;
-	
+			
+			// aapt resource value: 0x7f0700a9
+			public const int savebutton = 2131165353;
+			
 			// aapt resource value: 0x7f07001b
 			public const int screen = 2131165211;
 			
@@ -2671,9 +2671,9 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f070011
 			public const int tabMode = 2131165201;
-
-			// aapt resource value: 0x7f0700a9
-			public const int takePictureButton = 2131165353;
+			
+			// aapt resource value: 0x7f0700a6
+			public const int takePictureButton = 2131165350;
 			
 			// aapt resource value: 0x7f07009b
 			public const int takebutton = 2131165339;
@@ -2734,10 +2734,10 @@ namespace Fill_Up_App
 			
 			// aapt resource value: 0x7f07000e
 			public const int view_offset_helper = 2131165198;
-
-			// aapt resource value: 0x7f0700ad
-			public const int visible = 2131165357;
-
+			
+			// aapt resource value: 0x7f0700ab
+			public const int visible = 2131165355;
+			
 			// aapt resource value: 0x7f070027
 			public const int withText = 2131165223;
 			
