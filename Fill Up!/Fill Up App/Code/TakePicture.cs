@@ -12,11 +12,14 @@ using FillUpApp.Standart;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Fill_Up_App.Code
 {
     [Activity(Label = "Fill Up!")]
-    public class TakePicture : Activity
+    public class TakePicture : Android.App.Activity
     {
         ImageView imageView;
 
@@ -26,7 +29,7 @@ namespace Fill_Up_App.Code
             SetContentView(Resource.Layout.TakePictureLayout);
 
             Button savebutton = FindViewById<Button>(Resource.Id.saveButton);
-            savebutton.Click += new EventHandler(this.savebutton_Click);
+            savebutton.Click += new EventHandler(this.savebutton_ClickAsync);
 
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton);
             gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
@@ -50,7 +53,7 @@ namespace Fill_Up_App.Code
             StartActivityForResult(intent, 0);
         }
 
-        void savebutton_Click(Object sender, EventArgs e)
+        async void savebutton_ClickAsync(Object sender, EventArgs e)
         {
             try
             {
@@ -63,7 +66,36 @@ namespace Fill_Up_App.Code
                 {
                     throw new RegexException("Pavadinime gali būti tik raidės, skaičiai ir tarpai!");
                 }
+                //-------------------------------------------------------------------------------------
+                var dbFullPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
+                var db = new BarContext(dbFullPath);
 
+                try
+                {
+                    using (db)
+                    {
+                        // Entity
+                        Bar bar = new Bar()
+                        {
+                            BarName = ((EditText)FindViewById(Resource.Id.barName)).Text,
+                            RatingOfBar = (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating
+                        };
+                        List<Bar> barsInList = new List<Bar>() { bar };
+                        await db.Bars.AddRangeAsync(barsInList);
+                        await db.SaveChangesAsync();
+                        // INSERT
+                        //string barName = ((EditText)FindViewById(Resource.Id.barName)).Text;
+                        //int ratingOfBar = (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating;
+                        //db.Database.ExecuteSqlCommand("INSERT INTO [Bars] VALUES({0},{1})", barName, ratingOfBar);
+                        //await db.SaveChangesAsync();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.ToString());
+                }
+                //-------------------------------------------------------------------------------------------
                 Intent intent = new Intent(this, typeof(Results));
                 Bundle bundle = new Bundle();
                 bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
@@ -72,21 +104,24 @@ namespace Fill_Up_App.Code
                 StartActivity(intent);
 
                 FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
-                bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+                bool value = client.AddBarReview(((EditText)FindViewById(Resource.Id.barName)).Text, 
+                    (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
             }
             catch (BarNameEmptyException ex)
             {
-                return;
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
             catch (RegexException ex)
             {
-                return;
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
             catch (Exception ex)
             {
                 Toast.MakeText(Application.Context, "Įvyko klaida!", ToastLength.Long).Show();
-                return;
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
+
+            
         }
 
         void gobackbutton_Click(Object sender, EventArgs e)

@@ -2,7 +2,6 @@
 {
     public interface IBarReview
     {
-        int Id { get; set; }
         string BarName { get; set; }
         int RatingOfBar { get; set; }
     }

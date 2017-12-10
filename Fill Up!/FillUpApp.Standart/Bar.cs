@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace FillUpApp.Standart
 {
     public class Bar
     {
         [Key]
-        public int Id { get; set; }
         public string BarName { get; set; }
         public int RatingOfBar { get; set; }
     }

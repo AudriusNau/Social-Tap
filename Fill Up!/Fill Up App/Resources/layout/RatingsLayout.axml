@@ -13,7 +13,7 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="290.0dp"
             android:divider="#771B0C"
             android:dividerHeight="2dp"
             android:layout_marginTop="10dp"
@@ -23,7 +23,7 @@
         <Button
             android:text="Grįžti atgal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/goBackButton1"
             android:textSize="12pt"
             android:background="#771B0C"

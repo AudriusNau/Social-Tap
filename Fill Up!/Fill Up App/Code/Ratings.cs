@@ -24,27 +24,31 @@ namespace Fill_Up_App.Code
             list = FindViewById<ListView>(Resource.Id.listView2);
             list1 = new List<string>();
 
-            list1.Add("Baras - Įvertinimas:");
+            list1.Add("Baras        Įvertinimas:");
             //var ratings = client.GetSortedBarData();
             //foreach(KeyValuePair < string, BarData> a in ratings)
             //{
             //    list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
             //}
+            //-------------------------------------------------------------------------------------
             var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
             var db = new BarContext(dbFullPath);
-            //TextView textView = FindViewById<TextView>(Resource.Id.TextView1);
 
             try
             {
                 using (db)
                 {
-                    
+                    // Entity
                     var barsInDatabase = await db.Bars.ToListAsync();
 
                     foreach (var bar in barsInDatabase)
                     {
-                        list1.Add($"{bar.BarName} - {bar.RatingOfBar}" + System.Environment.NewLine);
+                        list1.Add($"{bar.BarName}       {bar.RatingOfBar} \u2605" + System.Environment.NewLine);
                     }
+                    await db.SaveChangesAsync();
+                    // SELECT
+                    //var barList = db.Bars.SqlQuery("SELECT BarName FROM Bars").ToList<Bar>();
+                    //await db.SaveChangesAsync();
                 }
 
             }
@@ -55,7 +59,7 @@ namespace Fill_Up_App.Code
 
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, list1);
             list.Adapter = adapter;
-
+            //----------------------------------------------------------------------------------------
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton1);
             gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
         }

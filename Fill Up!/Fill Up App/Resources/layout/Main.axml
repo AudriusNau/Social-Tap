@@ -24,11 +24,4 @@
         android:layout_marginTop="70dip"
         android:layout_marginLeft="90dip"
         android:layout_marginRight="90dip" />
-    <TextView
-        android:id="@+id/TextView1"
-        android:layout_width="match_parent"
-        android:layout_height="138.5dp"
-        android:layout_marginBottom="32.0dp"
-        android:background="@color/background_floating_material_light"
-        android:textColor="@color/abc_input_method_navigation_guard" />
 </LinearLayout>
