@@ -9,11 +9,7 @@ using Android.Graphics;
 using Fill_Up_App.Code.Exceptions;
 using System.Text.RegularExpressions;
 using FillUpApp.Standart;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Fill_Up_App.Code
@@ -28,7 +24,7 @@ namespace Fill_Up_App.Code
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.TakePictureLayout);
 
-            Button savebutton = FindViewById<Button>(Resource.Id.saveButton);
+            Button savebutton = FindViewById<Button>(Resource.Id.savebutton);
             savebutton.Click += new EventHandler(this.savebutton_ClickAsync);
 
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton);

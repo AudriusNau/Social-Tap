@@ -214,6 +214,7 @@
     <Compile Include="Code\MainController.cs" />
     <Compile Include="Code\Ratings.cs" />
     <Compile Include="Code\MainActivity.cs" />
+    <Compile Include="Code\Skip.cs" />
     <Compile Include="Code\SoundTracks.cs" />
     <Compile Include="Code\TakePicture.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -242,6 +243,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\TakePictureLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SetLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <None Include="Web References\FillUpWeb\FillUpWebService.wsdl" />

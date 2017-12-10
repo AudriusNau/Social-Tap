@@ -62,9 +62,37 @@ namespace Fill_Up_App.Code
             //----------------------------------------------------------------------------------------
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton1);
             gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
+
+            Button skipbutton = FindViewById<Button>(Resource.Id.skipbutton);
+            skipbutton.Click += (object sender, EventArgs e) =>
+            {
+                Finish();
+                //StartActivity(typeof(Skip));
+            };
+
+            Button takebutton = FindViewById<Button>(Resource.Id.takebutton);
+            takebutton.Click += new EventHandler(this.takebutton_Click);
+
+            Button agregatebutton = FindViewById<Button>(Resource.Id.agregatebutton);
+            agregatebutton.Click += new EventHandler(this.agregatebutton_Click);
+
+            Button groupbutton = FindViewById<Button>(Resource.Id.groupbutton);
+            groupbutton.Click += new EventHandler(this.groupbutton_Click);
         }
-        
+
         void gobackbutton_Click(Object sender, EventArgs e)
+        {
+            Finish();
+        }
+        void takebutton_Click(Object sender, EventArgs e)
+        {
+            Finish();
+        }
+        void agregatebutton_Click(Object sender, EventArgs e)
+        {
+            Finish();
+        }
+        void groupbutton_Click(Object sender, EventArgs e)
         {
             Finish();
         }

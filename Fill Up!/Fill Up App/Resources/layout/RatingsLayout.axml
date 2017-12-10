@@ -30,5 +30,45 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp" />
+      <Button
+            android:text="Visi barai, išskyrus pirmąjį"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/skipbutton"
+            android:textSize="12pt"
+            android:background="#771B0C"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+      <Button
+            android:text="Pirmas įvestas baras"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/takebutton"
+            android:textSize="12pt"
+            android:background="#771B0C"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+      <Button
+            android:text="Bendra įvertinimų suma"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/agregatebutton"
+            android:textSize="12pt"
+            android:background="#771B0C"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+      <Button
+            android:text="Pirmojo baro įvertinimai"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/groupbutton"
+            android:textSize="12pt"
+            android:background="#771B0C"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 </ScrollView>
