@@ -313,6 +313,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code\Migrations.csproj" />
+    <AndroidResource Include="Resources\drawable\alausInfo.jpg" />
+    <AndroidResource Include="Resources\drawable\bandom.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
