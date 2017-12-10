@@ -23,7 +23,7 @@
         <Button
             android:text="Grįžti atgal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/goBackButton1"
             android:textSize="12pt"
             android:background="#771B0C"

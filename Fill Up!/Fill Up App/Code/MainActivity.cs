@@ -15,8 +15,6 @@ namespace Fill_Up_App.Code
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            Thread th = new Thread(SoundTracks.SoundTrack);
-            th.Start();
 
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);

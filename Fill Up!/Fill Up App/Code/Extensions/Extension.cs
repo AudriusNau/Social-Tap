@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Fill_Up_.Code
+namespace Fill_Up_App.Code.Extensions
 {
     public static class Extension
     {

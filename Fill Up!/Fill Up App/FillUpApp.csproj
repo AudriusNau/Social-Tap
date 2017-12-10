@@ -26,7 +26,7 @@
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>True</DebugSymbols>
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>Full</DebugType>
     <Optimize>False</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
@@ -141,6 +141,8 @@
     </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Xamarin\Workbooks\WorkbookApps\Android\Framework\System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Interactive.Async, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
@@ -208,10 +210,11 @@
     <Compile Include="Code\BarReview.cs" />
     <Compile Include="Code\Exceptions\BarNameEmptyException.cs" />
     <Compile Include="Code\Exceptions\RegexException.cs" />
-    <Compile Include="Code\Extension.cs" />
+    <Compile Include="Code\Extensions\Extension.cs" />
     <Compile Include="Code\IBarData.cs" />
     <Compile Include="Code\IBarReview.cs" />
     <Compile Include="Code\MainController.cs" />
+    <Compile Include="Code\PictureAnalysis.cs" />
     <Compile Include="Code\Ratings.cs" />
     <Compile Include="Code\MainActivity.cs" />
     <Compile Include="Code\Skip.cs" />
