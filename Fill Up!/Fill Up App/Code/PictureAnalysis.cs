@@ -1,6 +1,4 @@
-﻿using Emgu.CV.Structure;
-using Emgu.CV;
-using Android.Graphics;
+﻿using Android.Graphics;
 
 namespace Fill_Up_App.Code
 {
