@@ -145,7 +145,48 @@ namespace Fill_Up_App.Code
 
         async void DoGroup()
         {
+            list = FindViewById<ListView>(Resource.Id.listView1);
+            a = new List<string>();
+            a.Add("Barai įvertinti 5 \u2605:");
 
+            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
+            var db = new BarContext(dbFullPath);
+
+            try
+            {
+                using (db)
+                {
+                    var barsInDatabase = await db.Bars.ToListAsync();
+
+                    var result = from bar in barsInDatabase
+                                 orderby bar
+                                 group bar by IsFiveStars(bar);
+
+                    foreach (var group in result)
+                    {
+                        if (group.Key == true)
+                        {
+                            foreach (var value in group)
+                            {
+                                a.Add($"{value.BarName}       {value.RatingOfBar} \u2605" + System.Environment.NewLine);
+                            }
+                        }
+                    }
+
+                    bool IsFiveStars(Bar bar)
+                    {
+                        return bar.RatingOfBar == 5;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
+            list.Adapter = adapter;
+            
         }
     }
 }
