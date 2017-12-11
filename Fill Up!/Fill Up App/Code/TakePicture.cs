@@ -98,7 +98,21 @@ namespace Fill_Up_App.Code
                 {
                     using (db)
                     {
-                        if (db == null)
+                        var barsInDatabase = await db.Bars.ToListAsync();
+                        int count = 0;
+                        foreach (var bar in barsInDatabase)
+                        {
+                            if (bar.BarName == ((EditText)FindViewById(Resource.Id.barName)).Text)
+                            {
+                                bar.RatingOfBar = (bar.RatingOfBar + (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating) / 2;
+                                count = 1;
+                            }
+                        }
+                        if (count == 1)
+                        {
+
+                        }
+                        if (count == 0)
                         {
                             // Entity
                             Bar bar = new Bar()
@@ -115,29 +129,7 @@ namespace Fill_Up_App.Code
                             //db.Database.ExecuteSqlCommand("INSERT INTO [Bars] VALUES({0},{1})", barName, ratingOfBar);
                             //await db.SaveChangesAsync();
                         }
-                        else
-                        {
-                            var barsInDatabase = await db.Bars.ToListAsync();
-                            foreach (var bar in barsInDatabase)
-                            {
-                                if (bar.BarName == ((EditText)FindViewById(Resource.Id.barName)).Text)
-                                {
-                                    bar.RatingOfBar = (bar.RatingOfBar + (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating) / 2;
-                                }
-                                else
-                                {
-                                    Bar bar1 = new Bar()
-                                    {
-                                        BarName = ((EditText)FindViewById(Resource.Id.barName)).Text,
-                                        RatingOfBar = (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating
-                                    };
-                                    List<Bar> barsInList = new List<Bar>() { bar1 };
-                                    await db.Bars.AddRangeAsync(barsInList);
-                                    await db.SaveChangesAsync();
-                                }
-
-                            }
-                        }
+                        count = 0;
                     }
                 }
                 catch (Exception ex)
