@@ -29,7 +29,7 @@ namespace Fill_Up_App.Code
                 DoTake();
             }else if(Intent.GetIntExtra("metodas", -1) == 3)
             {
-                DoAgregate();
+                DoAggregate();
             }
             else if (Intent.GetIntExtra("metodas", -1) == 4)
             {
@@ -78,17 +78,115 @@ namespace Fill_Up_App.Code
 
         async void DoTake()
         {
+            list = FindViewById<ListView>(Resource.Id.listView1);
+            a = new List<string>();
+            a.Add("Pirmasis baras:");
 
+            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
+            var db = new BarContext(dbFullPath);
+
+            try
+            {
+                using (db)
+                {
+                    var barsInDatabase = await db.Bars.ToListAsync();
+                    var barai = barsInDatabase.Take(1);
+
+                    foreach (var bar in barai)
+                    {
+                        a.Add($"{bar.BarName}       {bar.RatingOfBar} \u2605" + System.Environment.NewLine);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
+            list.Adapter = adapter;
         }
 
-        async void DoAgregate()
+        async void DoAggregate()
         {
+            list = FindViewById<ListView>(Resource.Id.listView1);
+            a = new List<string>();
+            a.Add("Visų barų įvertinimų vidurkis:");
 
+            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
+            var db = new BarContext(dbFullPath);
+
+            try
+            {
+                using (db)
+                {
+                    var barsInDatabase = await db.Bars.ToListAsync();
+                    List<int> ratings = new List<int>();
+                    int count = 0;
+
+                    foreach (var bar in barsInDatabase)
+                    {
+                        ratings.Add(bar.RatingOfBar);
+                        count++;
+                    }
+                    int result = ratings.Aggregate((a, b) => b + a); //visa suma ivertinimu
+                    double average = result / count; //vidurkis, ji isvedu
+                    a.Add($"{average} \u2605" + System.Environment.NewLine);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+            
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
+            list.Adapter = adapter;
         }
 
         async void DoGroup()
         {
+            list = FindViewById<ListView>(Resource.Id.listView1);
+            a = new List<string>();
+            a.Add("Barai įvertinti 5 \u2605:");
 
+            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
+            var db = new BarContext(dbFullPath);
+
+            try
+            {
+                using (db)
+                {
+                    var barsInDatabase = await db.Bars.ToListAsync();
+
+                    var result = from bar in barsInDatabase
+                                 orderby bar
+                                 group bar by IsFiveStars(bar);
+
+                    foreach (var group in result)
+                    {
+                        if (group.Key == true)
+                        {
+                            foreach (var value in group)
+                            {
+                                a.Add($"{value.BarName}       {value.RatingOfBar} \u2605" + System.Environment.NewLine);
+                            }
+                        }
+                    }
+
+                    bool IsFiveStars(Bar bar)
+                    {
+                        return bar.RatingOfBar == 5;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, a);
+            list.Adapter = adapter;
+            
         }
     }
 }
