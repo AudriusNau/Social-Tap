@@ -85,7 +85,7 @@ namespace Fill_Up_App.Code
                     throw new BarNameEmptyException("Įveskite baro pavadinimą");
                 }
 
-                if (!Regex.IsMatch(((EditText)FindViewById(Resource.Id.barName)).Text, @"^[a-zA-Z0-9 ]*$"))
+                if (!Regex.IsMatch(((EditText)FindViewById(Resource.Id.barName)).Text, @"^[\p{L}0-9\s]*$"))
                 {
                     throw new RegexException("Pavadinime gali būti tik raidės, skaičiai ir tarpai!");
                 }
