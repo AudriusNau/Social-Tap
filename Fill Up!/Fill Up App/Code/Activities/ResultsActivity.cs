@@ -6,24 +6,15 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Fill_Up_App.Code.Data;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Activities
 {
     [Activity(Label = "Fill Up!")]
-    public class Results: Activity
+    public class ResultsActivity: Activity
     {
         private ListView list;
         private List <string> a;
-
-        private Lazy<Results> _lazyProperty = new Lazy<Results>(() => new Results());
-
-        public Results MyProperty
-        {
-            get
-            {
-                return _lazyProperty.Value;
-            }
-        }
 
         protected override async void OnCreate(Bundle savedInstanceState)
         {
@@ -45,11 +36,9 @@ namespace Fill_Up_App.Code
 
             int rating = bar1.RatingOfBar;
             string betterBar = bar1.BarName;
-            //FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
-            //string betterBar = client.FindBetterBarName(bar.BarName, bar.RatingOfBar);
+            FillUpWeb.FillUpWebService client = new FillUpWeb.FillUpWebService();
 
-            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-            var db = new BarContext(dbFullPath);
+            var db = DatabaseProcessing.Database();
 
             try
             {

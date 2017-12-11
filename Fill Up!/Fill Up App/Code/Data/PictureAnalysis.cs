@@ -1,6 +1,6 @@
 ﻿using Android.Graphics;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Data
 {
     public class PictureAnalysis
     {
@@ -23,7 +23,7 @@ namespace Fill_Up_App.Code
                     numberOfPixels++;
             }
 
-            int result = numberOfPixels * 100 / image.Height;  //apskaičiuojami procentai kiek alaus spalva užima nuotraukos aukščio
+            int result = numberOfPixels * 90 / image.Height;  //apskaičiuojami procentai kiek alaus spalva užima nuotraukos aukščio
             return result;
         }
     }

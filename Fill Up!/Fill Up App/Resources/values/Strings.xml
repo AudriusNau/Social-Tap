@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">Fill Up App</string>
+  <string name="saved">Išsaugota.</string>
+  <string name="not_saved">Išsaugoti nepavyko.</string>
 </resources>

@@ -7,11 +7,12 @@ using System.IO;
 using FillUpApp.Standart;
 using Microsoft.EntityFrameworkCore;
 using Android.Content;
+using Fill_Up_App.Code.Data;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Activities
 {
     [Activity(Label = "Fill Up!")]
-    internal class Ratings : Activity
+    internal class RatingsActivity : Activity
     {
         private ListView list;
         private List<string> list1;
@@ -26,14 +27,8 @@ namespace Fill_Up_App.Code
             list1 = new List<string>();
 
             list1.Add("Baras        Įvertinimas:");
-            //var ratings = client.GetSortedBarData();
-            //foreach(KeyValuePair < string, BarData> a in ratings)
-            //{
-            //    list1.Add(a.Key + " - " + a.Value.RateAvg.ToString());
-            //}
-            //-------------------------------------------------------------------------------------
-            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-            var db = new BarContext(dbFullPath);
+
+            var db = DatabaseProcessing.Database();
 
             try
             {
@@ -67,12 +62,11 @@ namespace Fill_Up_App.Code
             Button skipbutton = FindViewById<Button>(Resource.Id.skipbutton);
             skipbutton.Click += (object sender, EventArgs e) =>
             {
-                Intent intent = new Intent(this, typeof(Skip));
+                Intent intent = new Intent(this, typeof(SkipActivity));
                 Bundle bundle = new Bundle();
                 bundle.PutInt("metodas", 1);
                 intent.PutExtras(bundle);
                 StartActivity(intent);
-                Finish();
             };
 
             Button takebutton = FindViewById<Button>(Resource.Id.takebutton);
@@ -91,30 +85,27 @@ namespace Fill_Up_App.Code
         }
         void takebutton_Click(Object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(Skip));
+            Intent intent = new Intent(this, typeof(SkipActivity));
             Bundle bundle = new Bundle();
             bundle.PutInt("metodas", 2);
             intent.PutExtras(bundle);
             StartActivity(intent);
-            Finish();
         }
         void agregatebutton_Click(Object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(Skip));
+            Intent intent = new Intent(this, typeof(SkipActivity));
             Bundle bundle = new Bundle();
             bundle.PutInt("metodas", 3);
             intent.PutExtras(bundle);
             StartActivity(intent);
-            Finish();
         }
         void groupbutton_Click(Object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(Skip));
+            Intent intent = new Intent(this, typeof(SkipActivity));
             Bundle bundle = new Bundle();
             bundle.PutInt("metodas", 4);
             intent.PutExtras(bundle);
             StartActivity(intent);
-            Finish();
         }
     }
 }

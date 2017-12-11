@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Widget;
+using Fill_Up_App.Code.Data;
 using FillUpApp.Standart;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,10 +9,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Activities
 {
     [Activity(Label = "Fill Up!")]
-    public class Skip : Activity
+    public class SkipActivity : Activity
     {
         private ListView list;
         private List<string> a;
@@ -51,8 +52,7 @@ namespace Fill_Up_App.Code
             a = new List<string>();
             a.Add("Visi barai, išskyrus pirmąjį:");
 
-            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-            var db = new BarContext(dbFullPath);
+            var db = DatabaseProcessing.Database();
 
             try
             {
@@ -82,8 +82,7 @@ namespace Fill_Up_App.Code
             a = new List<string>();
             a.Add("Pirmasis baras:");
 
-            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-            var db = new BarContext(dbFullPath);
+            var db = DatabaseProcessing.Database();
 
             try
             {
@@ -113,8 +112,7 @@ namespace Fill_Up_App.Code
             a = new List<string>();
             a.Add("Visų barų įvertinimų vidurkis:");
 
-            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-            var db = new BarContext(dbFullPath);
+            var db = DatabaseProcessing.Database();
 
             try
             {
@@ -149,8 +147,7 @@ namespace Fill_Up_App.Code
             a = new List<string>();
             a.Add("Barai įvertinti 5 \u2605:");
 
-            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-            var db = new BarContext(dbFullPath);
+            var db = DatabaseProcessing.Database();
 
             try
             {

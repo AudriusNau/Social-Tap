@@ -7,8 +7,9 @@ using System.IO;
 using FillUpApp.Standart;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using Fill_Up_App.Code.Data;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Activities
 {
     [Activity(Label = "Fill Up!", MainLauncher = true, Icon = "@drawable/beerIcon")]
     public class MainActivity : Android.App.Activity
@@ -19,20 +20,20 @@ namespace Fill_Up_App.Code
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
 
-            DeleteFromTable();
+            DatabaseProcessing.DeleteFromTable();
 
             Button button1 = FindViewById<Button>(Resource.Id.evaluationButton);
             Button button2 = FindViewById<Button>(Resource.Id.ratingsButton);
 
-            // Lambda israiskos
+           
             button1.Click += (object sender, EventArgs e) =>
             {
-                StartActivity(typeof(TakePicture));
+                StartActivity(typeof(TakePictureActivity));
             };
 
             button2.Click += (object sender, EventArgs e) =>
             {
-                StartActivity(typeof(Ratings));
+                StartActivity(typeof(RatingsActivity));
             };
         }
 
@@ -42,26 +43,6 @@ namespace Fill_Up_App.Code
             Toast.MakeText(Application.Context, reportContent, ToastLength.Short).Show();
         }
 
-        public static async void DeleteFromTable()
-        {
-            var dbFullPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-            var db = new BarContext(dbFullPath);
-
-            try
-            {
-                using (db)
-                {
-                    await db.Database.MigrateAsync(); //We need to ensure the latest Migration was added. This is different than EnsureDatabaseCreated.
-
-                    db.Database.ExecuteSqlCommand("DELETE FROM [Bars]");
-                    await db.SaveChangesAsync();
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-        }
     }
 }
 

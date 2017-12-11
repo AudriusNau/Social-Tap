@@ -1,4 +1,4 @@
-﻿namespace Fill_Up_App.Code
+﻿namespace Fill_Up_App.Code.Data
 {
     public interface IBarReview
     {

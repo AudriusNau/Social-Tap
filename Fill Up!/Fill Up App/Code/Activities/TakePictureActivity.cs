@@ -13,11 +13,12 @@ using FillUpApp.Standart;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Fill_Up_App.Code.Data;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Activities
 {
     [Activity(Label = "Fill Up!")]
-    public class TakePicture : Android.App.Activity
+    public class TakePictureActivity : Android.App.Activity
     {
         ImageView imageView;
         int result = 0;
@@ -27,7 +28,7 @@ namespace Fill_Up_App.Code
             SetContentView(Resource.Layout.TakePictureLayout);
 
             Button savebutton = FindViewById<Button>(Resource.Id.savebutton);
-            savebutton.Click += new EventHandler(this.savebutton_ClickAsync);
+            savebutton.Click += new EventHandler(this.savebutton_Click);
 
             Button gobackbutton = FindViewById<Button>(Resource.Id.goBackButton);
             gobackbutton.Click += new EventHandler(this.gobackbutton_Click);
@@ -77,7 +78,7 @@ namespace Fill_Up_App.Code
             StartActivityForResult(intent, 0);
         }
 
-        async void savebutton_ClickAsync(Object sender, EventArgs e)
+        void savebutton_Click(Object sender, EventArgs e)
         {
             try
             {
@@ -90,38 +91,10 @@ namespace Fill_Up_App.Code
                 {
                     throw new RegexException("Pavadinime gali būti tik raidės, skaičiai ir tarpai!");
                 }
-                //-------------------------------------------------------------------------------------
-                var dbFullPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Bars.db");
-                var db = new BarContext(dbFullPath);
 
-                try
-                {
-                    using (db)
-                    {
-                        var barsInDatabase = await db.Bars.ToListAsync();
-                        int count = 0;
-                        // Entity
-                        Bar bar = new Bar()
-                        {
-                            BarName = ((EditText)FindViewById(Resource.Id.barName)).Text,
-                            RatingOfBar = (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating
-                        };
-                        List<Bar> barsInList = new List<Bar>() { bar };
-                        await db.Bars.AddRangeAsync(barsInList);
-                        await db.SaveChangesAsync();
-                        // INSERT
-                        //string barName = ((EditText)FindViewById(Resource.Id.barName)).Text;
-                        //int ratingOfBar = (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating;
-                        //db.Database.ExecuteSqlCommand("INSERT INTO [Bars] VALUES({0},{1})", barName, ratingOfBar);
-                        //await db.SaveChangesAsync();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }
-                //-------------------------------------------------------------------------------------------
-                Intent intent = new Intent(this, typeof(Results));
+                DatabaseProcessing.InsertToTable(((EditText)FindViewById(Resource.Id.barName)).Text, (int)((RatingBar)FindViewById(Resource.Id.ratingOfBar)).Rating);
+
+                Intent intent = new Intent(this, typeof(ResultsActivity));
                 Bundle bundle = new Bundle();
                 bundle.PutString("name", ((EditText)FindViewById(Resource.Id.barName)).Text);
                 bundle.PutDouble("mug", (((EditText)FindViewById(Resource.Id.orderedMug)).Text).StringToDouble());
@@ -146,9 +119,7 @@ namespace Fill_Up_App.Code
             {
                 Toast.MakeText(Application.Context, "Įvyko klaida!", ToastLength.Long).Show();
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-
-            
+            } 
         }
 
         void gobackbutton_Click(Object sender, EventArgs e)

@@ -3,8 +3,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
+using Fill_Up_App.Code.Activities;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Data
 {
     public static class MainController
     {

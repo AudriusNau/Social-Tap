@@ -207,23 +207,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\BarData.cs" />
-    <Compile Include="Code\BarReview.cs" />
+    <Compile Include="Code\Data\BarData.cs" />
+    <Compile Include="Code\Data\BarReview.cs" />
+    <Compile Include="Code\Data\DatabaseProcessing.cs" />
     <Compile Include="Code\Exceptions\BarNameEmptyException.cs" />
     <Compile Include="Code\Exceptions\RegexException.cs" />
     <Compile Include="Code\Extensions\Extension.cs" />
-    <Compile Include="Code\IBarData.cs" />
-    <Compile Include="Code\IBarReview.cs" />
-    <Compile Include="Code\MainController.cs" />
-    <Compile Include="Code\PictureAnalysis.cs" />
-    <Compile Include="Code\Ratings.cs" />
+    <Compile Include="Code\Data\IBarData.cs" />
+    <Compile Include="Code\Data\IBarReview.cs" />
+    <Compile Include="Code\Data\MainController.cs" />
+    <Compile Include="Code\Data\PictureAnalysis.cs" />
+    <Compile Include="Code\Activities\RatingsActivity.cs" />
     <Compile Include="Code\MainActivity.cs" />
-    <Compile Include="Code\Skip.cs" />
-    <Compile Include="Code\SoundTracks.cs" />
-    <Compile Include="Code\TakePicture.cs" />
+    <Compile Include="Code\Activities\SkipActivity.cs" />
+    <Compile Include="Code\Activities\TakePictureActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Code\Results.cs" />
+    <Compile Include="Code\Activities\ResultsActivity.cs" />
     <Compile Include="Web References\FillUpWeb\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,9 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
-    <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -265,7 +263,6 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\audio\" />
     <Folder Include="Resources\mipmap-hdpi\" />
     <Folder Include="Resources\mipmap-mdpi\" />
     <Folder Include="Resources\mipmap-xhdpi\" />
@@ -313,8 +310,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code\Migrations.csproj" />
-    <AndroidResource Include="Resources\drawable\alausInfo.jpg" />
-    <AndroidResource Include="Resources\drawable\bandom.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

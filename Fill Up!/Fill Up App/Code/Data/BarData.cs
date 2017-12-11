@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Fill_Up_App.Code
+namespace Fill_Up_App.Code.Data
 {
     public class BarData : IBarData
     {
