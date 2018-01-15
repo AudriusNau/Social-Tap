@@ -21,6 +21,6 @@ Funkcionalumas:
     <li>Tada programa pasako kiek alaus įpilta ir ar apsimoka eiti į šį barą dar kartą. Jei ne, pateikia artimiausias vietas, kur nueiti labiau apsimokėtų. </li>
     <li>Naudotojas programėlėje gali pasižiūrėti mėgstamiausių (geriausiai įvertintų barų) sąrašą.</li>
   </ul>
-  <li>Duomenų bazė - išsaugoma vieta (baras), įvertinimas, kiek % neįpylė (palyginimui su kitais barais).</li>
+  <li>Duomenų bazė - išsaugoma vieta (baras), įvertinimas(palyginimui su kitais barais).</li>
 </ul>
 
