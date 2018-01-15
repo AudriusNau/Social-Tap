@@ -1,5 +1,5 @@
 
-Komandos pavadinimas - Beer lovers.<br>
+<h3>Komandos pavadinimas - Beer lovers.<br></h3>
 Programėlės pavadinimas - “Fill up!”.<br>
 Fill up! - android programėlė skirta įvertinti barą pagal tai ar teisingai yra įpilama alaus. Pagal turimus duomenis programa apskaičiuoja ar verta tame bare gerti alų, o jei ne tai pasiūlo alternatyvų. Įvertinimas vyksta nufotografavus bokalą arba ikėlus jo nuotrauką iš telefono.
 
@@ -12,7 +12,7 @@ Programą semestro metu kūrė:
   <li>Rūta Stankevičiūtė - komandos narė;</li>
 </ul>
 
-Funkcionalumas:
+<h3>Funkcionalumas:</h3>
 <ul><br>
   <li>UI:
   <ul>
