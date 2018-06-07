@@ -24,3 +24,7 @@ Programą semestro metu kūrė:
   <li>Duomenų bazėje išsaugoma vieta (baras), įvertinimas(palyginimui su kitais barais).</li>
 </ul>
 
+
+<img src="https://github.com/AudriusNau/Social-Tap/blob/Fill_Up_(app)/FillUP%20main.png" alt="Menu" height="503" width="270">
+<img src="https://github.com/AudriusNau/Social-Tap/blob/Fill_Up_(app)/FillUp%20ivertinimas.png" alt="Ivertinimas" height="503" width="270">
+<img src="https://github.com/AudriusNau/Social-Tap/blob/Fill_Up_(app)/FillUp%20result.png" alt="Result" height="503" width="270">
